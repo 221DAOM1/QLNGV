@@ -24,15 +24,14 @@
     <link rel="stylesheet" href="./public/css/reset.css">
 </head>
 <body>
-    <?php
-        require_once("header_footer/header.php");
-    ?>
-     <?php
-        //điều hướng
-        require_once("navigation.php");
-    ?>
-   <?php
-        require_once("header_footer/footer.php");
-    ?>
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col col-md-4 col-ms-6 col-xs-12 col-logo__header">
+                <p>Trường SPKT - 48 Cao Thắng - Phường Thanh Bình - Hải Châu, Đà Nẵng</p>
+            </div>
+        </div>
+    </div>
+</header>
 </body>
 </html>

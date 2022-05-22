@@ -24,15 +24,6 @@
     <link rel="stylesheet" href="./public/css/reset.css">
 </head>
 <body>
-    <?php
-        require_once("header_footer/header.php");
-    ?>
-     <?php
-        //điều hướng
-        require_once("navigation.php");
-    ?>
-   <?php
-        require_once("header_footer/footer.php");
-    ?>
+    
 </body>
 </html>
