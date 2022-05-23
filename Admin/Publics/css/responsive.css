@@ -1,0 +1,19 @@
+@media screen and (max-width: 767px) {
+    nav {
+        display: none;
+    }
+    #header {
+        padding-bottom: 160px;
+    }
+    #slider {
+        height: 0;
+    }
+}
+@media (max-width: 900px) and (min-width: 768px) {
+    .nav-list__item >a {
+        font-size: 15px;
+    }
+    #slider {
+        height: 0;
+    }
+}
