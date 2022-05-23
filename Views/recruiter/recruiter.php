@@ -16,8 +16,10 @@
             </fieldset>
             <fieldset class="form-group">
                 <label>Loại công việc</label>
-                <span class="required">*</span>
-                <input type="text" name="" class="form-control form-control-lg" placeholder="Loại công việc"/>
+                <select class="form-control">
+                    <option>Chăm sóc trẻ em</option>
+                    <option>Việc nhà</option>
+                </select>
             </fieldset>
             <p class="recruiter_check_text">Điều kiện làm việc</p>
             <hr>
@@ -27,7 +29,11 @@
             </fieldset>
             <fieldset class="form-group">
                 <label>Trình độ học vấn</label>
-                <input type="text" name="" class="form-control form-control-lg" placeholder="Trình độ học vấn"/>
+                <select class="form-control">
+                    <option>12/12</option>
+                    <option>Đại học</option>
+                    <option>Bỏ qua</option>
+                </select>
             </fieldset>
             <fieldset class="form-group">
                 <label>Thời gian làm việc</label>
@@ -35,7 +41,11 @@
             </fieldset>
             <fieldset class="form-group">
                 <label>Giới tính yêu cầu</label>
-                <input type="text" name="" class="form-control form-control-lg" placeholder="Giới tính yêu cầu"/>
+                <select class="form-control">
+                    <option>Mọi giới tính</option>
+                    <option>Nam</option>
+                    <option>Nữ</option>
+                </select>
             </fieldset>
             <fieldset class="form-group">
                 <label>Chức vụ người làm</label>
