@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="./Publics/css/reset.css">
     <link rel="stylesheet" href="./Publics/css/main.css">
     <link rel="stylesheet" href="./Publics/css/login.css">
+    <link rel="stylesheet" href="./Publics/css/recruiter.css">
 </head>
 <body>
     <?php

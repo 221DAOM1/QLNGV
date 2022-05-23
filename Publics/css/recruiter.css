@@ -1,0 +1,47 @@
+.page-content-recruiter {
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    border: solid 1px var(--cl-primary);
+    width: 1100px;
+}
+
+.page-content-recruiter h1 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--cl-red);
+}
+
+.recruiter_check_text {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.btn-recruiter {
+    text-align:center;
+}
+
+.btn-recruiter > .btn-confirm {
+    background-color: var(--cl-primary);
+    height: 40px;   
+    color: var(--white);
+    font-weight:bold;
+    text-align: center;
+    border: none;
+    border-radius: 0.3rem;
+    margin-right: 30px;
+}
+
+.btn-recruiter > .btn-cancel {
+    background-color: var(--cl-textad);
+    height: 40px;   
+    color: var(--white);
+    font-weight:bold;
+    text-align: center;
+    border: none;
+    border-radius: 0.3rem;
+    padding-left: 26px;
+    padding-right: 26px;
+}
+
+
