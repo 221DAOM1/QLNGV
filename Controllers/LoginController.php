@@ -83,6 +83,45 @@ class LoginController
         }    
         $this->login_model->dangky_action($data, $check1, $check2);
     }
+
+    function dangky_action_help()
+    {
+        $check1 = 0;
+        $check2 = 0;
+        $data_check = $this->login_model->check_account();
+        foreach ($data_check as $value) {
+            if ($value['email'] == $_POST['email'] || $value['taiKhoan'] == $_POST['taiKhoan']) {
+                $check1 = 1;
+            }
+        }
+
+        if ($_POST['matKhau'] != $_POST['check_password']) {
+            $check2 = 1;
+        }
+
+        $data = array(
+            'maQuyen' =>  '3',
+            'taiKhoan' => $_POST['taiKhoan'],
+            'matKhau' => md5($_POST['matKhau']),
+            'hoTen' => $_POST['hoTen'],
+            'gioiTinh' => "",
+            'ngaySinh' => "",
+            'CMND' => $_POST['CMND'],
+            'SDT' => $_POST['SDT'],
+            'email' => $_POST['email'],
+            'diaChi'  => "",
+            'hinhAnh' => "",
+            'TrangThai'  =>  '1',
+        );
+        foreach ($data as $key => $value) {
+            if (strpos($value, "'") != false) {
+                $value = str_replace("'", "\'", $value);
+                $data[$key] = $value;
+            }
+        }    
+        $this->login_model->dangky_action_help($data, $check1, $check2);
+    }
+
     function dangxuat()
     {
         $this->login_model->logout();

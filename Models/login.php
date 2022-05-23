@@ -103,6 +103,35 @@ class Login extends Model
         }
         header('Location:?act=taikhoan#dangky_action');
     }
+
+    function dangky_action_help($data, $check1, $check2)
+    {
+        if ($check1 == 0) {
+            if ($check2 == 0) {
+                $f = "";
+                $v = "";
+                foreach ($data as $key => $value) {
+                    $f .= $key . ",";
+                    $v .= "'" . $value . "',";
+                }
+                $f = trim($f, ",");
+                $v = trim($v, ",");
+                $query = "INSERT INTO taikhoan($f) VALUES ($v);";
+
+                $status = $this->conn->query($query);
+                if ($status == true) {
+                    setcookie('msg', 'Đăng ký thành công', time() + 2);
+                } else {
+                    setcookie('msg', 'Đăng ký không thành công', time() + 2);
+                }
+            } else {
+                setcookie('msg', 'Mật khẩu không trùng nhau', time() + 2);
+            }
+        } else {
+            setcookie('msg', 'Tên tài khoản hoặc Email  đã tồn tại', time() + 2);
+        }
+        header('Location:?act=taikhoan#dangky_action_help');
+    }
     function account()
     {
         $id = $_SESSION['login']['maTK'];

@@ -58,6 +58,9 @@ switch ($mod) {
                     case 'dangky_action':
                         $controller_obj->dangky_action();
                         break;
+                    case 'dangky_action_help':
+                            $controller_obj->dangky_action_help();
+                            break;
                     default:
                          $controller_obj->dangky();
                     break; 
