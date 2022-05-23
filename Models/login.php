@@ -101,7 +101,7 @@ class Login extends Model
         } else {
             setcookie('msg', 'Tên tài khoản hoặc Email  đã tồn tại', time() + 2);
         }
-        header('Location:?act=taikhoan#dangky_action');
+        header('Location:?act=taikhoan&xuli=dangky');
     }
 
     function dangky_action_help($data, $check1, $check2)
