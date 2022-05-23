@@ -1,37 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Người giúp việc</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <!-- Jquery-ui.min css -->
-    <link rel="stylesheet" href="./public/css/jquery-ui.min.css">
-    <!-- Lib -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/js-image-zoom@0.7.0/js-image-zoom.js" type="application/javascript"></script>
-    <script src="./public/js/jquery.js"></script>
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./public/css/style.css">
-    <link rel="stylesheet" href="./public/css/reset.css">
-</head>
-<body>
 <header id="header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-2 col col-md-4 col-ms-6 col-xs-12 col-logo__header">
-                <p>Trường SPKT - 48 Cao Thắng - Phường Thanh Bình - Hải Châu, Đà Nẵng</p>
+            <div class="col-lg-8 col">
+                <p><i class="fa-solid fa-location-dot"></i> Trường SPKT - 48 Cao Thắng - Phường Thanh Bình - Hải Châu, Đà Nẵng</p>
+            </div>
+            <div class="col-lg-4 col">
+                <p><i class="fa-solid fa-phone"></i> 0961640909 - 0935778714</p>
             </div>
         </div>
     </div>
 </header>
-</body>
-</html>
+<nav id="nav">
+    <ul class="nav-list">
+        <a href="" class="header__logo">
+            <img src="./Publics/images/logo.png" alt="">
+        </a>
+        <li class="nav-list__item"><a href="" class="nav-list__item-link">Trang chủ</a></li>
+        <li class="nav-list__item"><a class="nav-list__item-link" href="">Giới thiệu</a></li>
+        <li class="nav-list__item"><a class="nav-list__item-link" href="">Cho người tuyển dụng</a></li>
+        <li class="nav-list__item"><a class="nav-list__item-link" href="">Cho người giúp việc</a></li>
+        <li class="nav-list__item"><a class="nav-list__item-link" href="">Liên hệ</a></li>
+        <li class="nav-list__item"><a class="nav-list__item-link" href="">Tin tức</a></li>
+        <li class="nav-list__item">
+            <div class="user">
+                <a href="">
+                    <i class="fas fa-user"></i>
+                </a>
+                <div class="group-login">
+                    <ul class="group-login__list">
+                        <?php
+                        if(isset($_SESSION['login'])){
+                        ?>
+                            <li class="group-login__list-item"><b><?=$_SESSION['login']['hoTen']?></b></li>
+                            <li class="group-login__list-item"><a href="">Tài khoản</a></li>
+                            <li class="group-login__list-item"><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
+                            <?php
+                            if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
+                            <li class="group-login__list-item"><a href="admin/?mod=login">Trang quản lý</a></li>
+                            <?php }}else{ ?>
+                            <li class="group-login__list-item"><b>Khách hàng</b></li>
+                            <li class="group-login__list-item">
+                                <a href="?act=taikhoan&xuli=login">Đăng nhập</a>
+                            </li>
+                            <li class="group-login__list-item">
+                                <a href="?act=taikhoan&xuli=login" style="background">Giúp việc</a>
+                            </li>
+                            <?php } ?>
+                            
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+

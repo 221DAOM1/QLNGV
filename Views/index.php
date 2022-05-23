@@ -20,19 +20,68 @@
     <script src="./public/js/jquery.js"></script>
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./public/css/style.css">
-    <link rel="stylesheet" href="./public/css/reset.css">
+    <link rel="stylesheet" href="./Publics/css/style.css">
+    <link rel="stylesheet" href="./Publics/css/reset.css">
+    <link rel="stylesheet" href="./Publics/css/main.css">
+    <link rel="stylesheet" href="./Publics/css/login.css">
 </head>
 <body>
     <?php
         require_once("header_footer/header.php");
     ?>
-     <?php
+    <?php
         //điều hướng
         require_once("navigation.php");
     ?>
    <?php
         require_once("header_footer/footer.php");
     ?>
+    <script src="./Publics/lib/owl.carousel.min.js"></script>
+
+    <script src="./Publics/lib/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./Publics/js/main.js"></script>
+    <!-- <script src="./public/js/countdown.js"></script> -->
+    <script>
+        var $sliderBanner = $('.slider-list')
+        $sliderBanner.owlCarousel({
+            margin:10,
+            loop: true,
+            nav:true,
+            autoplay:true,
+            autoplayTimeout:4000,
+            responsive:{
+                1000:{
+                    items:1
+                },
+                768:{
+                    items:1
+                },
+                500:{
+                    items:1
+                }
+            }
+        });
+    </script>
+    <script>
+        function start() {
+            const timeLeft = JSON.parse(localStorage.getItem('timeLeft'));
+            if(timeLeft==null){
+                localStorage.setItem('timeLeft', JSON.stringify({
+                    d: 7,
+                    h: 0,
+                    m: 0,
+                    s: 0,
+                }))
+            } else {
+                return
+            }
+        }
+        start()
+    </script>
 </body>
 </html>

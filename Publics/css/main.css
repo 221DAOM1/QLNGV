@@ -1,0 +1,238 @@
+/* ---HEADER--- */
+#header{
+    background-color: white;
+    padding:15px 0px;
+    font-style: bold;
+    color: var(--cl-textprimary);
+}
+/* NAV */
+#nav {
+    width: 100%;
+    height: 130px;
+    background-color:var(--cl-primary);
+    margin-bottom: 20px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-list__item > a.active {
+    color: red;
+}
+
+.nav-list__item {
+    margin-right: 40px;
+    position: relative;
+}
+
+.nav-list__item >a {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+.nav-list__item > i {
+    color: #fff;
+}
+
+.nav-list__item:hover > ul.nav-item__down {
+    display: block;
+    transition: 0.5s ease;
+    
+}
+.nav-list__item::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 22px;
+    top: 14px;
+}
+.nav-list__item.active a{
+    color: red;
+}
+
+.nav-list__item a:hover,.nav-item__down-item a:hover {
+    color: red;
+    transition: 0.3s ease;
+}
+.nav-list__item:hover > a {
+    color: red;
+}
+.nav-item__down {
+    position: absolute;
+    box-shadow: 0 0 2px 2px #c1c1c1;
+    width: 200px;
+    top: 35px;
+    left: -20px;
+    display: none;
+    z-index: 12;
+    background: #fff;
+}
+
+.nav-item__down-item {  
+    border-bottom: 1px solid #c1c1c1;
+    position: relative;
+}
+.nav-item__down-item i.fas.fa-chevron-right {
+    position: absolute;
+    right: 15px;
+}
+.nav-item__down-item:hover .nav-list__down {
+    display: block;
+}
+
+.nav-item__down-item:hover > a {
+    color: red;
+}
+
+.nav-list__down {
+    position: absolute;
+    right: -100%;
+    top: 0;
+    background: #fff;
+    width: 200px;
+    display: none;
+    box-shadow: 0px 0px 6px rgb(79 95 120 / 10%);
+}
+
+.nav-item__down-item a{
+    color: var(--cl-text);
+    font-size: 16px;
+    padding: 10px 20px;
+    display: block;
+}
+
+.header__logo img {
+    margin-top: 2px;
+    margin-left: 100px;
+    width: 120px;
+    height: 120px;
+    margin-right: 80px;
+}
+
+.user{
+    position: relative;
+    color: var(--cl-textprimary);
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.user > a{
+    color: white;
+}
+
+.user:hover > .group-login {
+    z-index: 2;
+    display: block;
+    color: var(--cl-textprimary);
+}
+
+.user::before{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 20px;
+    top: 15px;
+    right: -60px;
+    z-index: 3;
+}
+
+.group-login {
+    position: absolute;
+    width: 160px;
+    box-shadow: 0px 0px 6px rgb(79 95 120 / 10%);
+    right: -60px;
+    top: 25px;
+    background-color: #fff;
+    display: none;
+    z-index: 2;
+}
+
+/* END CART */
+.group-login__list-item b {
+    padding: 15px;
+    display: block;
+}
+
+.group-login__list-item:first-child {
+    border-bottom: 1px solid #c1c1c1;
+    font-size: 14px;
+    text-align: center;
+}
+
+.group-login__list-item a{
+    color: var(--cl-title);
+    display: block;
+    padding: 10px 0px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 17px;
+}
+.group-login__list-item a:hover {
+    color: var(--cl-red);transition:0.2s ease;
+}
+
+/* ---FOOTER--- */
+#footer{
+    background-color: var(--cl-primary);
+    padding:15px 0px;
+    font-weight: 500;
+    font-style: bold;
+    color: white;
+    text-align:center;
+}
+
+#footer > p:first-child {
+    margin-bottom: 15px;
+}
+
+/* --SLIDER-- */
+#slider {
+    width: 100%;
+    height: 500px;
+}
+.slider-list {
+    position: relative;
+    overflow-x: hidden;
+}
+.slider-list .owl-stage {
+    display: flex;
+}
+
+.slider-list .owl-nav {
+    display: none;
+}
+.slider-list__item {
+    
+}
+#slider .owl-dots {
+    display: flex;
+    justify-content: center;
+}
+section#slider button.owl-dot {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: rgb(0, 54, 8);
+}
+section#slider button.owl-dot.active {
+    background: var(--cl-green);
+}
+
+.slider-list__item a {
+    width: 100%;
+    display: block;
+}
+
+.slider-list__item > a > img {
+    width: 100%;
+    height: 470px;
+}
+
