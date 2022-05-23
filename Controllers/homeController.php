@@ -1,7 +1,7 @@
 <?php
     require_once("./Models/helpModel.php");
     class homeController{
-        var $help_model,$page;
+        var $help_model;
         public function __construct()
         {
              $this->help_model = new helpModel();  

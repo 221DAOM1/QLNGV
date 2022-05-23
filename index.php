@@ -70,6 +70,11 @@ switch ($mod) {
             break;
         }
         break;
+    case 'recruiter':    
+        require_once('./Controllers/RecruiterController.php');
+        $objCate = new recruiterController();
+        $objCate->list();
+        break;
     default : require_once('home.php');
 }
 ?>

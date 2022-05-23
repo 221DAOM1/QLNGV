@@ -50,7 +50,10 @@
                 break;
             }
             break;
-        default:
-            require_once("error-404.php");
+        case "recruiter":
+            require_once("recruiter/recruiter.php");
             break;
+        default:
+        require_once("error-404.php");
+        break;
     }

@@ -67,7 +67,7 @@
     box-shadow: 0 0 2px 2px #c1c1c1;
     width: 200px;
     top: 35px;
-    left: -20px;
+    left: 0px;
     display: none;
     z-index: 12;
     background: #fff;
@@ -102,6 +102,7 @@
 .nav-item__down-item a{
     color: var(--cl-text);
     font-size: 16px;
+    font-weight: 550;
     padding: 10px 20px;
     display: block;
 }
@@ -146,7 +147,7 @@
     position: absolute;
     width: 160px;
     box-shadow: 0px 0px 6px rgb(79 95 120 / 10%);
-    right: -60px;
+    right: -80px;
     top: 25px;
     background-color: #fff;
     display: none;

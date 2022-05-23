@@ -15,9 +15,19 @@
         <a href="" class="header__logo">
             <img src="./Publics/images/logo.png" alt="">
         </a>
-        <li class="nav-list__item"><a href="" class="nav-list__item-link">Trang chủ</a></li>
+        <li class="nav-list__item"><a href="?act=home" class="nav-list__item-link">Trang chủ</a></li>
         <li class="nav-list__item"><a class="nav-list__item-link" href="">Giới thiệu</a></li>
-        <li class="nav-list__item"><a class="nav-list__item-link" href="">Cho người tuyển dụng</a></li>
+        <li class="nav-list__item">
+            <a href="">
+                Cho người tuyển dụng
+            </a>
+            <i class="fas fa-chevron-down"></i>
+            <ul class="nav-item__down">
+                <li class="nav-item__down-item">
+                    <a href="?act=recruiter">Đăng bài tuyển dụng</a>
+                </li>
+            </ul>
+        </li>
         <li class="nav-list__item"><a class="nav-list__item-link" href="">Cho người giúp việc</a></li>
         <li class="nav-list__item"><a class="nav-list__item-link" href="">Liên hệ</a></li>
         <li class="nav-list__item"><a class="nav-list__item-link" href="">Tin tức</a></li>
@@ -36,7 +46,7 @@
                             <li class="group-login__list-item"><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
                             <?php
                             if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
-                            <li class="group-login__list-item"><a href="admin/?mod=login">Trang quản lý</a></li>
+                            <li class="group-login__list-item"><a href="">Trang quản lý</a></li>
                             <?php }}else{ ?>
                             <li class="group-login__list-item"><b>Khách hàng</b></li>
                             <li class="group-login__list-item">

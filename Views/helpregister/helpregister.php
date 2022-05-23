@@ -10,7 +10,7 @@
                 </div>
                 <div>
                     <strong>
-                        <span>Đăng nhập tài khoản</span>
+                        <span>Đăng nhập tài khoản giúp việc</span>
                     </strong>
                 </div>
             </div>
