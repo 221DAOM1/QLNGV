@@ -164,3 +164,16 @@
     padding: 10px 30px;
     border-radius: 0.3rem;
 }
+
+.btn-register-help {
+    margin-top:30px;
+    border: 1px solid var(--white);
+    padding: 10px 30px;
+    border-radius: 0.3rem;
+    color: white;
+}
+
+.btn-register-help > a {
+    color: var(--white);
+    font-size: 13px;
+}

@@ -39,6 +39,9 @@
                         case 'dangky':
                             require_once("login/register.php");
                             break;
+                        case 'dangkygv':
+                            require_once("helpregister/helpregister.php");
+                            break;
                         default:
                             require_once("login/login.php");
                             break;

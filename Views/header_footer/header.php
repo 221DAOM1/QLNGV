@@ -42,9 +42,6 @@
                             <li class="group-login__list-item">
                                 <a href="?act=taikhoan&xuli=login">Đăng nhập</a>
                             </li>
-                            <li class="group-login__list-item">
-                                <a href="?act=taikhoan&xuli=login" style="background">Giúp việc</a>
-                            </li>
                             <?php } ?>
                             
                     </ul>

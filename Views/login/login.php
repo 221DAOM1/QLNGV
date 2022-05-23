@@ -70,6 +70,7 @@
                         <p>Quản lý người giúp việc trên hệ thống một cách tiện lợi</p>
                     </div>
                     <a class="btn-register-default" href="?act=taikhoan&xuli=dangky">Đăng ký</a>
+                    <p class="btn-register-help"><a href="?act=taikhoan&xuli=dangkygv">Đăng ký dành người giúp việc</a></p>
                 </div>
             </div>
         </div>
