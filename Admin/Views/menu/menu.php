@@ -30,8 +30,19 @@
                 <li>
                     <a class="has-arrow" href="" aria-expanded="true">
                         <div class="icon_menu">
-                            <i class="fas fa-seedling"></i>
+                            <i class="fa-solid fa-align-justify"></i>
                             <span>Quản lý danh mục</span>
+                        </div>
+                    </a>
+                </li>
+            <?php } ?>
+            <?php
+                if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
+                <li>
+                    <a class="has-arrow" href="" aria-expanded="true">
+                        <div class="icon_menu">
+                            <i class="fa-solid fa-align-justify"></i>
+                            <span>Quản lý bài đăng</span>
                         </div>
                     </a>
                 </li>

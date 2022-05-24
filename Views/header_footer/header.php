@@ -24,7 +24,7 @@
             <i class="fas fa-chevron-down"></i>
             <ul class="nav-item__down">
                 <li class="nav-item__down-item">
-                    <a href="?act=recruiter">Đăng bài tuyển dụng</a>
+                    <a href="?act=work">Đăng bài tuyển dụng</a>
                 </li>
             </ul>
         </li>

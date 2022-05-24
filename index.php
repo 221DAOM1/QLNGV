@@ -3,7 +3,7 @@ session_start();
 $mod = isset($_GET['act']) ? $_GET['act'] : "home";
 switch ($mod) {
     case 'home':
-        require_once('./Controllers/HomeController.php');
+        require_once('Controllers/HomeController.php');
         $objCate = new homeController();
         $objCate->list();
         break;
@@ -70,11 +70,30 @@ switch ($mod) {
             break;
         }
         break;
-    case 'recruiter':    
+    case 'work': 
+        $act = isset($_GET['xuli']) ? $_GET['xuli'] : "work";
         require_once('./Controllers/RecruiterController.php');
-        $objCate = new recruiterController();
-        $objCate->list();
+        $controller_obj = new recruiterController();
+        $controller_obj->list();
+        switch ($act) {
+            case 'add':
+                $controller_obj->store();
+                break;
+                case 'delete':
+                $controller_obj->delete();
+                break;
+            case 'edit':
+                $controller_obj->callUpdate();
+                break;
+            case 'update':
+                $controller_obj->update(); 
+                break;
+            default:
+                $controller_obj->list();
+                break;
+        }
         break;
-    default : require_once('home.php');
+
+    default : require_once('home/home.php');
 }
 ?>

@@ -34,8 +34,14 @@ class Login extends Model
                     $_SESSION['login'] = $login;
                     }
                     else{
-                        $_SESSION['isLogin'] = true;
+                        if($login['maQuyen'] == 2){
+                        $_SESSION['isLogin_KhachHang'] = true;
                         $_SESSION['login'] = $login;
+                        }
+                        else{
+                            $_SESSION['isLogin'] = true;
+                            $_SESSION['login'] = $login;
+                        }
                     }
                 }
             } 
