@@ -71,17 +71,22 @@ switch ($mod) {
         }
         break;
     case 'work': 
-        $act = isset($_GET['xuli']) ? $_GET['xuli'] : "work";
+        $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
         require_once('./Controllers/RecruiterController.php');
         $controller_obj = new recruiterController();
-        $controller_obj->list();
         switch ($act) {
+            case 'list':
+                $controller_obj->list();
+            break;
             case 'add':
+                $controller_obj->add();
+            break;
+            case 'store':
                 $controller_obj->store();
-                break;
-                case 'delete':
+            break;
+            case 'delete':
                 $controller_obj->delete();
-                break;
+            break;
             case 'edit':
                 $controller_obj->callUpdate();
                 break;

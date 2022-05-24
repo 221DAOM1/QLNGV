@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 24, 2022 lúc 05:54 AM
+-- Thời gian đã tạo: Th5 24, 2022 lúc 03:37 PM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 8.1.0
 
@@ -60,16 +60,16 @@ CREATE TABLE `congviec` (
   `diaChi` varchar(255) NOT NULL,
   `time` varchar(255) NOT NULL,
   `moTa` varchar(255) NOT NULL,
-  `maHA` int(11) NOT NULL,
-  `tinhTrang` int(11) NOT NULL
+  `tinhTrang` int(11) NOT NULL,
+  `thoiGianDang` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `congviec`
 --
 
-INSERT INTO `congviec` (`maCV`, `maTK`, `maDMCV`, `tenCV`, `soLuong`, `trinhDoHV`, `gioiTinhYC`, `chucVu`, `luong`, `diaChi`, `time`, `moTa`, `maHA`, `tinhTrang`) VALUES
-(30, 0, 1, 'b', 0, '12/12', 'Mọi giới t', 'b', 'b', 'b', 'b', 'b', 0, 1);
+INSERT INTO `congviec` (`maCV`, `maTK`, `maDMCV`, `tenCV`, `soLuong`, `trinhDoHV`, `gioiTinhYC`, `chucVu`, `luong`, `diaChi`, `time`, `moTa`, `tinhTrang`, `thoiGianDang`) VALUES
+(486, 0, 1, 'Giúp việc nhà ', 1, '12/12', 'Nữ', 'Nhân viên dọn dẹp nhà', '8.000.000 - 10.000.000 VNĐ', '02 Thanh Sơn, P. Thanh Bình, Q.Hải Châu, Đà Nẵng', 'Ngày 8 tiếng', 'Yêu cầu nhân viên đã có kinh nghiệm dọn dẹp nhà', 1, '2022-05-24 20:35:35');
 
 -- --------------------------------------------------------
 
@@ -104,6 +104,15 @@ CREATE TABLE `hinhanhcv` (
   `tenHinh` varchar(255) NOT NULL,
   `hinhAnh` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `hinhanhcv`
+--
+
+INSERT INTO `hinhanhcv` (`maHA`, `maCV`, `tenHinh`, `hinhAnh`) VALUES
+(1378, 486, 'anh1.jpg', 'hinhanh1'),
+(1379, 486, 'anh2.jpg', 'hinhanh2'),
+(1380, 486, 'anh3.jpg', 'hinhanh3');
 
 -- --------------------------------------------------------
 
@@ -204,7 +213,7 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT cho bảng `congviec`
 --
 ALTER TABLE `congviec`
-  MODIFY `maCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `maCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=487;
 
 --
 -- AUTO_INCREMENT cho bảng `danhmuccv`
@@ -216,7 +225,7 @@ ALTER TABLE `danhmuccv`
 -- AUTO_INCREMENT cho bảng `hinhanhcv`
 --
 ALTER TABLE `hinhanhcv`
-  MODIFY `maHA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `maHA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1381;
 
 --
 -- AUTO_INCREMENT cho bảng `phanquyen`

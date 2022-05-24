@@ -14,6 +14,18 @@
             require("result.php");
             return $data;
         }
+
+        function getIdWorknew(){
+            $query = "select maCV from congviec
+            ORDER BY thoiGianDang DESC limit 1";
+            $result = $this->conn->query($query);
+            $row = mysqli_fetch_assoc($result);
+          
+            $id =$row['maCV'];
+           
+            return $id;
+    
+        }
     
         function issetImgName($idsp, $imgName){
             $query = "select *from hinhanhcv where maCV = $idcv and tenHinh ='$imgName'";
@@ -38,10 +50,10 @@
                 }
             }
             if ($result == true) {
-                setcookie('msg', 'Cập nhật thành công', time() + 2);
-                header('Location: ?mod=' . $this->table);
+                setcookie('msg2', 'Cập nhật thành công', time() + 2);
+                header('Location:?act=work&xuli=add');
             } else {
-                setcookie('msg', $query, time() + 2);
+                setcookie('msg2', $query, time() + 2);
             }
         }
       
@@ -55,24 +67,24 @@
             }
             $dat = trim($dat, ",");
             $query = "INSERT INTO hinhanhcv VALUES $dat;";
-            // $result = $this->conn->query($query);
-            // if ($result == true) {
-            //     setcookie('msg', 'Duyệt thành công', time() + 2);
-            //     header('Location: ?mod=' . $this->table);
-            // } else {
-            //     setcookie('msg', $query, time() + 2);
-            // }
+            $result = $this->conn->query($query);
+            if ($result == true) {
+                setcookie('msg2', 'Gửi yêu cầu thành công', time() + 2);
+            } else {
+                setcookie('msg2', $query, time() + 2);
+            }
+            header('Location:?act=work&xuli=add');
         }
         function deleteImg($id)
         {
             $query = "DELETE from hinhanhcv where maCV=$id";    
             $status = $this->conn->query($query);
             if ($status == true) {
-                setcookie('msg', 'Xóa thành công', time() + 2);
+                setcookie('msg2', 'Xóa thành công', time() + 2);
             } else {
-                setcookie('msg', 'Xóa không thành công', time() + 2);
+                setcookie('msg2', 'Xóa không thành công', time() + 2);
             }
-            header('Location: ?mod=' . $this->table);
+            header('Location:?act=work&xuli=add');
         }
         function store($data)
         {
@@ -88,13 +100,13 @@
     
             $status = $this->conn->query($query);
     
-            // if ($status == true) {
-            //   setcookie('msg', 'Thêm mới thành công', time() + 2);
-            //   header('Location: ?mod=' .$this->table . '&act=add');
-            // } else {
-            //     setcookie('msg', 'Thêm mới thất bại', time() + 2);
-            //     header('Location: ?mod=' .$this->table . '&act=add');
-            // }
+            if ($status == true) {
+              setcookie('msg2', 'Gửi yêu cầu thành công', time() + 2);
+              
+            } else {
+                setcookie('msg2', 'Gửi yêu cầu thất bại', time() + 2);
+            }
+            header('Location:?act=work&xuli=add');
         }
     }
     

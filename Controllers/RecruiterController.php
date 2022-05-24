@@ -6,11 +6,17 @@
         {
              $this->recruiter_model = new recruiterModel();  
         }
-        function list(){
-            
+        public function list()
+        {
+            $data_work = $this->recruiter_model->all();
+            require_once("Views/index.php");
+        }
+        public function add()
+        {
             $data_work = $this->recruiter_model->all();
             $data_category = $this->recruiter_model->danhmuc();
-            require_once('Views/index.php');  
+
+            require_once("Views/index.php");
         }
         public function delete()
         {
@@ -20,7 +26,7 @@
         }
         public function store()
         {
-            $target_dir = "../Publics/images/";
+            $target_dir = "./Publics/images/";
             $hinhAnhChinh = "";
             $target_file = $target_dir . basename($_FILES["hinhAnhChinh"]["name"]);
             $status_upload = move_uploaded_file($_FILES["hinhAnhChinh"]["tmp_name"], $target_file);
@@ -41,6 +47,8 @@
             if ($status_upload) { 
                 $hinhAnh2 = basename($_FILES['hinhAnh2']['name']);
             }
+            date_default_timezone_set('Asia/Ho_Chi_Minh');
+            $ThoiGian =  date('Y-m-d H:i:s');
             $data_work = array(
                 'maCV' => 'null',
                 'maTK' => "",
@@ -56,12 +64,14 @@
                 'moTa' => $_POST['moTa'],
                 'maHA' => 0,
                 'tinhTrang' => 1,
+                'thoiGianDang' => $ThoiGian,
             );
             $this->recruiter_model->store($data_work);
+            $idcv = $this->recruiter_model->getIdWorknew();
             $data_img = array(
-                // $idcv . " 1" => $hinhAnhChinh,
-                // $idcv . " 2"  => $hinhAnh1,
-                // $idcv . " 3"  => $hinhAnh2
+                $idcv . " 1" => $hinhAnhChinh,
+                $idcv . " 2"  => $hinhAnh1,
+                $idcv . " 3"  => $hinhAnh2
             );
 
             $this->recruiter_model->insertImg($data_img);

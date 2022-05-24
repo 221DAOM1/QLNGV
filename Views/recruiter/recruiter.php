@@ -3,12 +3,12 @@
         <div class="page-content-recruiter">
             <h1>Đăng thông tin công việc</h1>
             <hr>
-            <?php if (isset($_COOKIE['msg'])) { ?>
+            <?php if (isset($_COOKIE['msg2'])) { ?>
                 <div class="alert alert-success">
-                    <strong>Thông báo</strong> <?= $_COOKIE['msg'] ?>
+                    <strong>Thông báo</strong> <?= $_COOKIE['msg2'] ?>
                 </div>
             <?php } ?>
-            <form id ="table" action="?act=work&xuli=add" method="POST" enctype="multipart/form-data">
+            <form id ="table" action="?act=work&xuli=store" method="POST" enctype="multipart/form-data">
                 <fieldset class="form-group">
                     <label>Tên công việc</label>
                     <span class="required">*</span>
@@ -77,7 +77,7 @@
                     <input type="file" class="form-control" id="" placeholder="" name="hinhAnh2">
                 </fieldset>
                 <div class="btn-recruiter">
-                    <button class="btn-confirm" >Xác nhận</button>
+                    <button class="btn-confirm" type="submit" form="table">Xác nhận</button>
                 </div>
         </form>
         </div>
