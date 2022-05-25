@@ -237,3 +237,62 @@ section#slider button.owl-dot.active {
     height: 470px;
 }
 
+/* ---Content-Help--- */
+#content_home {
+    margin-top: 50px;
+}
+
+.content_home_top {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.big-hotline {
+    height: 55px;
+    background-color: rgba(255, 255, 255, 0.9);
+    top: -55px;
+    right: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    color: red;
+}
+
+.slogan-left {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.bg-yellow {
+    background: #FF9326;
+    border-color: #F77B00;
+    color: #fff;
+    font-weight: 600;
+}
+
+.bg-yellow h5 {
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 14px 10px 15px;
+}
+
+.bg-yellow p {
+    font-weight: 700;
+    padding: 8px 10px 5px;
+    line-height: 27px;
+}
+
+.big-a {
+    margin: 0 0 13px;
+}
+
+.big-a > a {
+    font-size: 18px;
+    padding: 10px 14px 10px 15px;
+    font-weight: 500;
+}
+
+
