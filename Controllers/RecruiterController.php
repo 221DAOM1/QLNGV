@@ -15,7 +15,6 @@
         {
             $data_work = $this->recruiter_model->all();
             $data_category = $this->recruiter_model->danhmuc();
-
             require_once("Views/index.php");
         }
         public function delete()
@@ -51,7 +50,7 @@
             $ThoiGian =  date('Y-m-d H:i:s');
             $data_work = array(
                 'maCV' => 'null',
-                'maTK' => "",
+                'maTK' => $_SESSION['login']['maTK'],
                 'maDMCV'  =>   $_POST['maDMCV'],
                 'tenCV' => $_POST['tenCV'],
                 'soLuong' => $_POST['soLuong'],
@@ -62,7 +61,6 @@
                 'diaChi' =>  $_POST['diaChi'],
                 'time' =>  $_POST['time'],
                 'moTa' => $_POST['moTa'],
-                'maHA' => 0,
                 'tinhTrang' => 1,
                 'thoiGianDang' => $ThoiGian,
             );

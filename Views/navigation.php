@@ -51,7 +51,14 @@
             }
             break;
         case "work":
-                require_once('recruiter/recruiter.php');
+            switch ($act) {
+                case 'add':
+                  require_once('recruiter/recruiter.php');
+                  break;
+                default:
+                  require_once('recruiter/recruiter.php');
+                  break;
+                }
             break;
         default:
         require_once("error-404.php");
