@@ -92,3 +92,97 @@
         </div>
     </div>
 </section>
+<section id="help-new">
+    <div class="container">
+        <div class="product-sale-top">
+            <div class="product-sale-text">
+                <a href="">Cập nhật mỗi ngày</a>
+                <p>Nhân viên hỗ trợ khách hàng</p>
+            </div>
+            <div class="product-sale-count">
+                <div class="wrapper-count">
+                    <div class="countdown-block">
+                        <span class="days time-elem">
+                        <span class="top" style="transform: perspective(300px);">06</span>
+                        <span class="top-back" style="">
+                            <span>06</span>
+                        </span>
+                        <span class="bottom">06</span>
+                        <span class="bottom-back">
+                            <span>06</span>
+                        </span>
+                        </span>
+                    </div>
+                    <div class="countdown-block">
+                        <span class="hours time-elem">
+                        <span class="top" style="transform: perspective(300px);">19</span>
+                        <span class="top-back" style="">
+                            <span>19</span>
+                        </span>
+                        <span class="bottom">19</span>
+                        <span class="bottom-back">
+                            <span>19</span>
+                        </span>
+                        </span>
+                    </div>
+                    <div class="countdown-block">
+                        <span class="minutes time-elem">
+                        <span class="top" style="transform: perspective(300px);">43</span>
+                        <span class="top-back" style="">
+                            <span>43</span>
+                        </span>
+                        <span class="bottom">43</span>
+                        <span class="bottom-back">
+                            <span>43</span>
+                        </span>
+                        </span>
+                    </div>
+                    <div class="countdown-block">
+                        <span class="seconds time-elem">
+                        <span class="top" style="transform: perspective(300px) translate3d(0px, 0px, 0px) rotateX(-32.505deg);">43</span>
+                        <span class="top-back" style="transform: perspective(218.058px) translate3d(0px, 0px, 0px) rotateX(147.495deg);">
+                            <span>42</span>
+                        </span>
+                        <span class="bottom">43</span>
+                        <span class="bottom-back">
+                            <span>42</span>
+                        </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list-product-sale owl-carousel owl-theme" id="product-sale-slider">
+        <?php 
+            for ($i = 0; $i < (count($data_newhelp)); $i++) {
+        ?>
+        <div class="col-product__item sale-home">
+            <form action="" >
+                <div>
+                    <div class="product-item__sale-off">
+                        <label class ="home-product-item__label" for="">Hồ sơ</label>
+                    </div>
+                    <a href="">
+                        <i data-heart="<?php echo $data_newhelp[$i]['maTK'] ?>"  class="icon-heart-element product-item-icon far fa-heart"></i>
+                    </a>
+                </div>
+                <div class="product-img">
+                    <a>
+                        <span class ="img--hover"></span> 
+                        <img src="./Publics/images/<?php echo $data_newhelp[$i]['hinhAnh'] ?>" alt="">
+                    </a>
+                    <p class="text-sale">Mới</p>
+                </div>
+                <div class="product-fruits__infos">
+                    <h2 class="tilte-name-product-t"><?= $data_newhelp[$i]['hoTen']?></h2>
+                    <div>
+                        <span class="price-new"><?= $data_newhelp[$i]['ngaySinh'] ?></span>
+                        <span class="price-old"><?php $data_newhelp[$i]['diaChi'] ?></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <?php } ?>
+        </div>
+    </div>
+</section>
