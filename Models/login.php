@@ -30,12 +30,12 @@ class Login extends Model
                 }
                 else{
                     if($login['maQuyen'] == 3){
-                    $_SESSION['isLogin_GiupViec'] = true;
+                    $_SESSION['isLogin_Giupviec'] = true;
                     $_SESSION['login'] = $login;
                     }
                     else{
                         if($login['maQuyen'] == 2){
-                        $_SESSION['isLogin_KhachHang'] = true;
+                        $_SESSION['isLogin_Khachhang'] = true;
                         $_SESSION['login'] = $login;
                         }
                         else{
@@ -62,8 +62,12 @@ class Login extends Model
             unset($_SESSION['isLogin_Nhanvien']);
             unset($_SESSION['login']);
         }
-        if(isset($_SESSION['isLogin_GiupViec'])){
-            unset($_SESSION['isLogin_GiupViec']);
+        if(isset($_SESSION['isLogin_Giupviec'])){
+            unset($_SESSION['isLogin_Giupviec']);
+            unset($_SESSION['login']);
+        }
+        if(isset($_SESSION['isLogin_Khachhang'])){
+            unset($_SESSION['isLogin_Khachhang']);
             unset($_SESSION['login']);
         }
         if(isset($_SESSION['isLogin'])){
