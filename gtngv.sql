@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 24, 2022 lúc 03:37 PM
+-- Thời gian đã tạo: Th5 26, 2022 lúc 10:16 AM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 8.1.0
 
@@ -69,7 +69,8 @@ CREATE TABLE `congviec` (
 --
 
 INSERT INTO `congviec` (`maCV`, `maTK`, `maDMCV`, `tenCV`, `soLuong`, `trinhDoHV`, `gioiTinhYC`, `chucVu`, `luong`, `diaChi`, `time`, `moTa`, `tinhTrang`, `thoiGianDang`) VALUES
-(486, 0, 1, 'Giúp việc nhà ', 1, '12/12', 'Nữ', 'Nhân viên dọn dẹp nhà', '8.000.000 - 10.000.000 VNĐ', '02 Thanh Sơn, P. Thanh Bình, Q.Hải Châu, Đà Nẵng', 'Ngày 8 tiếng', 'Yêu cầu nhân viên đã có kinh nghiệm dọn dẹp nhà', 1, '2022-05-24 20:35:35');
+(486, 4, 1, 'Giúp việc nhà ', 1, '12/12', 'Nữ', 'Nhân viên dọn dẹp nhà', '8.000.000 - 10.000.000 VNĐ', '02 Thanh Sơn, P. Thanh Bình, Q.Hải Châu, Đà Nẵng', 'Ngày 8 tiếng', 'Yêu cầu nhân viên đã có kinh nghiệm dọn dẹp nhà', 1, '2022-05-24 20:35:35'),
+(487, 13, 1, 'Chăm sóc người già', 1, '12/12', 'Nữ', 'Nhân viên chăm sóc người già', '10.000.000 - 15.000.000', '28 thanh sơn, P. Thanh Bình, Hải Châu, Đà Nẵng', 'Ngày 10 tiếng', 'Yêu cầu nhân viên có kinh nghiệm chăm sóc người già', 1, '2022-05-25 07:31:26');
 
 -- --------------------------------------------------------
 
@@ -112,7 +113,10 @@ CREATE TABLE `hinhanhcv` (
 INSERT INTO `hinhanhcv` (`maHA`, `maCV`, `tenHinh`, `hinhAnh`) VALUES
 (1378, 486, 'anh1.jpg', 'hinhanh1'),
 (1379, 486, 'anh2.jpg', 'hinhanh2'),
-(1380, 486, 'anh3.jpg', 'hinhanh3');
+(1380, 486, 'anh3.jpg', 'hinhanh3'),
+(1381, 487, 'anh1.jpg', 'hinhanh1'),
+(1382, 487, 'anh2.jpg', 'hinhanh2'),
+(1383, 487, 'anh3.jpg', 'hinhanh3');
 
 -- --------------------------------------------------------
 
@@ -145,19 +149,54 @@ CREATE TABLE `taikhoan` (
   `email` varchar(255) NOT NULL,
   `diaChi` varchar(255) NOT NULL,
   `hinhAnh` varchar(255) NOT NULL,
-  `trangThai` int(11) NOT NULL
+  `trangThai` int(11) NOT NULL,
+  `thoiGian` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `taikhoan`
 --
 
-INSERT INTO `taikhoan` (`maTK`, `maQuyen`, `taiKhoan`, `matKhau`, `hoTen`, `gioiTinh`, `ngaySinh`, `CMND`, `SDT`, `email`, `diaChi`, `hinhAnh`, `trangThai`) VALUES
-(4, 2, 'nqhuy', 'b1200f883875ad6b70fc055cf27b2a65', 'Nguyễn Quang Huy', '', '', 23328997, 961640909, 'nqhuy@gmail.com', '', '', 1),
-(5, 2, 'huyhuy', 'cc0d45bc2f499fc4666d09691485a0f9', 'Nguyễn Quang Huy', '', '', 23328997, 961640909, 'admin1@gm', '', '', 1),
-(8, 3, 'ngv123', '5f6abcbffed27f4fb564589b4bbe08b0', 'Nguyễn Quang Huy', '', '', 23328997, 961640909, 'ngv@gmail.com', '', '', 1),
-(12, 3, '123', '202cb962ac59075b964b07152d234b70', '123', '', '', 132, 213, '123@123', '', '', 1),
-(13, 1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', '', '', 231245887, 961640909, 'admin@gmail.com', '', '', 1);
+INSERT INTO `taikhoan` (`maTK`, `maQuyen`, `taiKhoan`, `matKhau`, `hoTen`, `gioiTinh`, `ngaySinh`, `CMND`, `SDT`, `email`, `diaChi`, `hinhAnh`, `trangThai`, `thoiGian`) VALUES
+(4, 4, 'nqhuy', 'b1200f883875ad6b70fc055cf27b2a65', 'Nguyễn Quang Huy', '', '', 23328997, 961640909, 'nqhuy@gmail.com', '', '', 1, ''),
+(5, 2, 'huyhuy', 'cc0d45bc2f499fc4666d09691485a0f9', 'Nguyễn Quang Huy', '', '', 23328997, 961640909, 'admin1@gm', '', '', 1, ''),
+(8, 3, 'ngv123', '5f6abcbffed27f4fb564589b4bbe08b0', 'Nguyễn Thị Thanh Trà', 'Nữ', '19/05/1968', 23328997, 961640909, 'ngv@gmail.com', 'Đà Nẵng', 'ntg.jpg', 1, ''),
+(13, 1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'adminn', 'Nam', '233289997', 233289997, 961640909, 'admin@gmail.com', 'Đà Nẵng', 'admin.jpg', 1, ''),
+(14, 3, 'ngv01', '89a9f0cea6d85f20598c4ccd9761a15c', 'Lê Thị Hồng Thắm ', 'Nữ', '14/05/1987', 233547887, 964789851, 'ltht@gmail.com', 'Đà Nẵng', 'ltht.jpg', 1, ''),
+(15, 3, 'ngv02', 'd45d7bf6d6dde38d984291e44d9ea5d8', 'Đinh Thị Lự', 'Nữ', '14/05/1967', 235478741, 964741251, 'dtl@gmail.com', 'Đà Nẵng', 'dtl.jpg', 1, ''),
+(16, 3, 'ngv03', '7c96dc6bc52ebdc9c3bd612083ccae2e', 'Bùi Thị Soan', 'Nam', '12/03/1978', 257874114, 961452585, 'bts@gmail.com', 'Đà Nẵng', 'bts.jpg', 1, ''),
+(17, 3, 'ngv04', '87b04d99292adf1e1aaef1bbab6166ca', 'Vũ Thị Bàn', 'Nữ', '17/07/1981', 254745874, 965417758, 'vtb@gmail.com', 'Đà Nẵng', 'vtb.jpg', 1, ''),
+(18, 3, 'ngv05', '33fabe6ea5d96d12c85d7454e18ea17e', 'Phạm Thị Xuân', 'Nữ', '11/01/1969', 255857778, 961640909, 'ptx@gmail.com', 'Đà Nẵng', 'ptx.jpg', 1, ''),
+(19, 3, 'ngv06', 'b642f56a263892853e1edcd12ef293ff', 'Nguyễn Thị Minh Khai', 'Nữ', '03/05/1987', 258747774, 961452541, 'ntmk@gmail.com', 'Đà Nẵng', 'ntmk.jpg', 1, '2022-05-26 11:45:36');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `thongtinungvien`
+--
+
+CREATE TABLE `thongtinungvien` (
+  `maTK` int(11) NOT NULL,
+  `thoiGian` varchar(255) NOT NULL,
+  `trinhDoHV` varchar(255) NOT NULL,
+  `khuVucLamViec` varchar(255) NOT NULL,
+  `soThich` varchar(255) NOT NULL,
+  `ghiChu` varchar(255) NOT NULL,
+  `tinhTrangHD` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `thongtinungvien`
+--
+
+INSERT INTO `thongtinungvien` (`maTK`, `thoiGian`, `trinhDoHV`, `khuVucLamViec`, `soThich`, `ghiChu`, `tinhTrangHD`) VALUES
+(8, 'Mọi lúc', 'Đại học', 'Hải Châu', 'Thích chăm sóc trẻ em', 'Không', 1),
+(14, '0', '0', '0', '0', '0', 0),
+(15, '0', '0', '0', '0', '0', 0),
+(16, '0', '0', '0', '0', '0', 0),
+(17, '0', '0', '0', '0', '0', 0),
+(18, '0', '0', '0', '0', '0', 0),
+(19, '0', '0', '0', '0', '0', 0);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -200,6 +239,12 @@ ALTER TABLE `taikhoan`
   ADD PRIMARY KEY (`maTK`);
 
 --
+-- Chỉ mục cho bảng `thongtinungvien`
+--
+ALTER TABLE `thongtinungvien`
+  ADD PRIMARY KEY (`maTK`);
+
+--
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
 
@@ -213,7 +258,7 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT cho bảng `congviec`
 --
 ALTER TABLE `congviec`
-  MODIFY `maCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=487;
+  MODIFY `maCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=489;
 
 --
 -- AUTO_INCREMENT cho bảng `danhmuccv`
@@ -225,7 +270,7 @@ ALTER TABLE `danhmuccv`
 -- AUTO_INCREMENT cho bảng `hinhanhcv`
 --
 ALTER TABLE `hinhanhcv`
-  MODIFY `maHA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1381;
+  MODIFY `maHA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1387;
 
 --
 -- AUTO_INCREMENT cho bảng `phanquyen`
@@ -237,7 +282,13 @@ ALTER TABLE `phanquyen`
 -- AUTO_INCREMENT cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `maTK` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `maTK` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT cho bảng `thongtinungvien`
+--
+ALTER TABLE `thongtinungvien`
+  MODIFY `maTK` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
