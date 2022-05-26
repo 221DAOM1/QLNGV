@@ -144,6 +144,7 @@ class Login extends Model
         return $this->conn->query("SELECT * from taikhoan where maTK = $id")->fetch_assoc();
         
     }
+
     function updateInfor($data,$passOrinfo){
         $v = "";
         foreach ($data as $key => $value) {
@@ -151,8 +152,7 @@ class Login extends Model
         }
         $v = trim($v, ",");
        
-        $query = "UPDATE taikhoan SET $v  WHERE taiKhoan = ". $_SESSION['login']['maTK'];
-        echo $query;
+        $query = "UPDATE taikhoan SET $v  WHERE maTK = ". $_SESSION['login']['maTK'];   
         $result = $this->conn->query($query);
         
         if($passOrinfo=="pass")

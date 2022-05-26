@@ -105,6 +105,7 @@
     font-weight: 550;
     padding: 10px 20px;
     display: block;
+    text-align: center;
 }
 
 .header__logo img {

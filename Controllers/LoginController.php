@@ -132,23 +132,28 @@ class LoginController
         require_once('Views/index.php');
     }
 
-    
-    // Cập nhật 
     function updateinfo(){
        
-        if(isset($_POST['Ho']))
+        if(isset($_POST['hoTen']))
         {  
-            
+            $target_dir = "./Publics/images/";
+            $hinhAnh = "";
+            $target_file = $target_dir . basename($_FILES["hinhAnh"]["name"]);
+            $status_upload = move_uploaded_file($_FILES["hinhAnh"]["tmp_name"], $target_file);
+            if ($status_upload) { 
+                $hinhAnh = basename($_FILES['hinhAnh']['name']);
+            }
             setcookie( "doimk", "", time()- 60, "/","", 0);
             $data = array(
+                'taiKhoan' => $_POST['taiKhoan'],
                 'hoTen' => $_POST['hoTen'],
-                'gioiTinh' => "",
+                'gioiTinh' => $_POST['gioiTinh'],
                 'ngaySinh' => $_POST['ngaySinh'],
                 'CMND' => $_POST['CMND'],
                 'SDT' => $_POST['SDT'],
                 'email' => $_POST['email'],
-                'diaChi'  => "",
-                'hinhAnh' => "",
+                'diaChi'  => $_POST['diaChi'],
+                'hinhAnh' => $hinhAnh,
             );
             foreach ($data as $key => $value) {
                 if (strpos($value, "'") != false) {

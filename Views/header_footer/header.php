@@ -28,7 +28,15 @@
                 </li>
             </ul>
         </li>
-        <li class="nav-list__item"><a class="nav-list__item-link" href="">Cho người giúp việc</a></li>
+        <li class="nav-list__item">
+            <a class="nav-list__item-link" href="">Cho người giúp việc</a>
+            <i class="fas fa-chevron-down"></i>
+            <ul class="nav-item__down">
+                <li class="nav-item__down-item">
+                    <a href="?act=help&xuli=updateprofile">Cập nhật hồ sơ</a>
+                </li>
+            </ul>
+        </li>
         <li class="nav-list__item"><a class="nav-list__item-link" href="">Liên hệ</a></li>
         <li class="nav-list__item"><a class="nav-list__item-link" href="">Tin tức</a></li>
         <li class="nav-list__item">
@@ -42,7 +50,7 @@
                         if(isset($_SESSION['login'])){
                         ?>
                             <li class="group-login__list-item"><b><?=$_SESSION['login']['hoTen']?></b></li>
-                            <li class="group-login__list-item"><a href="">Tài khoản</a></li>
+                            <li class="group-login__list-item"><a href="?act=taikhoan&xuli=account">Tài khoản</a></li>
                             <li class="group-login__list-item"><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
                             <?php
                             if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>

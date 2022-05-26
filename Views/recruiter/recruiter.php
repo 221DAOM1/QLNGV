@@ -62,7 +62,7 @@
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Mô tả</label>
-                    <input type="text" name="moTa" class="form-control form-control-lg" placeholder="Trình độ học vấn"/>
+                    <input type="text" name="moTa" class="form-control form-control-lg" placeholder="Mô tả"/>
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Hình ảnh chính</label>

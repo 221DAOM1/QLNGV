@@ -98,7 +98,11 @@ switch ($mod) {
                 break;
         }
         break;
-
+    case 'help':
+        require_once('./Controllers/HelpController.php');
+        $controller_obj = new helpController();
+        $controller_obj->list();
+        break;
     default : require_once('home/home.php');
 }
 ?>

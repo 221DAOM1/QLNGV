@@ -12,7 +12,7 @@
                         require_once("login.php");
                         break;
                     case 'account':
-                        require_once("infoedit.php");
+                        require_once("login/infoedit.php");
                         break;
                     default:
                         require_once("login.php");
@@ -25,7 +25,7 @@
                             require_once("login.php");
                             break;
                         case 'account':
-                            require_once("infoedit.php");
+                            require_once("login/infoedit.php");
                             break;
                         default:
                             require_once("login.php");
@@ -60,6 +60,17 @@
                   break;
                 }
             break;
+        case "help":
+            switch ($act) {
+                case 'updateprofile':
+                    require_once('help/profile.php');
+                    break;
+                default:
+                    require_once('help/profile.php');
+                break;
+            }
+            break;
+            
         default:
         require_once("error-404.php");
         break;
