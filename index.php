@@ -99,9 +99,26 @@ switch ($mod) {
         }
         break;
     case 'help':
+        $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
         require_once('./Controllers/HelpController.php');
         $controller_obj = new helpController();
-        $controller_obj->list();
+        switch ($act) {
+            case 'list':
+                $controller_obj->list();
+            break;
+            case 'add':
+                $controller_obj->add();
+            break;
+            case 'store':
+                $controller_obj->store();
+            break;
+            case 'update':
+                $controller_obj->update(); 
+                break;
+            default:
+                $controller_obj->list();
+                break;
+        }
         break;
     default : require_once('home/home.php');
 }

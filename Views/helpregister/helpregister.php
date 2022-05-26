@@ -20,9 +20,9 @@
                 <div class="left-col-help">
                     <div class="d-group__login">
                         <h1>Đăng nhập tài khoản</h1>
-                        <?php if (isset($_COOKIE['msg1'])) { ?>
+                        <?php if (isset($_COOKIE['msg2'])) { ?>
                         <div class="alert alert-success">
-                            <strong>Thông báo</strong> <?= $_COOKIE['msg1'] ?>
+                            <strong>Thông báo</strong> <?= $_COOKIE['msg2'] ?>
                         </div>
                         <?php } ?>
                         <form action="?act=taikhoan&xuli=dangnhap" method="post" id="form1">

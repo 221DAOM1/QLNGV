@@ -62,12 +62,12 @@
             break;
         case "help":
             switch ($act) {
-                case 'updateprofile':
+                case 'add':
                     require_once('help/profile.php');
                     break;
                 default:
                     require_once('help/profile.php');
-                break;
+                    break;
             }
             break;
             

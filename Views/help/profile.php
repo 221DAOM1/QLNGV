@@ -8,11 +8,11 @@
                     <strong>Thông báo</strong> <?= $_COOKIE['msg2'] ?>
                 </div>
             <?php } ?>
-            <form id ="table" action="" method="POST" enctype="multipart/form-data">
+            <form id ="table" action="?act=help&xuli=store" method="POST" enctype="multipart/form-data">
                 <fieldset class="form-group">
                     <label>Thời gian đề xuất muốn làm</label>
                     <span class="required">*</span>
-                    <input type="text" name="" class="form-control form-control-lg" placeholder="Thời gian"/>
+                    <input type="text" name="thoiGian" class="form-control form-control-lg" placeholder="Thời gian"/>
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Trình độ học vấn</label>
@@ -24,19 +24,15 @@
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Khu vực muốn làm</label>
-                    <input type="text" name="" class="form-control form-control-lg" placeholder="Địa chỉ"/>
-                </fieldset>
-                <fieldset class="form-group">
-                    <label>Thời gian làm việc</label>
-                    <input type="text" name="" class="form-control form-control-lg" placeholder="Thời gian làm việc"/>
+                    <input type="text" name="khuVucLamViec" class="form-control form-control-lg" placeholder="Địa chỉ"/>
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Sở thích</label>
-                    <input type="text" name="" class="form-control form-control-lg" placeholder="Sở thích"/>
+                    <input type="text" name="soThich" class="form-control form-control-lg" placeholder="Sở thích"/>
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Ghi chú</label>
-                    <input type="text" name="" class="form-control form-control-lg" placeholder="Ghi chú"/>
+                    <input type="text" name="ghiChu" class="form-control form-control-lg" placeholder="Ghi chú"/>
                 </fieldset>
                 
                 <div class="btn-recruiter">
