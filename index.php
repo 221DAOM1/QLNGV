@@ -103,20 +103,14 @@ switch ($mod) {
         require_once('./Controllers/HelpController.php');
         $controller_obj = new helpController();
         switch ($act) {
-            case 'list':
-                $controller_obj->list();
+            case 'account':
+                $controller_obj->account();
             break;
-            case 'add':
-                $controller_obj->add();
-            break;
-            case 'store':
-                $controller_obj->store();
-            break;
-            case 'update':
-                $controller_obj->update(); 
+            case 'updateinfo':
+                $controller_obj->updateinfo();
                 break;
             default:
-                $controller_obj->list();
+                $controller_obj->account();
                 break;
         }
         break;

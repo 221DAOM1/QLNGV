@@ -33,7 +33,7 @@
             <i class="fas fa-chevron-down"></i>
             <ul class="nav-item__down">
                 <li class="nav-item__down-item">
-                    <a href="?act=help&xuli=updateprofile">Cập nhật hồ sơ</a>
+                    <a href="?act=help&xuli=account">Cập nhật hồ sơ</a>
                 </li>
             </ul>
         </li>

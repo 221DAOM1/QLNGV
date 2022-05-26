@@ -98,7 +98,8 @@ class LoginController
         if ($_POST['matKhau'] != $_POST['check_password']) {
             $check2 = 1;
         }
-
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
+        $ThoiGian =  date('Y-m-d H:i:s');
         $data = array(
             'maQuyen' =>  '3',
             'taiKhoan' => $_POST['taiKhoan'],
@@ -111,15 +112,31 @@ class LoginController
             'email' => $_POST['email'],
             'diaChi'  => "",
             'hinhAnh' => "",
-            'TrangThai'  =>  '1',
+            'trangThai'  =>  1,
+            'thoiGian' => $ThoiGian
         );
+
         foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {
                 $value = str_replace("'", "\'", $value);
                 $data[$key] = $value;
             }
         }    
+        
         $this->login_model->dangky_action_help($data, $check1, $check2);
+
+        $idtk = $this->login_model->getIdHelpnew();
+        echo $idtk;
+        // $data1 = array(
+            // 'maTK' => $idtk,
+            // 'thoiGian' => "",
+            // 'trinhDoHV'=> "",
+            // 'khuVucLamViec'=> "",
+            // 'soThich'=> "",
+            // 'ghiChu'=> "",
+            // 'tinhTrangHD'=> "",
+        // );
+        $this->login_model->insert_info($idtk);
     }
 
     function dangxuat()

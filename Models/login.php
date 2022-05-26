@@ -13,6 +13,18 @@ class Login extends Model
         require("result.php");
         return $data;
     }
+
+    function getIdHelpnew(){
+        $query = "select maTK from taikhoan
+        ORDER BY thoiGian DESC limit 1";
+        $result = $this->conn->query($query);
+        $row = mysqli_fetch_assoc($result);
+      
+        $id =$row['maTK'];
+       
+        return $id;
+
+    }
    
     function login_action($data)
     {
@@ -140,8 +152,18 @@ class Login extends Model
         } else {
             setcookie('msg', 'Tên tài khoản hoặc Email  đã tồn tại', time() + 2);
         }
+        
+    }
+
+    function insert_info($data)
+    {
+        
+        $query = "INSERT INTO thongtinungvien(maTK) VALUES('$idtk')";  
+        $result = $this->conn->query($query);
+        
         header('Location:?act=taikhoan&xuli=dangkygv');
     }
+
     function account()
     {
         $id = $_SESSION['login']['maTK'];

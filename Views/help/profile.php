@@ -8,15 +8,15 @@
                     <strong>Thông báo</strong> <?= $_COOKIE['msg2'] ?>
                 </div>
             <?php } ?>
-            <form id ="table" action="?act=help&xuli=store" method="POST" enctype="multipart/form-data">
+            <form id ="table" action="?act=help&xuli=updateinfo" method="POST" enctype="multipart/form-data">
                 <fieldset class="form-group">
                     <label>Thời gian đề xuất muốn làm</label>
                     <span class="required">*</span>
-                    <input type="text" name="thoiGian" class="form-control form-control-lg" placeholder="Thời gian"/>
+                    <input type="text" name="thoiGian" class="form-control form-control-lg" placeholder="Thời gian" value="<?= $data['thoiGian']?>"/>
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Trình độ học vấn</label>
-                    <select class="form-control" name="trinhDoHV">
+                    <select class="form-control" name="trinhDoHV" value="<?= $data['trinhDoHV']?>">
                         <option>12/12</option>
                         <option>Đại học</option>
                         <option>Bỏ qua</option>
@@ -24,15 +24,15 @@
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Khu vực muốn làm</label>
-                    <input type="text" name="khuVucLamViec" class="form-control form-control-lg" placeholder="Địa chỉ"/>
+                    <input type="text" name="khuVucLamViec" class="form-control form-control-lg" placeholder="Địa chỉ" value="<?= $data['khuVucLamViec']?>"/>
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Sở thích</label>
-                    <input type="text" name="soThich" class="form-control form-control-lg" placeholder="Sở thích"/>
+                    <input type="text" name="soThich" class="form-control form-control-lg" placeholder="Sở thích" value="<?= $data['soThich']?>"/>
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Ghi chú</label>
-                    <input type="text" name="ghiChu" class="form-control form-control-lg" placeholder="Ghi chú"/>
+                    <input type="text" name="ghiChu" class="form-control form-control-lg" placeholder="Ghi chú" value="<?= $data['ghiChu']?>"/>
                 </fieldset>
                 
                 <div class="btn-recruiter">

@@ -11,24 +11,29 @@
             $data_help = $this->help_model->all();
             require_once("Views/index.php");
         }
-        public function add()
-        {
-            $data_help = $this->help_model->all();
-            require_once("Views/index.php");
+        function account()
+        {   
+            $data = $this->help_model->account();
+            require_once('Views/index.php');
         }
-        public function store()
-        {
-            $data_help = array(
-                'maUV' => 'null',
-                'maTK' => $_SESSION['login']['maTK'],
+        function updateinfo(){
+            $data = array(
                 'thoiGian' => $_POST['thoiGian'],
-                'trinhDoHV'  => $_POST['trinhDoHV'],
-                'khuVucLamViec' => $_POST['khuVucLamViec'],
-                'soThich' => $_POST['soThich'],
-                'ghiChu' =>  $_POST['ghiChu'],
-                'tinhTrangHD'  => 1,
+                'trinhDoHV'=>$_POST['trinhDoHV'],
+                'khuVucLamViec'=> $_POST['khuVucLamViec'],
+                'soThich'=> $_POST['soThich'],
+                'ghiChu'=> $_POST['ghiChu'],
+                'tinhTrangHD'=> 1,
             );
-            $this->help_model->store($data_help);
-        }
+            foreach ($data as $key => $value) {
+                if (strpos($value, "'") != false) {
+                    $value = str_replace("'", "\'", $value);
+                    $data[$key] = $value;
+                }
+            }
+            $this->help_model->updateInfor($data);
+            
+            header('location: ?act=help&xuli=account');
+        }          
     }
 ?>
