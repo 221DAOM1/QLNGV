@@ -28,7 +28,7 @@
             <?php
                 if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
                 <li>
-                    <a class="has-arrow" href="" aria-expanded="true">
+                    <a class="has-arrow" href="?mod=category" aria-expanded="true">
                         <div class="icon_menu">
                             <i class="fa-solid fa-align-justify"></i>
                             <span>Quản lý danh mục</span>

@@ -54,6 +54,36 @@ session_start();
                     break;
             }
             break;
+        case 'category':
+            require_once('Controllers/CategoryController.php');
+            $controller_obj = new CategoryController();
+            switch ($act) {
+                case 'list':
+                    $controller_obj->list();
+                    break;
+                case 'detail':
+                    $controller_obj->detail();
+                    break;
+                case 'add':
+                    $controller_obj->add();
+                    break;
+                case 'store':
+                    $controller_obj->store();
+                    break;
+                case 'delete':
+                    $controller_obj->delete();
+                    break;
+                case 'edit':
+                    $controller_obj->edit();
+                    break;
+                case 'update':
+                    $controller_obj->update();
+                    break;
+                default:
+                    $controller_obj->list();
+                    break;
+            }
+            break; 
         default:
         header('location: ?mod=nguoidung');
     }

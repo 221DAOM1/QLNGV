@@ -1,8 +1,9 @@
-
+<?php if(isset($data) and $data != null && $_GET['tt']==0){ 
+?>
 <a href="?mod=congviec&act=xetduyet&id=<?= $data['0']['maCV'] ?>" 
 class="btn btn-success">Duyệt công việc</a>
 <a href="?mod=congviec&act=delete&id=<?= $data['0']['maCV'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>
-
+<?php } ?>
 <?php if (isset($_COOKIE['msg'])) { ?>
     <div class="alert alert-success">
         <strong>Thông báo</strong> <?= $_COOKIE['msg'] ?>
