@@ -37,6 +37,7 @@
 
 .nav-list__item > i {
     color: #fff;
+    padding-left: 6px;
 }
 
 .nav-list__item:hover > ul.nav-item__down {
