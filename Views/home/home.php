@@ -158,36 +158,36 @@
             </div>
         </div>
         <div class="list-product-sale owl-carousel owl-theme" id="product-sale-slider">
-        <?php 
-            for ($i = 0; $i < (count($data_newhelp)); $i++) {
-        ?>
-        <div class="col-product__item sale-home">
-            <form action="" >
-                <div>
-                    <div class="product-item__sale-off">
-                        <label class ="home-product-item__label" for="">Hồ sơ</label>
-                    </div>
-                    <a href="">
-                        <i data-heart="<?php echo $data_newhelp[$i]['maTK'] ?>"  class="icon-heart-element product-item-icon far fa-heart"></i>
-                    </a>
-                </div>
-                <div class="product-img">
-                    <a>
-                        <span class ="img--hover"></span> 
-                        <img src="./Publics/images/<?php echo $data_newhelp[$i]['hinhAnh'] ?>" alt="">
-                    </a>
-                    <p class="text-sale">Mới</p>
-                </div>
-                <div class="product-fruits__infos">
-                    <h2 class="tilte-name-product-t"><?= $data_newhelp[$i]['hoTen']?></h2>
+            <?php 
+                for ($i = 0; $i < (count($data_newhelp)); $i++) {
+            ?>
+            <div class="col-product__item sale-home">
+                <form action="" >
                     <div>
-                        <span class="price-new"><?= $data_newhelp[$i]['ngaySinh'] ?></span>
-                        <span class="price-old"><?php $data_newhelp[$i]['diaChi'] ?></span>
+                        <div class="product-item__sale-off">
+                            <label class ="home-product-item__label" for="">Hồ sơ</label>
+                        </div>
+                        <a href="">
+                            <i data-heart="<?php echo $data_newhelp[$i]['maTK'] ?>"  class="icon-heart-element product-item-icon far fa-heart"></i>
+                        </a>
                     </div>
-                </div>
-            </form>
-        </div>
-        <?php } ?>
+                    <div class="product-img">
+                        <a href="?act=detailhelp&tk=<?=$data_newhelp[$i]['maTK']?>" style="display: block;">
+                            <span class ="img--hover"></span> 
+                            <img src="./Publics/images/<?php echo $data_newhelp[$i]['hinhAnh'] ?>" alt="">
+                        </a>
+                        <p class="text-sale">Mới</p>
+                    </div>
+                    <div class="product-fruits__infos">
+                        <h2 class="tilte-name-product-t"><?= $data_newhelp[$i]['hoTen']?></h2>
+                        <div>
+                            <span class="price-new"><?= $data_newhelp[$i]['ngaySinh'] ?></span>
+                            <span class="price-old"><?php $data_newhelp[$i]['diaChi'] ?></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <?php } ?>
         </div>
     </div>
 </section>

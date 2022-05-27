@@ -70,7 +70,9 @@
                 break;
             }
             break;
-            
+        case "detailhelp":
+            require_once("detailhelp/detailhelp.php");
+            break;
         default:
         require_once("error-404.php");
         break;

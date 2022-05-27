@@ -1,0 +1,110 @@
+<main id="main">
+<div class="container">
+    <div class="break-crumb">
+        <div class="break-crumb__head">
+            <div class="home">
+                <a href="#">
+                    <span>Trang chủ</span>
+                </a>
+                <span class="mr_lr">&nbsp;/ &nbsp;</span>
+                <a href="#">
+                    <span>Sản phẩm</span>
+                </a>
+                <span class="mr_lr">&nbsp;/ &nbsp;</span>
+            </div>
+            <div>
+                <strong>
+                    <span><?php echo $data_user[0]['hoTen']; ?></span>
+                </strong>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col col-lg-4">
+            <div class="product-detail-left">
+                <div id="product-detail-left__thumbnail" class="<?php if($status == true) echo "product-detail-left__thumbnail--sale "?>">
+                    <img src="./Publics/images/<?php echo $data_user[0]['hinhAnh']; ?>" alt="" class="product-detail-left__image-main">
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-5">
+            <div class="product-detail-main">
+                <h2 class="tilte-name-product-detail">Họ và tên: <?php echo $data_user[0]['hoTen']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Ngày sinh: <?php echo $data_user[0]['ngaySinh']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Giới tính: <?php echo $data_user[0]['gioiTinh']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Địa chỉ: <?php echo $data_user[0]['diaChi']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Thời gian muốn làm: <?php echo $data_user[0]['thoiGian']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Trình độ học vấn: <?php echo $data_user[0]['trinhDoHV']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Khu vực làm việc: <?php echo $data_user[0]['khuVucLamViec']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Sở thích: <?php echo $data_user[0]['soThich']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Ghi chú: <?php echo $data_user[0]['ghiChu']; ?></h2>
+            </div>
+        </div>
+        <div class="col col-lg-3" style="visibility: visible; -webkit-animation-name: fadeInDown; animation-name: fadeInDown;">
+        <p class="link-btn big-a">
+            <a href="" class="btn btn-success">Đăng tin tuyển dụng
+                <i class="fa fa-chevron-circle-right"></i>
+            </a>
+        </p>
+        <p class="link-btn big-a">
+            <a href="" class="btn btn-success">Đăng tin tìm việc
+                <i class="fa fa-chevron-circle-right"></i>
+            </a>
+        </p>
+        <div class="delivery-method">
+            <h5>CHO NHÀ TUYỂN DỤNG</h5>
+            <ul>
+                <?php 
+                    for ($i = 0; $i < (count($data_dmcv)); $i++) { ?>
+                    <li><ahref=""><?php echo $data_dmcv[$i]['tenDM']; ?></ahref=></li>
+                <?php } ?>
+            </ul>
+        </div>
+        </div>
+        <section id="product-dry" class="product-related">
+            <div class="container">
+                <div class="populator__head">
+                    <div>
+                        <h2 class="populator__head-title">
+                            <a href="">Người giúp việc liên quan</a>
+                        </h2>
+                    </div>
+                </div>
+                <div class="list-product-sale owl-carousel owl-theme" id="product-sale-slider">
+                    <?php 
+                        for ($i = 0; $i < (count($data_newhelp)); $i++) {
+                    ?>
+                    <div class="col-product__item sale-home">
+                        <form action="" >
+                            <div>
+                                <div class="product-item__sale-off">
+                                    <label class ="home-product-item__label" for="">Hồ sơ</label>
+                                </div>
+                                <a href="">
+                                    <i data-heart="<?php echo $data_newhelp[$i]['maTK'] ?>"  class="icon-heart-element product-item-icon far fa-heart"></i>
+                                </a>
+                            </div>
+                            <div class="product-img">
+                                <a href="?act=detailhelp&tk=<?=$data_newhelp[$i]['maTK']?>" style="display: block;">
+                                    <span class ="img--hover"></span> 
+                                    <img src="./Publics/images/<?php echo $data_newhelp[$i]['hinhAnh'] ?>" alt="">
+                                </a>
+                                <p class="text-sale">Mới</p>
+                            </div>
+                            <div class="product-fruits__infos">
+                                <h2 class="tilte-name-product-t"><?= $data_newhelp[$i]['hoTen']?></h2>
+                                <div>
+                                    <span class="price-new"><?= $data_newhelp[$i]['ngaySinh'] ?></span>
+                                    <span class="price-old"><?php $data_newhelp[$i]['diaChi'] ?></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+</div>
+</main>

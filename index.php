@@ -114,6 +114,11 @@ switch ($mod) {
                 break;
         }
         break;
+    case "detailhelp":
+        require_once('./Controllers/DetailHelpController.php');
+        $objCate = new DetailController();
+        $objCate->list();
+        break;
     default : require_once('home/home.php');
 }
 ?>
