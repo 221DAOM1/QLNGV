@@ -22,6 +22,14 @@
                         <?php } ?> 
                     </select>
                 </fieldset>
+                <fieldset class="form-group">
+                    <label>Khu vực</label>
+                    <select id="khuVuc" class="form-control" name="khuVuc">
+                        <?php foreach ($data_district as $row) { ?>
+                        <option value="<?= $row['idQuan'] ?>"><?= $row['tenQuan'] ?></option>
+                        <?php } ?> 
+                    </select>
+                </fieldset>
                 <p class="recruiter_check_text">Điều kiện làm việc</p>
                 <hr>
                 <fieldset class="form-group">

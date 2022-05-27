@@ -152,6 +152,11 @@
                 </div>
             </div>
         </div>
+        <div class="content_home_top">
+            <div class="big-hotline  wow fadeInDown animated">
+                Tìm việc mới
+            </div>
+        </div>
         <div class="list-product-sale owl-carousel owl-theme" id="product-sale-slider">
         <?php 
             for ($i = 0; $i < (count($data_newhelp)); $i++) {
@@ -183,6 +188,86 @@
             </form>
         </div>
         <?php } ?>
+        </div>
+    </div>
+</section>
+<section id="work_new">
+    <div class="container">
+        <div class="work_new_content">
+            <div class="work_new_left_work">
+                <div class="content_home_top">
+                    <div class="big-hotline  wow fadeInDown animated">
+                        Tuyển dụng mới
+                    </div>
+                </div>
+                <?php 
+                    for ($i = 0; $i < (count($data_newwork)); $i++) {
+                ?> 
+                <div class="work_new_content">    
+                    <a href="">
+                        <div class="work_new_content_img">
+                            <a><img src="./Publics/images/<?php echo $data_newwork[$i]['tenHinh'] ?>" alt=""></a>
+                        </div>
+                        <div class="work_new_content_right">
+                            <p class="work_new_name"><?= $data_newwork[$i]['tenCV'] ?></p>
+                            <p class="work_new_detail"><?= $data_newwork[$i]['tenQuan'] ?></p>
+                            <p class="work_new_detail"><?= $data_newwork[$i]['moTa'] ?></p>
+                        </div>
+                    </a>
+                </div>
+                <?php } ?>
+            </div>
+            <div class="work_new_right_newspaper">
+                <div class="content_home_top">
+                    <div class="big-hotline  wow fadeInDown animated">
+                        Tin tức mới
+                    </div>
+                </div>
+                <div class="work_new_content">    
+                    <a href="">
+                        <div class="work_new_content_img">
+                            <a><img src="http://giupviectantam.net/images/upload/2222021112627h9.png" alt=""></a>
+                        </div>
+                        <div class="work_new_content_right">
+                            <p class="work_new_name">Nhu cầu các gia đình cần giúp việc đi làm gấp sau Tết tăng cao....</p>
+                            <p class="work_new_detail"><i class="fa fa-calendar"></i> 22/02/2021</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="work_new_content">    
+                    <a href="">
+                        <div class="work_new_content_img">
+                            <a><img src="http://giupviectantam.net/images/upload/2012021141754h17.jpg" alt=""></a>
+                        </div>
+                        <div class="work_new_content_right">
+                            <p class="work_new_name">Cung Cấp Giúp Việc Tết - Uy Tín, Chất Lượng</p>
+                            <p class="work_new_detail"><i class="fa fa-calendar"></i> 22/02/2021</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="work_new_content">    
+                    <a href="">
+                        <div class="work_new_content_img">
+                            <a><img src="http://giupviectantam.net/images/upload/16122021223719h6.jpg" alt=""></a>
+                        </div>
+                        <div class="work_new_content_right">
+                            <p class="work_new_name">Giúp việc ăn ở lại ngày tên, giúp việc theo giờ ngày tên tăng cao</p>
+                            <p class="work_new_detail"><i class="fa fa-calendar"></i> 22/02/2021</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="work_new_content">    
+                    <a href="">
+                        <div class="work_new_content_img">
+                            <a><img src="http://giupviectantam.net/images/upload/271202115754h3.jpg" alt=""></a>
+                        </div>
+                        <div class="work_new_content_right">
+                            <p class="work_new_name">Dịch Vụ Giúp Việc Ngày Tết - Uy Tín, Tận Tâm, Chu Đáo - giupviecdanang.net</p>
+                            <p class="work_new_detail"><i class="fa fa-calendar"></i> 22/02/2021</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

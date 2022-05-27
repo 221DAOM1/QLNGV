@@ -15,6 +15,7 @@
         {
             $data_work = $this->recruiter_model->all();
             $data_category = $this->recruiter_model->danhmuc();
+            $data_district = $this->recruiter_model->district();
             require_once("Views/index.php");
         }
         public function delete()
@@ -53,6 +54,7 @@
                 'maTK' => $_SESSION['login']['maTK'],
                 'maDMCV'  =>   $_POST['maDMCV'],
                 'tenCV' => $_POST['tenCV'],
+                'khuVuc' => $_POST['khuVuc'],
                 'soLuong' => $_POST['soLuong'],
                 'trinhDoHV' =>  $_POST['trinhDoHV'],
                 'gioiTinhYC'  => $_POST['gioiTinhYC'],

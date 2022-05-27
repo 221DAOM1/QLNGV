@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 26, 2022 lúc 10:16 AM
+-- Thời gian đã tạo: Th5 27, 2022 lúc 03:04 AM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 8.1.0
 
@@ -52,6 +52,7 @@ CREATE TABLE `congviec` (
   `maTK` int(11) NOT NULL,
   `maDMCV` int(11) NOT NULL,
   `tenCV` varchar(255) NOT NULL,
+  `khuVuc` int(11) NOT NULL,
   `soLuong` int(11) NOT NULL,
   `trinhDoHV` varchar(255) NOT NULL,
   `gioiTinhYC` varchar(10) NOT NULL,
@@ -68,9 +69,9 @@ CREATE TABLE `congviec` (
 -- Đang đổ dữ liệu cho bảng `congviec`
 --
 
-INSERT INTO `congviec` (`maCV`, `maTK`, `maDMCV`, `tenCV`, `soLuong`, `trinhDoHV`, `gioiTinhYC`, `chucVu`, `luong`, `diaChi`, `time`, `moTa`, `tinhTrang`, `thoiGianDang`) VALUES
-(486, 4, 1, 'Giúp việc nhà ', 1, '12/12', 'Nữ', 'Nhân viên dọn dẹp nhà', '8.000.000 - 10.000.000 VNĐ', '02 Thanh Sơn, P. Thanh Bình, Q.Hải Châu, Đà Nẵng', 'Ngày 8 tiếng', 'Yêu cầu nhân viên đã có kinh nghiệm dọn dẹp nhà', 1, '2022-05-24 20:35:35'),
-(487, 13, 1, 'Chăm sóc người già', 1, '12/12', 'Nữ', 'Nhân viên chăm sóc người già', '10.000.000 - 15.000.000', '28 thanh sơn, P. Thanh Bình, Hải Châu, Đà Nẵng', 'Ngày 10 tiếng', 'Yêu cầu nhân viên có kinh nghiệm chăm sóc người già', 1, '2022-05-25 07:31:26');
+INSERT INTO `congviec` (`maCV`, `maTK`, `maDMCV`, `tenCV`, `khuVuc`, `soLuong`, `trinhDoHV`, `gioiTinhYC`, `chucVu`, `luong`, `diaChi`, `time`, `moTa`, `tinhTrang`, `thoiGianDang`) VALUES
+(486, 4, 1, 'Tuyển giúp việc ăn ở lại lương từ 5 đến 12tr/tháng, tại Hải Châu', 1, 1, '12/12', 'Nữ', 'Nhân viên dọn dẹp nhà', '8.000.000 - 10.000.000 VNĐ', '02 Thanh Sơn, P. Thanh Bình, Q.Hải Châu, Đà Nẵng', 'Ngày 8 tiếng', 'Yêu cầu nhân viên đã có kinh nghiệm dọn dẹp nhà', 1, '2022-05-24 20:35:35'),
+(487, 13, 1, 'Cần tuyển giúp việc 10 ngày hè lương từ 250k đến 350k/ngày', 2, 1, '12/12', 'Nữ', 'Nhân viên chăm sóc người già', '10.000.000 - 15.000.000', '28 thanh sơn, P. Thanh Bình, Hải Châu, Đà Nẵng', 'Ngày 10 tiếng', 'Yêu cầu nhân viên có kinh nghiệm chăm sóc người già', 1, '2022-05-25 07:31:26');
 
 -- --------------------------------------------------------
 
@@ -103,19 +104,19 @@ CREATE TABLE `hinhanhcv` (
   `maHA` int(11) NOT NULL,
   `maCV` int(11) NOT NULL,
   `tenHinh` varchar(255) NOT NULL,
-  `hinhAnh` varchar(255) NOT NULL
+  `hinhAnhCV` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `hinhanhcv`
 --
 
-INSERT INTO `hinhanhcv` (`maHA`, `maCV`, `tenHinh`, `hinhAnh`) VALUES
+INSERT INTO `hinhanhcv` (`maHA`, `maCV`, `tenHinh`, `hinhAnhCV`) VALUES
 (1378, 486, 'anh1.jpg', 'hinhanh1'),
 (1379, 486, 'anh2.jpg', 'hinhanh2'),
 (1380, 486, 'anh3.jpg', 'hinhanh3'),
-(1381, 487, 'anh1.jpg', 'hinhanh1'),
-(1382, 487, 'anh2.jpg', 'hinhanh2'),
+(1381, 487, 'anh2.jpg', 'hinhanh1'),
+(1382, 487, 'anh1.jpg', 'hinhanh2'),
 (1383, 487, 'anh3.jpg', 'hinhanh3');
 
 -- --------------------------------------------------------
@@ -129,6 +130,31 @@ CREATE TABLE `phanquyen` (
   `tenQuyen` varchar(255) NOT NULL,
   `chiTietQuyen` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `quanhuyen`
+--
+
+CREATE TABLE `quanhuyen` (
+  `idQuan` int(11) NOT NULL,
+  `tenQuan` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `quanhuyen`
+--
+
+INSERT INTO `quanhuyen` (`idQuan`, `tenQuan`) VALUES
+(1, 'Hải Châu'),
+(2, 'Cẩm Lệ'),
+(3, 'Thanh Khê'),
+(4, 'Liên Chiểu'),
+(5, 'Ngũ Hành Sơn'),
+(6, 'Sơn Trà'),
+(7, 'Hòa Vang'),
+(8, 'Hoàng Sa');
 
 -- --------------------------------------------------------
 
@@ -233,6 +259,12 @@ ALTER TABLE `phanquyen`
   ADD PRIMARY KEY (`maQuyen`);
 
 --
+-- Chỉ mục cho bảng `quanhuyen`
+--
+ALTER TABLE `quanhuyen`
+  ADD PRIMARY KEY (`idQuan`);
+
+--
 -- Chỉ mục cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
@@ -258,7 +290,7 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT cho bảng `congviec`
 --
 ALTER TABLE `congviec`
-  MODIFY `maCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=489;
+  MODIFY `maCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=490;
 
 --
 -- AUTO_INCREMENT cho bảng `danhmuccv`
@@ -270,13 +302,19 @@ ALTER TABLE `danhmuccv`
 -- AUTO_INCREMENT cho bảng `hinhanhcv`
 --
 ALTER TABLE `hinhanhcv`
-  MODIFY `maHA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1387;
+  MODIFY `maHA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1390;
 
 --
 -- AUTO_INCREMENT cho bảng `phanquyen`
 --
 ALTER TABLE `phanquyen`
   MODIFY `maQuyen` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `quanhuyen`
+--
+ALTER TABLE `quanhuyen`
+  MODIFY `idQuan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `taikhoan`

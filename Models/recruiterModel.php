@@ -9,6 +9,11 @@
             require("result.php");
             return $data;
         }
+        function district(){
+            $query = "select * from quanhuyen";
+            require("result.php");
+            return $data;
+        }
         function getImgById($idsp){
             $query = "select *from hinhanhcv where maCV = $idcv";
             require("result.php");
@@ -45,7 +50,7 @@
                   $result = $this->conn->query($query);
                 }
                 else {
-                    $query = "INSERT into  hinhanh values ('null',  '$idsp' ,'$value' ,'$key')";
+                    $query = "INSERT into  hinhanhcv values ('null',  '$idsp' ,'$value' ,'$key')";
                     $result = $this->conn->query($query);
                 }
             }
