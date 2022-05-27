@@ -17,7 +17,7 @@
             <?php
                 if(isset($_SESSION['isLogin_Admin'])){ ?>
                 <li>
-                    <a class="has-arrow" href="" aria-expanded="true">
+                    <a class="has-arrow" href="?mod=nguoidung" aria-expanded="true">
                         <div class="icon_menu">
                             <i class="fas fa-user" aria-expanded="true"></i>
                             <span>Quản lý tài khoản</span>
@@ -39,7 +39,7 @@
             <?php
                 if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
                 <li>
-                    <a class="has-arrow" href="" aria-expanded="true">
+                    <a class="has-arrow" href="?mod=congviec" aria-expanded="true">
                         <div class="icon_menu">
                             <i class="fa-solid fa-briefcase"></i>
                             <span>Quản lý bài đăng</span>
