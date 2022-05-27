@@ -13,7 +13,7 @@
 <nav id="nav">
     <ul class="nav-list">
         <a href="" class="header__logo">
-            <img src="./Publics/images/logo.png" alt="">
+            <!-- <img src="./Publics/images/logo1.png" alt=""> -->
         </a>
         <li class="nav-list__item"><a href="?act=home" class="nav-list__item-link">Trang chủ</a></li>
         <li class="nav-list__item"><a class="nav-list__item-link" href="">Giới thiệu</a></li>
