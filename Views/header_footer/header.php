@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col">
-                <p><i class="fa-solid fa-location-dot"></i> Trường SPKT - 48 Cao Thắng - Phường Thanh Bình - Hải Châu, Đà Nẵng</p>
+                <p style="color: var(--cl-primary);"><i class="fa-solid fa-location-dot"></i> Trường SPKT - 48 Cao Thắng - Phường Thanh Bình - Hải Châu, Đà Nẵng</p>
             </div>
             <div class="col-lg-4 col">
-                <p><i class="fa-solid fa-phone"></i> 0961640909 - 0935778714</p>
+                <p style="color: var(--cl-primary);"><i class="fa-solid fa-phone"></i> 0961640909 - 0935778714</p>
             </div>
         </div>
     </div>
