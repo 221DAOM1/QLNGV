@@ -8,7 +8,7 @@
                 </a>
                 <span class="mr_lr">&nbsp;/ &nbsp;</span>
                 <a href="#">
-                    <span>Sản phẩm</span>
+                    <span>Chi tiết người giúp việc</span>
                 </a>
                 <span class="mr_lr">&nbsp;/ &nbsp;</span>
             </div>

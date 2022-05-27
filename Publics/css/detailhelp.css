@@ -62,7 +62,7 @@
  }
 
  .product-detail-main {
-     margin-left: 20px;
+     margin-left: 30px;
  }
 
  .tilte-name-product-detail{
@@ -112,4 +112,5 @@
 
  .btn-success {
      width: 285px;
+     background-color: var(--cl-primary);
  }
