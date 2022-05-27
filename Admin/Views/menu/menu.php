@@ -41,7 +41,7 @@
                 <li>
                     <a class="has-arrow" href="" aria-expanded="true">
                         <div class="icon_menu">
-                            <i class="fa-solid fa-align-justify"></i>
+                            <i class="fa-solid fa-briefcase"></i>
                             <span>Quản lý bài đăng</span>
                         </div>
                     </a>
