@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 27, 2022 lúc 03:04 AM
+-- Thời gian đã tạo: Th5 29, 2022 lúc 04:53 PM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 8.1.0
 
@@ -71,7 +71,28 @@ CREATE TABLE `congviec` (
 
 INSERT INTO `congviec` (`maCV`, `maTK`, `maDMCV`, `tenCV`, `khuVuc`, `soLuong`, `trinhDoHV`, `gioiTinhYC`, `chucVu`, `luong`, `diaChi`, `time`, `moTa`, `tinhTrang`, `thoiGianDang`) VALUES
 (486, 4, 1, 'Tuyển giúp việc ăn ở lại lương từ 5 đến 12tr/tháng, tại Hải Châu', 1, 1, '12/12', 'Nữ', 'Nhân viên dọn dẹp nhà', '8.000.000 - 10.000.000 VNĐ', '02 Thanh Sơn, P. Thanh Bình, Q.Hải Châu, Đà Nẵng', 'Ngày 8 tiếng', 'Yêu cầu nhân viên đã có kinh nghiệm dọn dẹp nhà', 1, '2022-05-24 20:35:35'),
-(487, 13, 1, 'Cần tuyển giúp việc 10 ngày hè lương từ 250k đến 350k/ngày', 2, 1, '12/12', 'Nữ', 'Nhân viên chăm sóc người già', '10.000.000 - 15.000.000', '28 thanh sơn, P. Thanh Bình, Hải Châu, Đà Nẵng', 'Ngày 10 tiếng', 'Yêu cầu nhân viên có kinh nghiệm chăm sóc người già', 1, '2022-05-25 07:31:26');
+(487, 13, 1, 'Cần tuyển giúp việc 10 ngày hè lương từ 250k đến 350k/ngày', 2, 1, '12/12', 'Nữ', 'Nhân viên chăm sóc người già', '10.000.000 - 15.000.000', '28 thanh sơn, P. Thanh Bình, Hải Châu, Đà Nẵng', 'Ngày 10 tiếng', 'Yêu cầu nhân viên có kinh nghiệm chăm sóc người già', 0, '2022-05-25 07:31:26');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `danhgiagv`
+--
+
+CREATE TABLE `danhgiagv` (
+  `maTK` int(11) NOT NULL,
+  `soSao` int(11) NOT NULL,
+  `maCV` int(11) NOT NULL,
+  `binhLuan` varchar(255) NOT NULL,
+  `ngayDanhGia` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhgiagv`
+--
+
+INSERT INTO `danhgiagv` (`maTK`, `soSao`, `maCV`, `binhLuan`, `ngayDanhGia`) VALUES
+(14, 5, 486, '', '');
 
 -- --------------------------------------------------------
 
@@ -93,6 +114,26 @@ INSERT INTO `danhmuccv` (`maDMCV`, `tenDM`, `hinhAnh`) VALUES
 (1, 'Chăm sóc trẻ em', ''),
 (2, 'Dọn dẹp nhà', ''),
 (3, 'Chăm sóc người già', '');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `danhsachungvien`
+--
+
+CREATE TABLE `danhsachungvien` (
+  `maTK` int(11) NOT NULL,
+  `maCV` int(11) NOT NULL,
+  `tinhTrangUngTuyen` int(11) NOT NULL,
+  `khXacNhan` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `danhsachungvien`
+--
+
+INSERT INTO `danhsachungvien` (`maTK`, `maCV`, `tinhTrangUngTuyen`, `khXacNhan`) VALUES
+(14, 486, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -241,10 +282,22 @@ ALTER TABLE `congviec`
   ADD PRIMARY KEY (`maCV`);
 
 --
+-- Chỉ mục cho bảng `danhgiagv`
+--
+ALTER TABLE `danhgiagv`
+  ADD PRIMARY KEY (`maTK`);
+
+--
 -- Chỉ mục cho bảng `danhmuccv`
 --
 ALTER TABLE `danhmuccv`
   ADD PRIMARY KEY (`maDMCV`);
+
+--
+-- Chỉ mục cho bảng `danhsachungvien`
+--
+ALTER TABLE `danhsachungvien`
+  ADD PRIMARY KEY (`maTK`);
 
 --
 -- Chỉ mục cho bảng `hinhanhcv`
@@ -293,10 +346,22 @@ ALTER TABLE `congviec`
   MODIFY `maCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=490;
 
 --
+-- AUTO_INCREMENT cho bảng `danhgiagv`
+--
+ALTER TABLE `danhgiagv`
+  MODIFY `maTK` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT cho bảng `danhmuccv`
 --
 ALTER TABLE `danhmuccv`
   MODIFY `maDMCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT cho bảng `danhsachungvien`
+--
+ALTER TABLE `danhsachungvien`
+  MODIFY `maTK` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT cho bảng `hinhanhcv`
