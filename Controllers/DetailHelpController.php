@@ -12,6 +12,8 @@ require_once("./Models/helpModel.php");
             $data_user = $this->help_model->taikhoangv($_GET['tk']);
             $data_newhelp = $this->help_model->giupviec_moi();
             $data_dmcv = $this->help_model->danhmuc();
+            //lấy đánh giá
+            $DataEvalute = $this->help_model->getEvalute($_GET['tk']);
             require_once("Views/index.php");
         }
     }

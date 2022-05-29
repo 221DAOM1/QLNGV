@@ -12,24 +12,37 @@
        <?php } ?>
        <form action="?mod=nguoidung&act=store" method="POST" role="form" enctype="multipart/form-data">
            <div class="form-group">
-               <label for="">Họ</label>
-               <input type="text" class="form-control" id="" placeholder="" name="Ho">
+               <label for="">Mã quyền</label>
+               <input type="text" class="form-control" id="" placeholder="" name="maQuyen">
            </div>
            <div class="form-group">
-               <label for="">Tên</label>
-               <input type="text" class="form-control" id="" placeholder="" name="Ten">
+               <label for="">Tài khoản</label>
+               <input type="text" class="form-control" id="" placeholder="" name="taiKhoan">
            </div>
            <div class="form-group">
-               <label for="">Tên Tài Khoản</label>
+               <label for="">Mật khẩu</label>
                <input type="text" class="form-control" id="" placeholder="" name="TaiKhoan">
            </div>
            <div class="form-group">
+               <label for="">Họ tên</label>
+               <input type="text" class="form-control" id="" placeholder="" name="maQuyen">
+           </div>   
+           <div class="form-group">
                <label for="">Giới tính</label>
-               <select id="" name="GioiTinh" class="form-control">
+               <select id="" name="gioiTinh" class="form-control">
                     <option value="Nam">Nam</option>
                     <option value="Nữ">Nữ</option>
                     <option value="Khác">Khác</option>
                </select>
+           </div>
+           
+           <div class="form-group">
+               <label for="">Ngày sinh</label>
+               <input type="text" class="form-control" id="" placeholder="" name="ngaySinh">
+           </div>
+           <div class="form-group">
+               <label for="">CMND</label>
+               <input type="text" class="form-control" id="" placeholder="" name="ngaySinh">
            </div>
            <div class="form-group">
                <label for="">Số Điện Thoại</label>
