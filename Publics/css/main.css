@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     height: 100%;
+    justify-content:center;
 }
 
 .nav-list__item > a.active {
@@ -38,6 +39,7 @@
 .nav-list__item > i {
     color: #fff;
     padding-left: 6px;
+    padding-right: 0px;
 }
 
 .nav-list__item:hover > ul.nav-item__down {
@@ -110,12 +112,6 @@
 }
 
 .header__logo {
-    margin-top: 2px;
-    margin-left: 60px;
-    width: 200px;
-    height: 68px;
-    margin-right: 10px;
-    color: white;
 }
 
 .user{

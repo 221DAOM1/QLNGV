@@ -17,6 +17,9 @@
         </a>
         <li class="nav-list__item"><a href="?act=home" class="nav-list__item-link">Trang chủ</a></li>
         <li class="nav-list__item"><a class="nav-list__item-link" href="">Giới thiệu</a></li>
+        <?php
+            if(isset($_SESSION['isLogin_Khachhang'])|| isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){
+        ?>
         <li class="nav-list__item">
             <a href="">
                 Cho người tuyển dụng
@@ -28,14 +31,19 @@
                 </li>
             </ul>
         </li>
+        <?php } ?>
+        <?php
+            if(isset($_SESSION['isLogin_Giupviec'])){
+        ?>
         <li class="nav-list__item">
-            <a class="nav-list__item-link" href="">Cho người giúp việc</a>
-            <i class="fas fa-chevron-down"></i>
-            <ul class="nav-item__down">
-                <li class="nav-item__down-item">
-                    <a href="?act=help&xuli=account">Cập nhật hồ sơ</a>
-                </li>
-            </ul>
+        <a class="nav-list__item-link" href="">Cho người giúp việc</a>
+        <i class="fas fa-chevron-down"></i>
+        <ul class="nav-item__down">
+            <li class="nav-item__down-item">
+                <a href="?act=help&xuli=account">Cập nhật hồ sơ</a>
+            </li>
+        </ul>
+        <?php } ?>
         </li>
         <li class="nav-list__item"><a class="nav-list__item-link" href="">Liên hệ</a></li>
         <li class="nav-list__item"><a class="nav-list__item-link" href="">Tin tức</a></li>
