@@ -1,4 +1,4 @@
-<section id="main">
+<section class="main">
     <div class="container">
         <?php if (isset($_COOKIE['msg2'])) { ?>
         <div class="alert alert-success">

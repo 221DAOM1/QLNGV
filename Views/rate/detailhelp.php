@@ -1,5 +1,5 @@
 
-<main id="main">
+<main class="main">
 <div class="container">
     <div class="break-crumb">
         <div class="break-crumb__head">
