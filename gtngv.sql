@@ -6,7 +6,8 @@
 -- Thời gian đã tạo: Th5 27, 2022 lúc 03:04 AM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 8.1.0
-
+create database gtngv;
+use gtngv;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";

@@ -1,0 +1,56 @@
+<html>
+<title>Firebase Messaging Demo</title>
+<style>
+    div {
+        margin-bottom: 15px;
+    }
+</style>
+
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js"></script>
+    <script>
+        // TODO: Replace firebaseConfig you get from Firebase Console
+        var firebaseConfig = {
+            apiKey: "AIzaSyDl06JoZavgolR96a7o7vKYpgrg16iBUGg",
+            authDomain: "dapm-212f9.firebaseapp.com",
+            projectId: "dapm-212f9",
+            storageBucket: "dapm-212f9.appspot.com",
+            messagingSenderId: "225147019126",
+            appId: "1:225147019126:web:9dd2e59139797eb522e457"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        const messaging = firebase.messaging();
+
+        messaging.requestPermission().then(() => {
+            if (tokenToSever()) {
+                console.log("token is saved")
+            } else {
+                getToken();
+            }
+        })
+        function getToken() {
+            messaging.getToken(messaging, {
+                vapidKey: 'BP5GVQkxyTDhtPw24zr3jH2p-jUlM5kKukbVtNNTWjZ8xyT529Eluj7-tlERzdaeCpJbR4lPcmaFQWU1ly1P7Ck'
+            }).then((currentToken) => {
+                if (currentToken) {
+                    console.log(currentToken)
+                } else {
+                    // Show permission request UI
+                    console.log('No registration token available. Request permission to generate one.');
+                }
+            }).catch((err) => {
+                console.log('An error occurred while retrieving token. ', err);
+            });
+        }
+
+        function tokenToSever() {
+            return false;
+        }
+    </script>
+</body>
+
+</html>
