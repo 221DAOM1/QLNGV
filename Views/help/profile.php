@@ -24,7 +24,11 @@
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Khu vực muốn làm</label>
-                    <input type="text" name="khuVucLamViec" class="form-control form-control-lg" placeholder="Địa chỉ" value="<?= $data['khuVucLamViec']?>"/>
+                    <select id="khuVucLamViec" class="form-control" name="khuVucLamViec">
+                        <?php foreach ($data_district as $row) { ?>
+                        <option value="<?= $row['idQuan'] ?>"><?= $row['tenQuan'] ?></option>
+                        <?php } ?> 
+                    </select>
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Sở thích</label>

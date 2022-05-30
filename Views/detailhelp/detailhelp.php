@@ -43,7 +43,7 @@
                 <h2 class="tilte-name-product-detail-detail">Địa chỉ: <?php echo $data_user[0]['diaChi']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Thời gian muốn làm: <?php echo $data_user[0]['thoiGian']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Trình độ học vấn: <?php echo $data_user[0]['trinhDoHV']; ?></h2>
-                <h2 class="tilte-name-product-detail-detail">Khu vực làm việc: <?php echo $data_user[0]['khuVucLamViec']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Khu vực làm việc: <?php echo $data_user[0]['tenQuan']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Sở thích: <?php echo $data_user[0]['soThich']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Ghi chú: <?php echo $data_user[0]['ghiChu']; ?></h2>
                 <div class="product-detail-main__flex">
@@ -93,7 +93,7 @@
             </ul>
         </div>
         </div>
-        <section id="product-dry" class="product-related">
+        <section id="product-dry" class="product-related" style="width: 100%;">
             <div class="container">
                 <div class="populator__head">
                     <div>
@@ -102,32 +102,29 @@
                         </h2>
                     </div>
                 </div>
-                <div class="list-product-sale owl-carousel owl-theme" id="product-sale-slider">
+                <div class="list-product-sale owl-carousel owl-theme" id="help-slider">
                     <?php 
-                        for ($i = 0; $i < (count($data_newhelp)); $i++) {
+                        for ($i = 0; $i < (count($data_lq)); $i++) {
                     ?>
-                    <div class="col-product__item sale-home">
+                    <div class="col-product__item sale-home" style="margin-right: 20px;">
                         <form action="" >
                             <div>
-                                <div class="product-item__sale-off">
-                                    <label class ="home-product-item__label" for="">Hồ sơ</label>
-                                </div>
                                 <a href="">
-                                    <i data-heart="<?php echo $data_newhelp[$i]['maTK'] ?>"  class="icon-heart-element product-item-icon far fa-heart"></i>
+                                    <i data-heart="<?php echo $data_lq[$i]['maTK'] ?>"  class="icon-heart-element product-item-icon far fa-heart"></i>
                                 </a>
                             </div>
                             <div class="product-imgg">
-                                <a href="?act=detailhelp&tk=<?=$data_newhelp[$i]['maTK']?>" style="display: block;">
+                                <a href="?act=detailhelp&tk=<?=$data_lq[$i]['maTK']?>" style="display: block;">
                                     <span class ="img--hover"></span> 
-                                    <img src="./Publics/images/<?php echo $data_newhelp[$i]['hinhAnh'] ?>" alt="">
+                                    <img src="./Publics/images/<?php echo $data_lq[$i]['hinhAnh'] ?>" alt="">
                                 </a>
                                 
                             </div>
                             <div class="product-fruits__infos">
-                                <h2 class="tilte-name-product-t"><?= $data_newhelp[$i]['hoTen']?></h2>
+                                <h2 class="tilte-name-product-t"><?= $data_lq[$i]['hoTen']?></h2>
                                 <div>
-                                    <span class="price-new"><?= $data_newhelp[$i]['ngaySinh'] ?></span>
-                                    <span class="price-old"><?php $data_newhelp[$i]['diaChi'] ?></span>
+                                    <span class="price-new"><?= $data_lq[$i]['ngaySinh'] ?></span>
+                                    <span class="price-old"><?php $data_lq[$i]['diaChi'] ?></span>
                                 </div>
                             </div>
                         </form>

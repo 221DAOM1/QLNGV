@@ -8,12 +8,14 @@
         }
         public function list()
         {
+            $data_district = $this->help_model->district();
             $data_help = $this->help_model->all();
             require_once("Views/index.php");
         }
         function account()
         {   
             $data = $this->help_model->account();
+            $data_district = $this->help_model->district();
             require_once('Views/index.php');
         }
         function updateinfo(){

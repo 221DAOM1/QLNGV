@@ -28,7 +28,7 @@
             return $data;
         }
         function taikhoangv($idTK){
-            $query = "SELECT * from taikhoan,thongtinungvien WHERE taikhoan.maTK = thongtinungvien.maTK AND taikhoan.maTK=$idTK;";
+            $query = "SELECT * from taikhoan,thongtinungvien,quanhuyen WHERE taikhoan.maTK = thongtinungvien.maTK AND thongtinungvien.khuVucLamViec=quanhuyen.idQuan AND taikhoan.maTK=$idTK;";
             require("result.php");
             return $data;
         }
@@ -42,6 +42,13 @@
             dsuv.maCV=dg.maCV and tk.maTK=dg.maTK and khXacNhan=1 and tk.maTK = '$maTK' ;";
            require("result.php");
            return $data;
+        }
+
+        function help_danhmuc($danhmuc)
+        {  
+            $query ="SELECT * from taikhoan,thongtinungvien WHERE taikhoan.maTK = thongtinungvien.maTK and khuVucLamViec = $danhmuc GROUP BY taikhoan.maTK;";
+            require("result.php");
+            return $data;  
         }
     }
 ?>

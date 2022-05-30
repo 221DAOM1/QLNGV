@@ -4,6 +4,11 @@
         var $table = "thongtinungvien";
         var $contens = "maTK";
 
+        function district(){
+            $query = "select * from quanhuyen";
+            require("result.php");
+            return $data;
+        }
         function updateInfor($data){
             $v = "";
             foreach ($data as $key => $value) {
@@ -14,6 +19,13 @@
             $query = "UPDATE thongtinungvien SET $v  WHERE maTK = ". $_SESSION['login']['maTK'];   
             $result = $this->conn->query($query);
             
+        }
+
+        function help_danhmuc($danhmuc)
+        {  
+            $query ="SELECT * from taikhoan,thongtinungvien WHERE taikhoan.maTK = thongtinungvien.maTK and khuVucLamViec = $danhmuc;";
+            require("result.php");
+            return $data;  
         }
 
         function account()

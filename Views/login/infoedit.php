@@ -22,7 +22,7 @@
                 ?>
                 <label class="container-infor__title">Thông Tin Tài Khoản</label>
                 <h2 class ="container-infor__name">Khách hàng: <span><?= $data['hoTen'] ?></span></h2>
-                <input checked="true" class= "infoChange-type" type="radio" name="radio-changeInfor" id="radio-changeInfor">
+                <input checked="true" class= "infoChange-type" type="radio" name="radio-changeInfor" id="radio-changeInfor" style="margin-left: 20px;">
                 <label for="radio-changeInfor">
                     <span>Thông tin cá nhân </span>
                 </label>
