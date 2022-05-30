@@ -155,10 +155,9 @@ ul.product-detail-main__vote li i {
     cursor: pointer;
 }
 
-ul.product-detail-main__vote span ,.count-vote span,.count-producted span{
+ul.product-detail-main__vote span, .count-vote span, .count-producted span{
     padding-right: 4px;
     display: block;
-    text-decoration: underline;
     font-weight: 600;
 }
 

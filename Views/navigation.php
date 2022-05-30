@@ -73,6 +73,23 @@
         case "detailhelp":
             require_once("detailhelp/detailhelp.php");
             break;
+        case "ratehelp":
+            $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
+            switch ($act) {
+                case 'list':
+                    require_once('rate/rate.php');
+                    break;
+                    case 'chitiet':
+                    require_once('rate/detail.php');
+                    break;
+                    case 'chitiethelp':
+                    require_once('rate/detailhelp.php');
+                    break;
+                    default:
+                    require_once('rate/rate.php');
+                    break;
+            }
+            break;
         default:
         require_once("error-404.php");
         break;

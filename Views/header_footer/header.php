@@ -59,6 +59,10 @@
                         ?>
                             <li class="group-login__list-item"><b><?=$_SESSION['login']['hoTen']?></b></li>
                             <li class="group-login__list-item"><a href="?act=taikhoan&xuli=account">Tài khoản</a></li>
+                            <?php
+                            if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien']) || isset($_SESSION['isLogin_Khachhang'])){ ?>
+                            <li class="group-login__list-item"><a href="?act=ratehelp&xuli=list">Đánh giá</a></li>
+                            <?php } ?>
                             <li class="group-login__list-item"><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
                             <?php
                             if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>

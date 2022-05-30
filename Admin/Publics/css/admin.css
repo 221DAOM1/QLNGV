@@ -245,3 +245,8 @@
 .btn-remove-none {
     display: none;
 }
+.table thead th {
+    vertical-align: top;
+    border-bottom: 2px solid #dee2e6;
+    text-align: center;
+}

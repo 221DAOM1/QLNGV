@@ -119,6 +119,27 @@ switch ($mod) {
         $objCate = new DetailController();
         $objCate->list();
         break;
+    case 'ratehelp': 
+        $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
+        require_once('./Controllers/RateController.php');
+        $controller_obj = new RateController();
+        switch ($act) {
+            case 'list':
+                $controller_obj->list();
+            break;
+            case 'chitiet':
+                $controller_obj->chitiet();
+                break;
+            case 'chitiethelp':
+                $controller_obj->detailhelp();
+                break;
+            case 'store':
+                $controller_obj->store();
+            default:
+                $controller_obj->chitiet();
+                break;
+        }
+        break;
     default : require_once('home/home.php');
 }
 ?>

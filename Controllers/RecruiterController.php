@@ -52,7 +52,7 @@
             $data_work = array(
                 'maCV' => 'null',
                 'maTK' => $_SESSION['login']['maTK'],
-                'maDMCV'  =>   $_POST['maDMCV'],
+                'maDMCV'  => $_POST['maDMCV'],
                 'tenCV' => $_POST['tenCV'],
                 'khuVuc' => $_POST['khuVuc'],
                 'soLuong' => $_POST['soLuong'],
