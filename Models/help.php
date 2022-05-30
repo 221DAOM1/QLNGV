@@ -21,13 +21,6 @@
             
         }
 
-        function help_danhmuc($danhmuc)
-        {  
-            $query ="SELECT * from taikhoan,thongtinungvien WHERE taikhoan.maTK = thongtinungvien.maTK and khuVucLamViec = $danhmuc;";
-            require("result.php");
-            return $data;  
-        }
-
         function account()
         {
             $id = $_SESSION['login']['maTK'];

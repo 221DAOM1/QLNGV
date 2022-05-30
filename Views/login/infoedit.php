@@ -64,7 +64,7 @@
                     <fieldset class="container-infor__item">
                         <label>Số điện thoại </label>
                         <span class="required">*</span>
-                        <input type="tel" name ="SDT" value="<?= $data['SDT']?>" class="form-control form-control-lg edit" placeholder=""/>
+                        <input type="tel" name ="SDT" value="0<?= $data['SDT']?>" class="form-control form-control-lg edit" placeholder=""/>
                     </fieldset>
                     <fieldset class="container-infor__item">
                         <label>Email </label>
