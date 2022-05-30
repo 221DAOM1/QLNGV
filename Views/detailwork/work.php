@@ -53,13 +53,17 @@
                 <h2 class="tilte-name-product-detail-detail">Địa chỉ: <?php echo $data_work[0]['diaChi']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Thời gian: <?php echo $data_work[0]['time']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Mô tả: <?php echo $data_work[0]['moTa']; ?></h2>
-                <form id ="table" action="?act=detailwork&xuli=store" method="POST" enctype="multipart/form-data">
-                    <h2 class="tilte-name-product-detail" style="text-align: center;margin-top: 20px;">ĐĂNG KÝ ỨNG TUYỂN</h2>
-                    <input style="display: none;" type="text" name="maCV" class="form-control form-control-lg" value="<?= $data_work[0]['maCV']?>"/>
-                    <div class="btn-recruiter">
-                        <button class="btn-confirm" type="submit" form="table" style="margin-left: 30px;">Đăng ký</button>
-                    </div>
-                </form>
+                <?php
+                    if(isset($_SESSION['isLogin_Giupviec'])){ ?>
+                    <form id ="table" action="?act=detailwork&xuli=store" method="POST" enctype="multipart/form-data">
+                        <h2 class="tilte-name-product-detail" style="text-align: center;margin-top: 20px;">ĐĂNG KÝ ỨNG TUYỂN</h2>
+                        <input style="display: none;" type="text" name="maCV" class="form-control form-control-lg" value="<?= $data_work[0]['maCV']?>"/>
+                        <div class="btn-recruiter">
+                            <button class="btn-confirm" type="submit" form="table" style="margin-left: 30px;">Đăng ký</button>
+                        </div>
+                    </form>
+                <?php } ?>
+               
             </div>
         </div>
         <div class="col col-lg-3" style="visibility: visible; -webkit-animation-name: fadeInDown; animation-name: fadeInDown;">
