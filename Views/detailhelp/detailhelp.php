@@ -1,6 +1,6 @@
 <?php
  $length = count($DataEvalute);
- $countrating = $length;
+ $countrating = $length/2;
  $tbSao = 0;
  foreach($DataEvalute as $row){
     $tbSao += $row['soSao']/$length;

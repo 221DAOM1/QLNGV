@@ -17,7 +17,7 @@
         }
 
         function taikhoangv($id,$idTK){
-            $query = "SELECT taikhoan.maTK,hinhAnh,taikhoan.diaChi,hoTen,ngaySinh,gioiTinh,congviec.maCV,tenCV FROM taikhoan,congviec,danhsachungvien,danhgiagv WHERE taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
+            $query = "SELECT taikhoan.maTK,hinhAnh,taikhoan.diaChi,hoTen,ngaySinh,gioiTinh,congviec.maCV,tenCV FROM taikhoan,congviec,danhsachungvien WHERE taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
             AND danhsachungvien.maTK=$idTK AND danhsachungvien.maCV=$id;";
             require("result.php");
             return $data;
