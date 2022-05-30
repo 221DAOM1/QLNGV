@@ -204,14 +204,16 @@
                     for ($i = 0; $i < (count($data_newwork)); $i++) {
                 ?> 
                 <div class="work_new_content">    
-                    <a href="">
-                        <div class="work_new_content_img">
-                            <a><img src="./Publics/images/<?php echo $data_newwork[$i]['tenHinh'] ?>" alt=""></a>
-                        </div>
-                        <div class="work_new_content_right">
-                            <p class="work_new_name"><?= $data_newwork[$i]['tenCV'] ?></p>
-                            <p class="work_new_detail"><?= $data_newwork[$i]['tenQuan'] ?></p>
-                            <p class="work_new_detail"><?= $data_newwork[$i]['moTa'] ?></p>
+                    <a href="?act=detailwork&cv=<?=$data_newwork[$i]['maCV']?>" style="display: block;">
+                        <div style="display: flex;">
+                            <div class="work_new_content_img">
+                                <img src="./Publics/images/<?php echo $data_newwork[$i]['tenHinh'] ?>" alt="">
+                            </div>
+                            <div class="work_new_content_right">
+                                <p class="work_new_name"><?= $data_newwork[$i]['tenCV'] ?></p>
+                                <p class="work_new_detail"><?= $data_newwork[$i]['tenQuan'] ?></p>
+                                <p class="work_new_detail"><?= $data_newwork[$i]['moTa'] ?></p>
+                            </div>
                         </div>
                     </a>
                 </div>

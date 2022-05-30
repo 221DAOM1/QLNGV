@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 30, 2022 lúc 04:02 AM
+-- Thời gian đã tạo: Th5 30, 2022 lúc 07:41 AM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 8.1.0
 
@@ -93,11 +93,7 @@ CREATE TABLE `danhgiagv` (
 --
 
 INSERT INTO `danhgiagv` (`maDG`, `maCV`, `maTK`, `soSao`, `binhLuan`, `ngayDanhGia`) VALUES
-(1, 486, 15, 5, '', '2022-05-30 07:55:56'),
-(2, 487, 14, 5, '', ''),
-(3, 486, 14, 4, '', ''),
-(6, 486, 14, 1, 'a', '2022-05-30 08:37:45'),
-(7, 486, 15, 5, 'GOOD', '2022-05-30 08:40:16');
+(8, 486, 14, 5, 'GOOD JOB', '2022-05-30 09:10:32');
 
 -- --------------------------------------------------------
 
@@ -127,8 +123,8 @@ INSERT INTO `danhmuccv` (`maDMCV`, `tenDM`, `hinhAnh`) VALUES
 --
 
 CREATE TABLE `danhsachungvien` (
-  `maDS` int(11) NOT NULL,
   `maCV` int(11) NOT NULL,
+  `thoiGianUT` varchar(255) NOT NULL,
   `maTK` int(11) NOT NULL,
   `tinhTrangUngTuyen` int(11) NOT NULL,
   `khXacNhan` int(11) NOT NULL
@@ -138,9 +134,9 @@ CREATE TABLE `danhsachungvien` (
 -- Đang đổ dữ liệu cho bảng `danhsachungvien`
 --
 
-INSERT INTO `danhsachungvien` (`maDS`, `maCV`, `maTK`, `tinhTrangUngTuyen`, `khXacNhan`) VALUES
-(1, 486, 14, 1, 1),
-(2, 486, 15, 1, 1);
+INSERT INTO `danhsachungvien` (`maCV`, `thoiGianUT`, `maTK`, `tinhTrangUngTuyen`, `khXacNhan`) VALUES
+(486, '', 14, 1, 1),
+(486, '', 15, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -264,13 +260,13 @@ CREATE TABLE `thongtinungvien` (
 --
 
 INSERT INTO `thongtinungvien` (`maTK`, `thoiGian`, `trinhDoHV`, `khuVucLamViec`, `soThich`, `ghiChu`, `tinhTrangHD`) VALUES
-(8, 'Mọi lúc', 'Đại học', 'Hải Châu', 'Thích chăm sóc trẻ em', 'Không', 1),
-(14, '0', '0', '0', '0', '0', 0),
-(15, '0', '0', '0', '0', '0', 0),
-(16, '0', '0', '0', '0', '0', 0),
-(17, '0', '0', '0', '0', '0', 0),
-(18, '0', '0', '0', '0', '0', 0),
-(19, '0', '0', '0', '0', '0', 0);
+(8, 'Mọi lúc', '12/12', '2', 'Thích chăm sóc trẻ em', 'Không', 1),
+(14, 'Sáng', '12/12', '1', 'Thích chăm sóc trẻ em', 'Không', 1),
+(15, 'Chiều', '12/12', '1', 'Thích chăm sóc trẻ em', 'Không', 1),
+(16, 'Tối', '12/12', '2', 'Thích chăm sóc trẻ em', 'Không', 1),
+(17, 'Tối', '12/12', '3', 'Thích chăm sóc trẻ em', 'Không', 1),
+(18, 'Mọi lúc', '12/12', '4', 'Thích chăm sóc trẻ em', 'Không', 1),
+(19, 'Sáng', '12/12', '3', 'Thích chăm sóc trẻ em', 'Không', 1);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -299,12 +295,6 @@ ALTER TABLE `danhgiagv`
 --
 ALTER TABLE `danhmuccv`
   ADD PRIMARY KEY (`maDMCV`);
-
---
--- Chỉ mục cho bảng `danhsachungvien`
---
-ALTER TABLE `danhsachungvien`
-  ADD PRIMARY KEY (`maDS`);
 
 --
 -- Chỉ mục cho bảng `hinhanhcv`
@@ -356,19 +346,13 @@ ALTER TABLE `congviec`
 -- AUTO_INCREMENT cho bảng `danhgiagv`
 --
 ALTER TABLE `danhgiagv`
-  MODIFY `maDG` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `maDG` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `danhmuccv`
 --
 ALTER TABLE `danhmuccv`
   MODIFY `maDMCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT cho bảng `danhsachungvien`
---
-ALTER TABLE `danhsachungvien`
-  MODIFY `maDS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `hinhanhcv`

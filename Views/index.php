@@ -13,7 +13,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- Jquery-ui.min css -->
-    <link rel="stylesheet" href="./public/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./Publics/css/jquery-ui.min.css">
     <!-- Lib -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/js-image-zoom@0.7.0/js-image-zoom.js" type="application/javascript"></script>
@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="./Publics/css/recruiter.css">
     <link rel="stylesheet" href="./Publics/css/detailhelp.css">
     <link rel="stylesheet" href="./Admin/Publics/css/admin.css">
+    <link rel="stylesheet" href="./Publics/js/main.js">
 </head>
 <body>
     <?php

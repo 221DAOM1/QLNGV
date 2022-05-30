@@ -90,6 +90,17 @@
                     break;
             }
             break;
+        case "detailwork":
+            $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
+            switch ($act) {
+                case 'list':
+                    require_once('detailwork/work.php');
+                    break;
+                default:
+                    require_once('detailwork/work.php');
+                    break;
+                }
+            break;
         default:
         require_once("error-404.php");
         break;

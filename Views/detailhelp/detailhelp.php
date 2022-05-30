@@ -107,7 +107,7 @@
                         for ($i = 0; $i < (count($data_lq)); $i++) {
                     ?>
                     <div class="col-product__item sale-home" style="margin-right: 20px;">
-                        <form action="" >
+                        <form action="" style="width: 229px;">
                             <div>
                                 <a href="">
                                     <i data-heart="<?php echo $data_lq[$i]['maTK'] ?>"  class="icon-heart-element product-item-icon far fa-heart"></i>
