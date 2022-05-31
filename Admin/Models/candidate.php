@@ -2,8 +2,9 @@
 require_once("model.php");
 class candidate extends Model
 {
+    var $table = "danhsachungvien";
     function chitietungvien($id){
-        $query = "SELECT taikhoan.maTK,hoTen,gioiTinh,ngaySinh,CMND,SDT,taikhoan.diaChi,thongtinungvien.thoiGian,thongtinungvien.trinhDoHV,thongtinungvien.khuVucLamViec,thongtinungvien.soThich,thongtinungvien.ghiChu,taikhoan.taikhoan FROM quanhuyen,thongtinungvien,taikhoan,congviec,danhsachungvien WHERE quanhuyen.idQuan=thongtinungvien.khuVucLamViec and thongtinungvien.maTK=taikhoan.maTK and taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
+        $query = "SELECT taikhoan.maTK,hoTen,gioiTinh,ngaySinh,CMND,SDT,taikhoan.diaChi,thongtinungvien.thoiGian,thongtinungvien.trinhDoHV,thongtinungvien.khuVucLamViec,thongtinungvien.soThich,thongtinungvien.ghiChu,taikhoan.taikhoan,congviec.maCV FROM quanhuyen,thongtinungvien,taikhoan,congviec,danhsachungvien WHERE quanhuyen.idQuan=thongtinungvien.khuVucLamViec and thongtinungvien.maTK=taikhoan.maTK and taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
         AND trangThai=1 and congviec.maCV=$id;";
 
         require("result.php");
@@ -47,11 +48,21 @@ class candidate extends Model
        return $data;
     }
 
+    function updateds($idcv,$idtk){
+        $query = "UPDATE danhsachungvien SET tinhTrangUngTuyen=1 WHERE maCV=$idcv and maTK=$idtk";
+        $result = $this->conn->query($query);
+        $query1 = "UPDATE congviec SET tinhTrangDaUT=1 WHERE maCV=$idcv";
+        $result1 = $this->conn->query($query1);
+        header('Location: ?mod=candidate');
+    }
+
     function help_danhmuc($danhmuc)
     {  
         $query ="SELECT * from taikhoan,thongtinungvien WHERE taikhoan.maTK = thongtinungvien.maTK and khuVucLamViec = $danhmuc GROUP BY taikhoan.maTK;";
         require("result.php");
         return $data;  
     }
+
+    
 
 }

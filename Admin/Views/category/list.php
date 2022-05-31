@@ -23,7 +23,7 @@
         <td><?= $row['maDMCV'] ?></td>
         <td><?= $row['tenDM'] ?></td>
         <td>
-          <a href="?mod=category&act=detail&id=<?= $row['maDMCV'] ?>" class="btn btn-success">Xem</a>
+          <a  style="width: 55px;" href="?mod=category&act=detail&id=<?= $row['maDMCV'] ?>" class="btn btn-success">Xem</a>
           <?php if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) { ?>
           <a href="?mod=category&act=edit&id=<?= $row['maDMCV'] ?>" class="btn btn-warning">Sửa</a>
           <a href="?mod=category&act=delete&id=<?= $row['maDMCV'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>

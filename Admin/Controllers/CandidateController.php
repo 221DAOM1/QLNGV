@@ -22,7 +22,8 @@ class CandidateController
     }
     function xetduyet()
     {
-        
+        $this->candidate_model->updateds($_GET['idcv'],$_GET['idtk']);
+        require_once("./Views/index.php");
     }
     function chitiet()
     {

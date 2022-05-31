@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 30, 2022 lúc 07:41 AM
+-- Thời gian đã tạo: Th5 31, 2022 lúc 11:36 AM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 8.1.0
 
@@ -62,6 +62,7 @@ CREATE TABLE `congviec` (
   `time` varchar(255) NOT NULL,
   `moTa` varchar(255) NOT NULL,
   `tinhTrang` int(11) NOT NULL,
+  `tinhTrangDaUT` int(11) NOT NULL,
   `thoiGianDang` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -69,9 +70,9 @@ CREATE TABLE `congviec` (
 -- Đang đổ dữ liệu cho bảng `congviec`
 --
 
-INSERT INTO `congviec` (`maCV`, `maTK`, `maDMCV`, `tenCV`, `khuVuc`, `soLuong`, `trinhDoHV`, `gioiTinhYC`, `chucVu`, `luong`, `diaChi`, `time`, `moTa`, `tinhTrang`, `thoiGianDang`) VALUES
-(486, 4, 1, 'Tuyển giúp việc ăn ở lại lương từ 5 đến 12tr/tháng, tại Hải Châu', 1, 1, '12/12', 'Nữ', 'Nhân viên dọn dẹp nhà', '8.000.000 - 10.000.000 VNĐ', '02 Thanh Sơn, P. Thanh Bình, Q.Hải Châu, Đà Nẵng', 'Ngày 8 tiếng', 'Yêu cầu nhân viên đã có kinh nghiệm dọn dẹp nhà', 1, '2022-05-24 20:35:35'),
-(487, 13, 1, 'Cần tuyển giúp việc 10 ngày hè lương từ 250k đến 350k/ngày', 2, 1, '12/12', 'Nữ', 'Nhân viên chăm sóc người già', '10.000.000 - 15.000.000', '28 thanh sơn, P. Thanh Bình, Hải Châu, Đà Nẵng', 'Ngày 10 tiếng', 'Yêu cầu nhân viên có kinh nghiệm chăm sóc người già', 0, '2022-05-25 07:31:26');
+INSERT INTO `congviec` (`maCV`, `maTK`, `maDMCV`, `tenCV`, `khuVuc`, `soLuong`, `trinhDoHV`, `gioiTinhYC`, `chucVu`, `luong`, `diaChi`, `time`, `moTa`, `tinhTrang`, `tinhTrangDaUT`, `thoiGianDang`) VALUES
+(486, 4, 1, 'Tuyển giúp việc ăn ở lại lương từ 5 đến 12tr/tháng, tại Hải Châu', 1, 1, '12/12', 'Nữ', 'Nhân viên dọn dẹp nhà', '8.000.000 - 10.000.000 VNĐ', '02 Thanh Sơn, P. Thanh Bình, Q.Hải Châu, Đà Nẵng', 'Ngày 8 tiếng', 'Yêu cầu nhân viên đã có kinh nghiệm dọn dẹp nhà', 1, 1, '2022-05-24 20:35:35'),
+(487, 13, 1, 'Cần tuyển giúp việc 10 ngày hè lương từ 250k đến 350k/ngày', 2, 1, '12/12', 'Nữ', 'Nhân viên chăm sóc người già', '10.000.000 - 15.000.000', '28 thanh sơn, P. Thanh Bình, Hải Châu, Đà Nẵng', 'Ngày 10 tiếng', 'Yêu cầu nhân viên có kinh nghiệm chăm sóc người già', 1, 1, '2022-05-25 07:31:26');
 
 -- --------------------------------------------------------
 
@@ -123,6 +124,7 @@ INSERT INTO `danhmuccv` (`maDMCV`, `tenDM`, `hinhAnh`) VALUES
 --
 
 CREATE TABLE `danhsachungvien` (
+  `maDS` int(11) NOT NULL,
   `maCV` int(11) NOT NULL,
   `thoiGianUT` varchar(255) NOT NULL,
   `maTK` int(11) NOT NULL,
@@ -134,9 +136,9 @@ CREATE TABLE `danhsachungvien` (
 -- Đang đổ dữ liệu cho bảng `danhsachungvien`
 --
 
-INSERT INTO `danhsachungvien` (`maCV`, `thoiGianUT`, `maTK`, `tinhTrangUngTuyen`, `khXacNhan`) VALUES
-(486, '', 14, 1, 1),
-(486, '', 15, 1, 1);
+INSERT INTO `danhsachungvien` (`maDS`, `maCV`, `thoiGianUT`, `maTK`, `tinhTrangUngTuyen`, `khXacNhan`) VALUES
+(1, 486, '', 14, 1, 1),
+(2, 487, '', 15, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -297,6 +299,12 @@ ALTER TABLE `danhmuccv`
   ADD PRIMARY KEY (`maDMCV`);
 
 --
+-- Chỉ mục cho bảng `danhsachungvien`
+--
+ALTER TABLE `danhsachungvien`
+  ADD PRIMARY KEY (`maDS`);
+
+--
 -- Chỉ mục cho bảng `hinhanhcv`
 --
 ALTER TABLE `hinhanhcv`
@@ -353,6 +361,12 @@ ALTER TABLE `danhgiagv`
 --
 ALTER TABLE `danhmuccv`
   MODIFY `maDMCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT cho bảng `danhsachungvien`
+--
+ALTER TABLE `danhsachungvien`
+  MODIFY `maDS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `hinhanhcv`

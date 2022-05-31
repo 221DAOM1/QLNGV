@@ -63,7 +63,7 @@
         <td><?= $row['tinhTrang'] ?></td>
         <td><?= $row['thoiGianDang'] ?></td>
         <td>
-          <a href="?mod=congviec&act=chitiet&id=<?= $row['maCV'] ?>&tt=<?=$row['tinhTrang']?>" class="btn btn-success" >Xem chi tiết</a>
+          <a style="width: 110px;" href="?mod=congviec&act=chitiet&id=<?= $row['maCV'] ?>&tt=<?=$row['tinhTrang']?>" class="btn btn-success" >Xem chi tiết</a>
           <a href="?mod=congviec&act=delete&id=<?= $row['maCV'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" 
           class="btn btn-danger <?php if($row['tinhTrang']!=0) echo 'btn-remove-none';?>">Xóa</a>
         </td>
