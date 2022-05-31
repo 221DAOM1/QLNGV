@@ -38,7 +38,7 @@ class WorkController
     function chitiet()
     {
         $id = isset($_GET['id']) ? $_GET['id'] : 1;
-        $data = $this->work_model->chitietcongviec($id);
+        $data_work = $this->work_model->chitietcongviec($id);
         require_once("./Views/index.php");
     }
     
