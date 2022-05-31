@@ -13,6 +13,12 @@ class work extends Model
         return $data;
     }
 
+    function updatecv($idcv){
+        $query = "UPDATE congviec SET tinhTrang=1 WHERE maCV=$idcv";
+        $result = $this->conn->query($query);
+        header('Location: ?mod=congviec');
+    }
+
     function trangthai($id){
         $query = "select * from congviec where tinhTrang = $id  ORDER BY maCV DESC";
 

@@ -23,11 +23,8 @@ class WorkController
     }
     function xetduyet()
     {
-        $data = array(
-            'maCV' => $_GET['id'],
-            'tinhTrang' => 1
-        );
-        $this->work_model->update($data);
+        $this->work_model->updatecv($_GET['idcv'],$_GET['idtk']);
+        require_once("./Views/index.php");
     }
     function delete()
     {
