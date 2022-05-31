@@ -47,11 +47,14 @@
         <td><?= $row['ghiChu'] ?></td>
         <td>
           <a style="width: 110px;" href="?mod=candidate&act=chitiethelp&id=<?= $row['maTK']?>" class="btn btn-success" >Xem chi tiết</a>
+          <?php if($row['tinhTrangUngTuyen']==0) { ?>
+          
           <form id ="table" action="?mod=candidate&act=xetduyet&idcv=<?= $data['0']['maCV']; ?>&idtk=<?= $data['0']['maTK']; ?>" method="POST" enctype="multipart/form-data">
               <div class="btn-recruiter">
                   <button class="btn btn-success" type="submit" form="table" style="width: 66px;background: red;">Duyệt</button>
               </div>
           </form>
+          <?php } ?>
         </td>
       </tr>
     <?php } ?>

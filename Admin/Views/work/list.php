@@ -64,11 +64,13 @@
         <td><?= $row['thoiGianDang'] ?></td>
         <td>
           <a style="width: 110px;" href="?mod=congviec&act=chitiet&id=<?= $row['maCV'] ?>&tt=<?=$row['tinhTrang']?>" class="btn btn-success" >Xem chi tiết</a>
+          <?php if($row['tinhTrang']==0) {?>
           <form id ="table" action="?mod=congviec&act=xetduyet&idcv=<?= $row['maCV']; ?>" method="POST" enctype="multipart/form-data">
               <div class="btn-recruiter">
                   <button class="btn btn-success" type="submit" form="table" style="width: 66px;background: red;">Duyệt</button>
               </div>
           </form>
+          <?php } ?>
         </td>
       </tr>
     <?php } ?>

@@ -1,5 +1,5 @@
-<a href="?mod=candidate&id=1" type="button" class="btn btn-primary">Đã ứng tuyển</a>
-<a href="?mod=candidate&id=0" type="button" class="btn btn-danger">Chưa ứng tuyển</a>
+<a href="?mod=candidate&id=1" type="button" class="btn btn-primary">Đã giới thiệu</a>
+<a href="?mod=candidate&id=0" type="button" class="btn btn-danger">Chưa giới thiệu</a>
 <?php if (isset($_COOKIE['msg2'])) { ?>
   <div class="alert alert-success">
     <strong>Thông báo</strong> <?= $_COOKIE['msg2'] ?>
@@ -47,7 +47,7 @@
         <td><?= $row['moTa'] ?></td>
         <td><?= $row['thoiGianDang'] ?></td>
         <td>
-          <a style="width: 177px;" href="?mod=candidate&act=chitiet&id=<?= $row['maCV']?>&tt=1" class="btn btn-success" >Xem người ứng tuyển</a>
+          <a style="width: 177px;" href="?mod=candidate&act=chitiet&id=<?= $row['maCV']?>&tt=0" class="btn btn-success" >Xem người ứng tuyển</a>
         </td>
       </tr>
     <?php } ?>
