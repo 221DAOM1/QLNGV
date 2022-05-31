@@ -2,7 +2,6 @@
 
 <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js"></script>
 <script>
-    // TODO: Replace firebaseConfig you get from Firebase Console
     var firebaseConfig = {
         apiKey: "AIzaSyDl06JoZavgolR96a7o7vKYpgrg16iBUGg",
         authDomain: "dapm-212f9.firebaseapp.com",
@@ -15,36 +14,21 @@
 
     const messaging = firebase.messaging();
 
-    messaging.requestPermission().then(() => {
-        if (tokenToSever()) {
-            console.log("token is saved")
-        } else {
-            getToken();
-        }
-    })
-
-    function getToken() {
-        messaging.getToken(messaging, {
-            vapidKey: 'BP5GVQkxyTDhtPw24zr3jH2p-jUlM5kKukbVtNNTWjZ8xyT529Eluj7-tlERzdaeCpJbR4lPcmaFQWU1ly1P7Ck'
-        }).then((currentToken) => {
-            if (currentToken) {
-                console.log(currentToken)
-            } else {
-                // Show permission request UI
-                console.log('No registration token available. Request permission to generate one.');
-            }
-        }).catch((err) => {
-            console.log('An error occurred while retrieving token. ', err);
-        });
-    }
-
-    function tokenToSever() {
-        return false;
-    }
+    messaging.onMessage(function(payload) {
+        // console.log("Message received. ", payload);
+        notificationTitle = payload.data.title;
+        notificationOptions = {
+            body: payload.data.body,
+            icon: payload.data.icon,
+            image: payload.data.image
+        };
+        var notification = new Notification(notificationTitle, notificationOptions);
+    });
 </script>
 
 <?php
 session_start();
+// require_once("./Notification/send.php");
 $mod = isset($_GET['act']) ? $_GET['act'] : "home";
 switch ($mod) {
     case 'home':
@@ -163,6 +147,25 @@ switch ($mod) {
         require_once('./Controllers/DetailHelpController.php');
         $objCate = new DetailController();
         $objCate->list();
+        break;
+    case "userToken":
+        $act = isset($_GET['xuli']) ? $_GET['xuli'] : "getToken";
+        require_once('Controllers/TokenController.php');
+        $tokenController = new TokenController();
+        switch ($act) {
+            case 'getToken':
+                $tokenController->getTokenOfUser();
+                break;
+            case 'addToken':
+                $tokenController->addTokenForUser();
+                break;
+            case 'deleteToken':
+                $tokenController->deleteToken();
+                break;
+            default:
+                $tokenController->getTokenOfUser();
+                break;
+        }
         break;
     default:
         require_once('home/home.php');

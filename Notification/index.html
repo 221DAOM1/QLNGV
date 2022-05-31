@@ -50,6 +50,17 @@
         function tokenToSever() {
             return false;
         }
+
+        messaging.onMessage(function (payload) {
+            console.log("Message received. ", payload);
+            notificationTitle = payload.data.title;
+            notificationOptions = {
+                body: payload.data.body,
+                icon: payload.data.icon,
+                image: payload.data.image
+            };
+            var notification = new Notification(notificationTitle, notificationOptions);
+        });
     </script>
 </body>
 
