@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <div class="col col-lg-5">
+        <div class="col col-lg-5" style="text-align: left;">
             <div class="product-detail-main">
                 <h2 class="tilte-name-product-detail">Tên công việc: <?php echo $data_user[0]['tenCV']; ?></h2>
                 <h2 class="tilte-name-product-detail">Họ và tên: <?php echo $data_user[0]['hoTen']; ?></h2>
@@ -41,7 +41,7 @@
                 </div>
                 <?php } ?>
                 <form id ="table" action="?act=ratehelp&xuli=store" method="POST" enctype="multipart/form-data">
-                    <h2 class="tilte-name-product-detail">ĐÁNH GIÁ GIÚP VIỆC</h2>
+                    <h2 class="tilte-name-product-detail" style="text-align: center;">ĐÁNH GIÁ GIÚP VIỆC</h2>
                     <fieldset class="form-group">
                         <label>Số sao</label>
                         <select class="form-control" name="soSao">
