@@ -47,7 +47,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="has-arrow" href="?mod=candidate" aria-expanded="true">
+                    <a class="has-arrow" href="?mod=candidate&id=1" aria-expanded="true">
                         <div class="icon_menu">
                             <i class="fa-solid fa-handshake-angle"></i>
                             <span>Giới thiệu ứng viên</span>

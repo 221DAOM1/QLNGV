@@ -27,8 +27,14 @@ class CandidateController
     }
     function chitiet()
     {
+        $data = array();
+        $tt = isset($_GET['tt']) ? $_GET['tt'] : 1;
+        $tt = $_GET['tt'];
+        if ($tt > 1) {
+            $tt = 0;
+        }
         $id = isset($_GET['id']) ? $_GET['id'] : 1;
-        $data = $this->candidate_model->chitietungvien($id);
+        $data = $this->candidate_model->chitietungvien($id,$tt);
         require_once("./Views/index.php");
     }
     function chitiethelp()
