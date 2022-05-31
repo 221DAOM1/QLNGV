@@ -54,6 +54,27 @@ session_start();
                     break;
             }
             break;
+        case 'candidate':
+            require_once('Controllers/CandidateController.php');
+            $controller_obj = new CandidateController();
+            switch ($act) {
+                case 'list':
+                    $controller_obj->list();
+                    break;
+                case 'chitiet':
+                    $controller_obj->chitiet();
+                    break;
+                case 'chitiethelp':
+                    $controller_obj->chitiethelp();
+                    break;
+                case 'xetduyet':
+                    $controller_obj->xetduyet();
+                    break;
+                default:
+                    $controller_obj->list();
+                    break;
+            }
+            break;
         case 'category':
             require_once('Controllers/CategoryController.php');
             $controller_obj = new CategoryController();

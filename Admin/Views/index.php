@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="./Publics/css/style.css">
     <link rel="stylesheet" href="./Publics/css/reset.css">
     <link rel="stylesheet" href="./Publics/css/admin.css">
+    <link rel="stylesheet" href="../Publics/css/main.css">
+    
+    <link rel="stylesheet" href="../Publics/css/detailhelp.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./public/js/jquery.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -76,6 +79,22 @@
                                               default:
                                                 require_once('work/list.php');
                                                 break;
+                                        }
+                                        break;
+                                    case 'candidate':
+                                        switch ($act) {
+                                            case 'list':
+                                                require_once('candidate/list.php');
+                                                break;
+                                            case 'chitiet':
+                                                require_once('candidate/listhelp.php');
+                                                break;
+                                            case 'chitiethelp':
+                                                require_once('candidate/detailhelp.php');
+                                                break;
+                                            default:
+                                            require_once('candidate/list.php');
+                                            break;
                                         }
                                         break;
                                     case 'category':
