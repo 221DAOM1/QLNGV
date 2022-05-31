@@ -700,6 +700,11 @@ i.far.fa-heart.icon-heart-i:hover,
     margin-top: 10px;
 }
 
+.work_new_content > a:hover {
+    color: var(--cl-textprimary);
+    text-decoration: none;
+}
+
 .work_new_name {
     color: var(--cl-textprimary);
     font-weight: 600;
