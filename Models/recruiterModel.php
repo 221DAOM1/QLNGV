@@ -114,5 +114,3 @@
             header('Location:?act=work&xuli=add');
         }
     }
-    
-?>

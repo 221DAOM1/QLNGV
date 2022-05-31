@@ -330,6 +330,14 @@ ALTER TABLE `thongtinungvien`
   MODIFY `maTK` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
+create table userToken (
+	id int primary key auto_increment,
+    token varchar(255)  not null,
+	maTK int not null,
+    foreign key(maTK) references taikhoan(maTK)
+);
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
