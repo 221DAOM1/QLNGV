@@ -16,11 +16,38 @@
             return $data;
         }
 
+        function chitietuv($id){
+            $query = "SELECT * FROM taikhoan,congviec,danhsachungvien WHERE taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
+            AND congviec.maCV=$id AND tinhTrangUngTuyen=1;";
+            require("result.php");
+            return $data;
+        }
+
         function taikhoangv($id,$idTK){
             $query = "SELECT taikhoan.maTK,hinhAnh,taikhoan.diaChi,hoTen,ngaySinh,gioiTinh,congviec.maCV,tenCV FROM taikhoan,congviec,danhsachungvien WHERE taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
             AND danhsachungvien.maTK=$idTK AND danhsachungvien.maCV=$id;";
             require("result.php");
             return $data;
+        }
+
+        function taikhoangv1($id,$idTK){
+            $query = "SELECT taikhoan.maTK,hinhAnh,taikhoan.diaChi,hoTen,ngaySinh,gioiTinh,congviec.maCV,tenCV,thongtinungvien.thoiGian,quanhuyen.tenQuan,thongtinungvien.soThich,thongtinungvien.ghiChu,thongtinungvien.trinhDoHV from taikhoan,thongtinungvien,quanhuyen,congviec,danhsachungvien WHERE taikhoan.maTK = thongtinungvien.maTK AND thongtinungvien.khuVucLamViec=quanhuyen.idQuan AND taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
+            AND danhsachungvien.maTK=$idTK AND danhsachungvien.maCV=$id;";
+            require("result.php");
+            return $data;
+        }
+
+        function getEvalute($maTK){
+            $query = "SELECT * from taikhoan as tk,danhsachungvien as dsuv,danhgiagv as dg WHERE  
+            dsuv.maCV=dg.maCV and tk.maTK=dg.maTK and khXacNhan=1 and tk.maTK = '$maTK' ;";
+           require("result.php");
+           return $data;
+        }
+
+        function updateds($idcv,$idtk){
+            $query = "UPDATE danhsachungvien SET khXacNhan=1 WHERE maCV=$idcv and maTK=$idtk";
+            $result = $this->conn->query($query);
+            header('Location: ?act=confirmhelp&xuli=list');
         }
 
         function store($data)
@@ -39,7 +66,7 @@
 
             if ($status == true) {
                 setcookie('msg2', 'ĐÁNH GIÁ THÀNH CÔNG', time() + 2);
-                header('Location: ?mod=' . "home");
+                header('Location: ?act=' . "home");
             } else {
                 
             }

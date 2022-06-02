@@ -18,10 +18,18 @@
             $data = $this->rate_model->chitietcongviec($id);
             require_once("./Views/index.php");
         }
-        function detailhelp()
+        function chitietuv()
         {
             $id = isset($_GET['id']) ? $_GET['id'] : 1;
-            $data_user = $this->rate_model->taikhoangv($id,$_GET['tk']);
+            $data = $this->rate_model->chitietuv($id);
+            require_once("./Views/index.php");
+        }
+        function detailhelp()
+        {
+            //lấy đánh giá
+            $DataEvalute = $this->rate_model->getEvalute($_GET['tk']);
+            $id = isset($_GET['id']) ? $_GET['id'] : 1;
+            $data_user = $this->rate_model->taikhoangv1($id,$_GET['tk']);
             require_once("./Views/index.php");
         }
         public function store()
@@ -37,6 +45,11 @@
                 'ngayDanhGia' => $ThoiGian
             );
             $this->rate_model->store($data_work);
+           
+        }
+        public function confirm()
+        {
+            $this->rate_model->updateds($_POST['maCV'],$_POST['maTK']);
            
         }
         

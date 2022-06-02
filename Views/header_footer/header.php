@@ -29,6 +29,10 @@
                 <li class="nav-item__down-item">
                     <a href="?act=work&xuli=add">Đăng bài tuyển dụng</a>
                 </li>
+                <li class="nav-item__down-item">
+                    <a href="?act=confirmhelp&xuli=list">Ứng viên giới thiệu</a>
+                </li>
+                <li class="nav-item__down-item"><a href="?act=ratehelp&xuli=list">Đánh giá giúp việc</a></li>
             </ul>
         </li>
         <?php } ?>
@@ -59,10 +63,6 @@
                         ?>
                             <li class="group-login__list-item"><b><?=$_SESSION['login']['hoTen']?></b></li>
                             <li class="group-login__list-item"><a href="?act=taikhoan&xuli=account">Tài khoản</a></li>
-                            <?php
-                            if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien']) || isset($_SESSION['isLogin_Khachhang'])){ ?>
-                            <li class="group-login__list-item"><a href="?act=ratehelp&xuli=list">Đánh giá</a></li>
-                            <?php } ?>
                             <li class="group-login__list-item"><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
                             <?php
                             if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>

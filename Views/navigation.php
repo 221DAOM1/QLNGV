@@ -90,6 +90,23 @@
                     break;
             }
             break;
+        case "confirmhelp":
+            $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
+            switch ($act) {
+                case 'list':
+                    require_once('confirmhelp/confirm.php');
+                    break;
+                case 'chitietuv':
+                    require_once('confirmhelp/detail.php');
+                    break;
+                case 'chitiethelp':
+                    require_once('confirmhelp/detailhelp.php');
+                    break;
+                default:
+                require_once('confirmhelp/confirm.php');
+                break;
+            }
+            break;
         case "detailwork":
             $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
             switch ($act) {
