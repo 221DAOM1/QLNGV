@@ -9,9 +9,23 @@
             return $data;
         }
 
+        function congviecgv($idCV){
+            $query = "SELECT * from congviec,hinhanhcv,danhmuccv,quanhuyen,taikhoan WHERE taikhoan.maTK=congviec.maTK and quanhuyen.idQuan=congviec.khuVuc AND congviec.maCV=hinhanhcv.maCV AND danhmuccv.maDMCV = congviec.maDMCV AND congviec.maCV=$idCV;";
+            require("result.php");
+            return $data;
+        }
+
+
         function chitietcongviec($id){
             $query = "SELECT * FROM taikhoan,congviec,danhsachungvien WHERE taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
             AND congviec.maCV=$id;";
+            require("result.php");
+            return $data;
+        }
+
+        function chitietdangky($id){
+            $query = "SELECT * FROM taikhoan,congviec,danhsachungvien WHERE taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
+            AND danhsachungvien.maTK=$id;";
             require("result.php");
             return $data;
         }

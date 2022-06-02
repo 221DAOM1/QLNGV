@@ -102,6 +102,12 @@
                 case 'chitiethelp':
                     require_once('confirmhelp/detailhelp.php');
                     break;
+                case 'listregister':
+                    require_once('confirmhelp/listregister.php');
+                    break;
+                case 'detailwork':
+                    require_once('confirmhelp/detailwork.php');
+                    break;
                 default:
                 require_once('confirmhelp/confirm.php');
                 break;

@@ -45,6 +45,7 @@
         <ul class="nav-item__down">
             <li class="nav-item__down-item">
                 <a href="?act=help&xuli=account">Cập nhật hồ sơ</a>
+                <a href="?act=confirmhelp&xuli=listregister">Công việc đăng ký</a>
             </li>
         </ul>
         <?php } ?>

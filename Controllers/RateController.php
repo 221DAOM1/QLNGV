@@ -24,12 +24,23 @@
             $data = $this->rate_model->chitietuv($id);
             require_once("./Views/index.php");
         }
+        function register()
+        {
+            $data = $this->rate_model->chitietdangky($_SESSION['login']['maTK']);
+            require_once("./Views/index.php");
+        }
         function detailhelp()
         {
             //lấy đánh giá
             $DataEvalute = $this->rate_model->getEvalute($_GET['tk']);
             $id = isset($_GET['id']) ? $_GET['id'] : 1;
             $data_user = $this->rate_model->taikhoangv1($id,$_GET['tk']);
+            require_once("./Views/index.php");
+        }
+        function detailwork()
+        {
+            $id = isset($_GET['id']) ? $_GET['id'] : 1;
+            $data_work = $this->rate_model->congviecgv($id);
             require_once("./Views/index.php");
         }
         public function store()

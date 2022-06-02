@@ -157,6 +157,10 @@ switch ($mod) {
                 break;
             case 'confirm':
                 $controller_obj->confirm();
+            case 'listregister':
+                $controller_obj->register();
+            case 'detailwork':
+                $controller_obj->detailwork();
             default:
                 $controller_obj->chitiet();
                 break;
