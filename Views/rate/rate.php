@@ -1,6 +1,7 @@
 <section class="main">
     <div class="container">
-        <?php if (isset($_COOKIE['msg2'])) { ?>
+        <?php if(count($data)!=0) {?>
+            <?php if (isset($_COOKIE['msg2'])) { ?>
         <div class="alert alert-success">
             <strong>Thông báo</strong> <?= $_COOKIE['msg2'] ?>
         </div>
@@ -64,5 +65,9 @@
             $('#dataTable').DataTable();
         });
         </script>
+        <?php } 
+            else{ ?>
+                <img src="./Publics/images/iconnull.png" style="width: 500px;">
+            <?php } ?>
     </div>
 </section>
