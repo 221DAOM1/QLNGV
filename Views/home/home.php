@@ -32,16 +32,16 @@
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <p class="link-btn big-a">
                                 <a class="btn btn-success" style="width:100%" href="">
-                                    <span> Giúp việc gia đình</span>
-                                        <i class="fa fa-chevron-circle-right"></i>
+                                    <span style="float: left;"> Giúp việc gia đình</span>
+                                    <i class="fa fa-chevron-circle-right" style="float: right; margin-top:3px;"></i>
                                 </a>
                                 </p>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <p class="link-btn big-a">
                                 <a class="btn btn-success" style="width:100%" href="">
-                                    <span> Chăm sóc trẻ em</span>
-                                        <i class="fa fa-chevron-circle-right"></i>
+                                    <span style="float: left;"> Chăm sóc trẻ em</span>
+                                        <i class="fa fa-chevron-circle-right" style="float: right; margin-top:3px;"></i>
                                 </a>
                                 </p>
                             </div>
@@ -49,32 +49,32 @@
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <p class="link-btn big-a">
                                 <a class="btn btn-success" style="width:100%" href="">
-                                    <span> Giúp việc giờ theo hành chính</span>
-                                        <i class="fa fa-chevron-circle-right"></i>
+                                    <span style="float: left;"> Giúp việc giờ theo hành chính</span>
+                                        <i class="fa fa-chevron-circle-right" style="float: right; margin-top:3px;"></i>
                                 </a>
                                 </p>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <p class="link-btn big-a">
                                 <a class="btn btn-success" style="width:100%" href="">
-                                    <span> Giúp việc tết nguyên đán</span>
-                                        <i class="fa fa-chevron-circle-right"></i>
+                                    <span style="float: left;"> Giúp việc tết nguyên đán</span>
+                                        <i class="fa fa-chevron-circle-right" style="float: right; margin-top:3px;"></i>
                                 </a>
                                 </p>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <p class="link-btn big-a">
                                 <a class="btn btn-success" style="width:100%" href="">
-                                    <span> Giúp việc mùa hè</span>
-                                        <i class="fa fa-chevron-circle-right"></i>
+                                    <span style="float: left;"> Giúp việc mùa hè</span>
+                                        <i class="fa fa-chevron-circle-right" style="float: right; margin-top:3px;"></i>
                                 </a>
                                 </p>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <p class="link-btn big-a">
                                 <a class="btn btn-success" style="width:100%" href="">
-                                    <span> Giúp việc chăm sóc người già</span>
-                                        <i class="fa fa-chevron-circle-right"></i>
+                                    <span style="float: left;"> Giúp việc chăm sóc người già</span>
+                                        <i class="fa fa-chevron-circle-right" style="float: right; margin-top:3px;"></i>
                                 </a>
                                 </p>
                             </div>
