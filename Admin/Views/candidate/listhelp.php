@@ -1,6 +1,6 @@
 
-<a href="?mod=candidate&act=chitiet&id=<?php echo $data[0]['maCV']; ?>&tt=1" type="button" class="btn btn-primary">Đã duyệt</a>
-<a href="?mod=candidate&act=chitiet&id=<?php echo $data[0]['maCV']; ?>&tt=0" type="button" class="btn btn-danger">Chưa duyệt</a>
+<a href="?mod=candidate&act=chitiet&id=<?= $data[0]['maCV'] ?>&tt=1" type="button" class="btn btn-primary">Ứng viên đã duyệt</a>
+<a href="?mod=candidate&act=chitiet&id=<?= $data[0]['maCV'] ?>&tt=0" type="button" class="btn btn-danger">Ứng viên chưa duyệt</a>
 <?php if (isset($_COOKIE['msg2'])) { ?>
   <div class="alert alert-success">
     <strong>Thông báo</strong> <?= $_COOKIE['msg2'] ?>
@@ -42,7 +42,7 @@
         <td><?= $row['diaChi'] ?></td>
         <td><?= $row['thoiGian'] ?></td>
         <td><?= $row['trinhDoHV'] ?></td>
-        <td><?= $row['khuVucLamViec'] ?></td>
+        <td><?= $row['tenQuan'] ?></td>
         <td><?= $row['soThich'] ?></td>
         <td><?= $row['ghiChu'] ?></td>
         <td>

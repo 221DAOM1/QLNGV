@@ -4,7 +4,7 @@ class candidate extends Model
 {
     var $table = "danhsachungvien";
     function chitietungvien($id,$tt){
-        $query = "SELECT danhsachungvien.tinhTrangUngTuyen,taikhoan.maTK,hoTen,gioiTinh,ngaySinh,CMND,SDT,taikhoan.diaChi,thongtinungvien.thoiGian,thongtinungvien.trinhDoHV,thongtinungvien.khuVucLamViec,thongtinungvien.soThich,thongtinungvien.ghiChu,taikhoan.taikhoan,congviec.maCV FROM quanhuyen,thongtinungvien,taikhoan,congviec,danhsachungvien WHERE quanhuyen.idQuan=thongtinungvien.khuVucLamViec and thongtinungvien.maTK=taikhoan.maTK and taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
+        $query = "SELECT quanhuyen.tenQuan,danhsachungvien.tinhTrangUngTuyen,taikhoan.maTK,hoTen,gioiTinh,ngaySinh,CMND,SDT,taikhoan.diaChi,thongtinungvien.thoiGian,thongtinungvien.trinhDoHV,thongtinungvien.khuVucLamViec,thongtinungvien.soThich,thongtinungvien.ghiChu,taikhoan.taikhoan,congviec.maCV FROM quanhuyen,thongtinungvien,taikhoan,congviec,danhsachungvien WHERE quanhuyen.idQuan=thongtinungvien.khuVucLamViec and thongtinungvien.maTK=taikhoan.maTK and taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
         AND trangThai=1 and congviec.maCV=$id and tinhTrangUngTuyen=$tt;";
 
         require("result.php");
@@ -18,7 +18,7 @@ class candidate extends Model
         return $data;
     }
     function congviec($id){
-        $query = "SELECT * FROM congviec,danhmuccv WHERE tinhTrang = 1  and congviec.maDMCV=danhmuccv.maDMCV and tinhTrangDaUT = $id GROUP BY congviec.maCV DESC";
+        $query = "SELECT * FROM congviec,danhmuccv,quanhuyen WHERE congviec.khuVuc=quanhuyen.idQuan and tinhTrang = 1  and congviec.maDMCV=danhmuccv.maDMCV and tinhTrangDaUT = $id GROUP BY congviec.maCV DESC";
 
         require("result.php");
 
