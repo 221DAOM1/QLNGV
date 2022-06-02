@@ -44,8 +44,10 @@
         <div class="col col-lg-5">
             <div class="product-detail-main">
                 <h2 class="tilte-name-product-detail">Tên công việc: <?php echo $data_work[0]['tenCV']; ?></h2>
-                <h2 class="tilte-name-product-detail-detail">Khu vực: <?php echo $data_work[0]['tenQuan']; ?></h2>
-                <h2 class="tilte-name-product-detail-detail">Số lương: <?php echo $data_work[0]['soLuong']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Người đăng: <?php echo $data_work[0]['hoTen']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Liên hệ: 0<?php echo $data_work[0]['SDT']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Khu vực làm việc: <?php echo $data_work[0]['tenQuan']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Số lượng người làm: <?php echo $data_work[0]['soLuong']; ?> người</h2>
                 <h2 class="tilte-name-product-detail-detail">Trình độ học vấn: <?php echo $data_work[0]['trinhDoHV']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Giới tính yêu cầu: <?php echo $data_work[0]['gioiTinhYC']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Chức vụ: <?php echo $data_work[0]['chucVu']; ?></h2>

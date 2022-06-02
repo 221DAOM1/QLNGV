@@ -11,7 +11,7 @@
             return $data;
         }
         function congviec($idCV){
-            $query = "SELECT * from congviec,hinhanhcv,danhmuccv,quanhuyen WHERE quanhuyen.idQuan=congviec.khuVuc AND congviec.maCV=hinhanhcv.maCV AND danhmuccv.maDMCV = congviec.maDMCV AND congviec.maCV=$idCV;";
+            $query = "SELECT * from congviec,hinhanhcv,danhmuccv,quanhuyen,taikhoan WHERE taikhoan.maTK=congviec.maTK and quanhuyen.idQuan=congviec.khuVuc AND congviec.maCV=hinhanhcv.maCV AND danhmuccv.maDMCV = congviec.maDMCV AND congviec.maCV=$idCV;";
             require("result.php");
             return $data;
         }
@@ -94,28 +94,6 @@
                 setcookie('msg2', 'Xóa thành công', time() + 2);
             } else {
                 setcookie('msg2', 'Xóa không thành công', time() + 2);
-            }
-            header('Location:?act=work&xuli=add');
-        }
-        function store($data)
-        {
-            $f = "";
-            $v = "";
-            foreach ($data as $key => $value) {
-                $f .= $key . ",";
-                $v .= "'" . $value . "',";
-            }
-            $f = trim($f, ",");
-            $v = trim($v, ",");
-            $query = "INSERT INTO $this->table($f) VALUES ($v);";
-    
-            $status = $this->conn->query($query);
-    
-            if ($status == true) {
-              setcookie('msg2', 'Gửi yêu cầu thành công', time() + 2);
-              
-            } else {
-                setcookie('msg2', 'Gửi yêu cầu thất bại', time() + 2);
             }
             header('Location:?act=work&xuli=add');
         }
