@@ -25,18 +25,18 @@ class UserController
     public function store()
     {
         $data = array(
-            'maQuyen' =>  '2',
+            'maQuyen' =>  $_POST['maQuyen'],
             'taiKhoan' => $_POST['taiKhoan'],
             'matKhau' => md5($_POST['matKhau']),
             'hoTen' => $_POST['hoTen'],
-            'gioiTinh' => "",
-            'ngaySinh' => "",
+            'gioiTinh' => $_POST['gioiTinh'],
+            'ngaySinh' => $_POST['ngaySinh'],
             'CMND' => $_POST['CMND'],
             'SDT' => $_POST['SDT'],
             'email' => $_POST['email'],
-            'diaChi'  => "",
+            'diaChi'  => $_POST['diaChi'],
             'hinhAnh' => "",
-            'TrangThai'  =>  '1',
+            'trangThai'  =>  '1',
         );
         foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {
@@ -60,17 +60,20 @@ class UserController
     public function update()
     {
         $data = array(
-            'MaND' => $_POST['MaND'],
-            'Ho' =>    $_POST['Ho'],
-            'Ten'  =>   $_POST['Ten'],
-            'GioiTinh' => $_POST['GioiTinh'],
+            
+            'maTK' => $_POST['maTK'],
+            'maQuyen' =>  $_POST['maQuyen'],
+            'taiKhoan' => $_POST['taiKhoan'],
+            'matKhau' => md5($_POST['matKhau']),
+            'hoTen' => $_POST['hoTen'],
+            'gioiTinh' => $_POST['gioiTinh'],
+            'ngaySinh' => $_POST['ngaySinh'],
+            'CMND' => $_POST['CMND'],
+            'email' => $_POST['email'],
             'SDT' => $_POST['SDT'],
-            'Email' =>    $_POST['Email'],
-            'DiaChi'  =>   $_POST['DiaChi'],
-            'TaiKhoan' => $_POST['TaiKhoan'],
-            'MatKhau' => md5($_POST['MatKhau']),
-            'MaQuyen' =>  $_POST['MaQuyen'],
-            'TrangThai'  =>  $_POST['TrangThai'],
+            'diaChi'  => $_POST['diaChi'],
+            'hinhAnh' => "",
+            'trangThai'  =>  '1',
         );
         foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {
