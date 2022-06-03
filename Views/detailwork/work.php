@@ -58,10 +58,10 @@
                 <?php
                     if(isset($_SESSION['isLogin_Giupviec'])){ ?>
                     <form id ="table" action="?act=detailwork&xuli=store" method="POST" enctype="multipart/form-data">
-                        <h2 class="tilte-name-product-detail" style="text-align: center;margin-top: 20px;">ĐĂNG KÝ ỨNG TUYỂN</h2>
+                        <h2 class="tilte-name-product-detail" style="margin-top: 20px;">ĐĂNG KÝ ỨNG TUYỂN</h2>
                         <input style="display: none;" type="text" name="maCV" class="form-control form-control-lg" value="<?= $data_work[0]['maCV']?>"/>
                         <div class="btn-recruiter">
-                            <button class="btn-confirm" type="submit" form="table" style="margin-left: 30px;">Đăng ký</button>
+                            <button class="btn-confirm" type="submit" form="table" style="margin-left: -191px; padding:12px;">Đăng ký</button>
                         </div>
                     </form>
                 <?php } ?>
