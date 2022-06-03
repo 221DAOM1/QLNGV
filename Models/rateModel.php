@@ -3,8 +3,8 @@
     class rate extends model{
         var $table = "danhgiagv";
         function congviec($maTK){
-            $query = "SELECT * FROM congviec as cv, danhsachungvien as dsuv,hinhanhcv as ha
-            WHERE cv.maCV=dsuv.maCV and ha.maCV=cv.maCV and dsuv.khXacNhan=1 and cv.maTK = $maTK GROUP BY cv.maCV;";
+            $query = "SELECT * FROM congviec as cv, danhsachungvien as dsuv,hinhanhcv as ha,quanhuyen as qh
+            WHERE cv.maCV=dsuv.maCV and ha.maCV=cv.maCV and dsuv.khXacNhan=1 and qh.idQuan=cv.khuVuc and cv.maTK = $maTK GROUP BY cv.maCV;";
             require("result.php");
             return $data;
         }
@@ -31,7 +31,7 @@
         }
 
         function chitietuv($id){
-            $query = "SELECT * FROM taikhoan,congviec,danhsachungvien WHERE taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
+            $query = "SELECT * FROM taikhoan,congviec,danhsachungvien,quanhuyen WHERE quanhuyen.idQuan=congviec.khuVuc and taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
             AND congviec.maCV=$id AND tinhTrangUngTuyen=1;";
             require("result.php");
             return $data;

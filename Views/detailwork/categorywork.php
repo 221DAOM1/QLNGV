@@ -100,10 +100,7 @@
                     <div class="product-list col-lg-7" >
                         
                         <div class="container">
-                            <div class="product-list__title row">
-                                <h1 id="product-list__title__h1" data-danhmuc="<?= $cate ?>">
-                                </h1>
-                            </div>
+                            
                             <?php 
                             for ($i = 0; $i < (count($data_work)); $i++) {
                             ?> 

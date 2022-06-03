@@ -150,7 +150,7 @@
     width: 160px;
     box-shadow: 0px 0px 6px rgb(79 95 120 / 10%);
     right: -80px;
-    top: 25px;
+    top: 22px;
     background-color: #fff;
     display: none;
     z-index: 2;
@@ -657,6 +657,7 @@ p.text-sale {
     top :3px;
     right: -30px;
     visibility: hidden;
+    color: red;
 }
 
 .col-product__item:hover .product-item-icon{
@@ -703,6 +704,7 @@ i.far.fa-heart.icon-heart-i:hover,
 .work_new_content_right {
     margin-left: 10px;
     margin-top: 10px;
+    text-align: left;
 }
 
 .work_new_content > a:hover {

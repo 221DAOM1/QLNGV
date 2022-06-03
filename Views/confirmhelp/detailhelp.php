@@ -16,7 +16,7 @@
                 </a>
                 <span class="mr_lr">&nbsp;/ &nbsp;</span>
                 <a href="#">
-                    <span>Chi tiết người giúp việc</span>
+                    <span>Ứng viên giới thiệu &nbsp;/ &nbsp;Ứng viên</span>
                 </a>
                 <span class="mr_lr">&nbsp;/ &nbsp;</span>
             </div>
@@ -71,14 +71,26 @@
                     </div>
                 </div>
                 <form id ="table" action="?act=confirmhelp&xuli=confirm" method="POST" enctype="multipart/form-data">
-                    <h2 class="tilte-name-product-detail" style="text-align: center;">XÁC NHẬN ỨNG VIÊN</h2>
+                    <h2 class="tilte-name-product-detail" style="text-align: left;">XÁC NHẬN ỨNG VIÊN</h2>
                     <input style="display: none;" type="text" name="maTK" class="form-control form-control-lg" value="<?= $data_user[0]['maTK']?>"/>
                     <input style="display: none;" type="text" name="maCV" class="form-control form-control-lg" value="<?= $data_user[0]['maCV']?>"/>
-                    <div class="btn-recruiter">
+                    <div class="btn-recruiter" style="text-align: left; margin-left: 50px;">
                         <button class="btn-confirm" type="submit" form="table">Xác nhận</button>
                     </div>
                 </form>
             </div>
+        </div>
+        <div class="col col-lg-2" style="visibility: visible; -webkit-animation-name: fadeInDown; animation-name: fadeInDown;">
+            <p class="link-btn big-a">
+                <a href="" class="btn btn-success">Đăng tin tuyển dụng
+                    <i class="fa fa-chevron-circle-right"></i>
+                </a>
+            </p>
+            <p class="link-btn big-a">
+                <a href="" class="btn btn-success">Đăng tin tìm việc
+                    <i class="fa fa-chevron-circle-right"></i>
+                </a>
+            </p>
         </div>
     </div>
     

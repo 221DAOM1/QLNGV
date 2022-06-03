@@ -1,73 +1,59 @@
 <section class="main">
     <div class="container">
-        <?php if(count($data)!=0) {?>
-            <?php if (isset($_COOKIE['msg2'])) { ?>
-        <div class="alert alert-success">
-            <strong>Thông báo</strong> <?= $_COOKIE['msg2'] ?>
+        <div class="break-crumb">
+            <div class="break-crumb__head">
+                <div class="home">
+                    <a href="#">
+                        <span>Trang chủ</span>
+                    </a>
+                        <span class="mr_lr">&nbsp;/ Công việc&nbsp;</span>
+                </div>
+                <div>
+                    <strong>
+                        <span id="danhmuc">/ Ứng viên giới thiệu</span>
+                    </strong>
+                </div>
+            </div>
         </div>
-        <?php } ?>
-        <hr>
-        <table class="table table-bordered acountTable" id="dataTable" width="100%" cellspacing="0">
-        <thead>
-            <tr style="
-            background-color: var(--cl-primary);
-            color: white;">
-            <th scope="col">Tên danh mục</th>
-            <th scope="col">Tên công việc</th>
-            <th scope="col">Trình độ học vấn</th>
-            <th scope="col">Giới tính yêu cầu</th>
-            <th scope="col">Chức vụ</th>
-            <th scope="col">Lương</th>
-            <th scope="col">Địa chỉ</th>
-            <th scope="col">Thời gian</th>
-            <th scope="col">Mô tả</th>
-            <th scope="col">Thời gian đăng</th>
-            <th>Thao tác</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            foreach ($data as $row) { ?>
-            <tr>
-                <td>
-                <?php
-                if ($row['maDMCV'] == 1) {
-                    echo 'Chăm sóc trẻ em';
-                } else {
-                    if ($row['maDMCV'] == 2) {
-                    echo 'Dọn dẹp nhà';
-                    } else {
-                        if ($row['maDMCV'] == 3) {
-                        echo 'Chăm sóc người già';
-                        }
-                    }
-                }
-                ?>
-                </td>
-                <td><?= $row['tenCV'] ?></td>
-                <td><?= $row['trinhDoHV'] ?></td>
-                <td><?= $row['gioiTinhYC'] ?></td>
-                <td><?= $row['chucVu'] ?></td>
-                <td><?= $row['luong'] ?></td>
-                <td><?= $row['diaChi'] ?></td>
-                <td><?= $row['time'] ?></td>
-                <td><?= $row['moTa'] ?></td>
-                <td><?= $row['thoiGianDang'] ?></td>
-                <td>
-                <a href="?act=confirmhelp&xuli=chitietuv&id=<?= $row['maCV'] ?>" class="btn btn-success" >Xem ứng viên</a>
-                </td>
-            </tr>
-            <?php } ?>
-        </tbody>
-        </table>
-        <script>
-        $(document).ready(function() {
-            $('#dataTable').DataTable();
-        });
-        </script>
-        <?php } 
-            else{ ?>
-                <img src="./Publics/images/iconnull.png" style="width: 500px;">
-            <?php } ?>
-    </div>
+        <div class="product__content">
+            <div class="container">
+                <div class="row">
+                    <div class="product-list col-lg-9" >
+                        <?php 
+                        for ($i = 0; $i < (count($data)); $i++) {?> 
+                            <div class="work_new_content">    
+                                <a href="?act=confirmhelp&xuli=chitietuv&id=<?= $data[$i]['maCV'] ?>" style="display: block;">
+                                    <div style="display: flex;">
+                                        <div class="work_new_content_img">
+                                            <img style="width:150px;height:150px;" src="./Publics/images/<?php echo $data[$i]['tenHinh'] ?>" alt="">
+                                        </div>
+                                        <div class="work_new_content_right">
+                                            <p class="work_new_name"><?= $data[$i]['tenCV'] ?></p>
+                                            <p class="work_new_detail">Khu vực làm việc: <?= $data[$i]['tenQuan'] ?></p>
+                                            <p class="work_new_detail">Mô tả: <?= $data[$i]['moTa'] ?></p>
+                                            <p class="work_new_detail">Địa chỉ làm việc: <?= $data[$i]['diaChi'] ?></p>
+                                            <p class="work_new_detail">Số lượng người làm: <?= $data[$i]['soLuong'] ?></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        <?php } ?>   
+                    </div>
+                    <div class="col col-lg-3" style="visibility: visible; -webkit-animation-name: fadeInDown; animation-name: fadeInDown;">
+                        <p class="link-btn big-a">
+                            <a href="" class="btn btn-success">Đăng tin tuyển dụng
+                                <i class="fa fa-chevron-circle-right"></i>
+                            </a>
+                        </p>
+                        <p class="link-btn big-a">
+                            <a href="" class="btn btn-success">Đăng tin tìm việc
+                                <i class="fa fa-chevron-circle-right"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>    
 </section>

@@ -37,27 +37,6 @@
 .container-infor__item .edit{
     font-size: 14px !important;
 }
-.btn-edit{
-    
-    background-color: var(--cl-green);
-    display: block;
-    width: 100%;
-    outline: none;
-    border: none;
-    height: 30px;
-    color:#ffff;
-    border-radius: 5px;
-   
-}
-.container-infor__title{
-   
-    color:#ffff;
-    text-align: center;
-    line-height: 1.8rem;
-    height: 30px;
-    width: 100%;
-    background-color: green;
-}
 .container-infor__name{
     margin: 10px;
 }
