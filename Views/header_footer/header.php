@@ -26,13 +26,14 @@
             </a>
             <i class="fas fa-chevron-down"></i>
             <ul class="nav-item__down">
-            <li class="nav-item__down-item">
+                <li class="nav-item__down-item">
                     <a href="?act=detailwork&xuli=listcategory&id=1">Chăm sóc trẻ em</a>
+                    <i class="fas fa-chevron-right"></i>
                 </li>
-                <li class="nav-item__down-item"><a href="?act=detailwork&xuli=listcategory&id=2">Dọn dẹp nhà</a></li>
-                <li class="nav-item__down-item"><a href="?act=detailwork&xuli=listcategory&id=3">Chăm sóc người già</a></li>
-                <li class="nav-item__down-item"><a href="?act=detailwork&xuli=listcategory&id=4">Giúp việc theo giờ hành chính</a></li>
-                <li class="nav-item__down-item"><a href="?act=detailwork&xuli=listcategory&id=5">Giúp việc tết nguyên đám</a></li>
+                <li class="nav-item__down-item"><a href="?act=detailwork&xuli=listcategory&id=2">Dọn dẹp nhà</a><i class="fas fa-chevron-right"></i></li>
+                <li class="nav-item__down-item"><a href="?act=detailwork&xuli=listcategory&id=3">Chăm sóc người già</a><i class="fas fa-chevron-right"></i></li>
+                <li class="nav-item__down-item"><a href="?act=detailwork&xuli=listcategory&id=4">Giúp việc theo giờ hành chính</a><i class="fas fa-chevron-right"></i></li>
+                <li class="nav-item__down-item"><a href="?act=detailwork&xuli=listcategory&id=5">Giúp việc tết nguyên đám</a><i class="fas fa-chevron-right"></i></li>
             </ul>
         </li>
         <?php } ?>
@@ -44,17 +45,19 @@
                 Người tuyển dụng
             </a>
             <i class="fas fa-chevron-down"></i>
-            <ul class="nav-item__down">
+            <ul class="nav-item__down" style="width: 155px;">
                 <li class="nav-item__down-item">
-                    <a href="?act=detailhelp&xuli=listcategory&id=1">Hải châu</a>
+                    <a href="?act=detailhelp&xuli=listcategory&id=1">Hải châu</a><i class="fas fa-chevron-right"></i>
                 </li>
-                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=2">Cẩm lệ</a></li>
-                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=3">Thanh Khê</a></li>
-                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=4">Liên Chiểu</a></li>
-                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=5">Ngũ Hành Sơn</a></li>
-                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=3">Sơn Trà</a></li>
-                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=4">Hòa Vang</a></li>
-                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=5">Hoàng Sa</a></li>
+                <li class="nav-item__down-item">
+                    <a href="?act=detailhelp&xuli=listcategory&id=2">Cẩm lệ</a><i class="fas fa-chevron-right"></i>
+                </li>
+                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=3">Thanh Khê</a><i class="fas fa-chevron-right"></i></li>
+                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=4">Liên Chiểu</a><i class="fas fa-chevron-right"></i></li>
+                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=5">Ngũ Hành Sơn</a><i class="fas fa-chevron-right"></i></li>
+                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=3">Sơn Trà</a><i class="fas fa-chevron-right"></i></li>
+                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=4">Hòa Vang</a><i class="fas fa-chevron-right"></i></li>
+                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=5">Hoàng Sa</a><i class="fas fa-chevron-right"></i></li>
             </ul>
         </li>
         <?php } ?>
@@ -66,14 +69,14 @@
                 Cho người tuyển dụng
             </a>
             <i class="fas fa-chevron-down"></i>
-            <ul class="nav-item__down">
+            <ul class="nav-item__down" style="width: 200px;">
                 <li class="nav-item__down-item">
-                    <a href="?act=work&xuli=add">Đăng bài tuyển dụng</a>
+                    <a href="?act=work&xuli=add">Đăng bài tuyển dụng</a><i class="fas fa-chevron-right"></i>
                 </li>
                 <li class="nav-item__down-item">
-                    <a href="?act=confirmhelp&xuli=list">Ứng viên giới thiệu</a>
+                    <a href="?act=confirmhelp&xuli=list">Ứng viên giới thiệu</a><i class="fas fa-chevron-right"></i>
                 </li>
-                <li class="nav-item__down-item"><a href="?act=ratehelp&xuli=list">Đánh giá giúp việc</a></li>
+                <li class="nav-item__down-item"><a href="?act=ratehelp&xuli=list">Đánh giá giúp việc</a><i class="fas fa-chevron-right"></i></li>
             </ul>
         </li>
         <?php } ?>
@@ -83,10 +86,13 @@
         <li class="nav-list__item">
         <a class="nav-list__item-link" href="">Cho người giúp việc</a>
         <i class="fas fa-chevron-down"></i>
-        <ul class="nav-item__down">
+        <ul class="nav-item__down" style="width: 200px;">
             <li class="nav-item__down-item">
-                <a href="?act=help&xuli=account">Cập nhật hồ sơ</a>
-                <a href="?act=confirmhelp&xuli=listregister">Công việc đăng ký</a>
+                <a href="?act=help&xuli=account">Cập nhật hồ sơ</a><i class="fas fa-chevron-right"></i>
+                
+            </li>
+            <li class="nav-item__down-item">
+                <a href="?act=confirmhelp&xuli=listregister">Công việc đăng ký</a><i class="fas fa-chevron-right"></i>
             </li>
         </ul>
         <?php } ?>

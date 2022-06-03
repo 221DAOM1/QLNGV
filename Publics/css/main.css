@@ -68,7 +68,7 @@
 .nav-item__down {
     position: absolute;
     box-shadow: 0 0 2px 2px #c1c1c1;
-    width: 200px;
+    width: 250px;
     top: 35px;
     left: 0px;
     display: none;
@@ -79,11 +79,16 @@
 .nav-item__down-item {  
     border-bottom: 1px solid #c1c1c1;
     position: relative;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    align-items: center;
 }
 .nav-item__down-item i.fas.fa-chevron-right {
     position: absolute;
     right: 15px;
 }
+
 .nav-item__down-item:hover .nav-list__down {
     display: block;
 }
@@ -105,10 +110,8 @@
 .nav-item__down-item a{
     color: var(--cl-text);
     font-size: 16px;
-    font-weight: 550;
-    padding: 10px 20px;
+    padding: 10px 10px;
     display: block;
-    text-align: center;
 }
 
 .header__logo {
