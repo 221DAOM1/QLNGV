@@ -11,6 +11,11 @@
             $data_work = $this->work_model->congviec($_GET['cv']);
             require_once("Views/index.php");
         }
+        public function listcategory()
+        {
+            $data_work = $this->work_model->congvieccg($_GET['id']);
+            require_once("Views/index.php");
+        }
         public function store()
         {
             date_default_timezone_set('Asia/Ho_Chi_Minh');

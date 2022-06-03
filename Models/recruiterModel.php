@@ -15,6 +15,11 @@
             require("result.php");
             return $data;
         }
+        function congvieccg($idCV){
+            $query = "SELECT * from congviec,hinhanhcv,danhmuccv,quanhuyen,taikhoan WHERE taikhoan.maTK=congviec.maTK and quanhuyen.idQuan=congviec.khuVuc AND congviec.maCV=hinhanhcv.maCV AND danhmuccv.maDMCV = congviec.maDMCV AND congviec.maDMCV=$idCV GROUP BY congviec.maCV;";
+            require("result.php");
+            return $data;
+        }
         function district(){
             $query = "select * from quanhuyen";
             require("result.php");

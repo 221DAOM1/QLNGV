@@ -18,6 +18,44 @@
         <li class="nav-list__item"><a href="?act=home" class="nav-list__item-link">Trang chủ</a></li>
         <li class="nav-list__item"><a class="nav-list__item-link" href="">Giới thiệu</a></li>
         <?php
+            if(isset($_SESSION['isLogin_Giupviec'])|| isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){
+        ?>
+        <li class="nav-list__item">
+            <a href="">
+                Công việc tuyển dụng
+            </a>
+            <i class="fas fa-chevron-down"></i>
+            <ul class="nav-item__down">
+                <li class="nav-item__down-item">
+                    <a href="?act=detailwork&xuli=listcategory&id=1">Chăm sóc trẻ em</a>
+                </li>
+                <li class="nav-item__down-item"><a href="?act=detailwork&xuli=listcategory&id=2">Dọn dẹp nhà</a></li>
+                <li class="nav-item__down-item"><a href="?act=detailwork&xuli=listcategory&id=3">Chăm sóc người già</a></li>
+                <li class="nav-item__down-item"><a href="?act=detailwork&xuli=listcategory&id=4">Giúp việc theo giờ hành chính</a></li>
+                <li class="nav-item__down-item"><a href="?act=detailwork&xuli=listcategory&id=5">Giúp việc tết nguyên đám</a></li>
+            </ul>
+        </li>
+        <?php } ?>
+        <?php
+            if(isset($_SESSION['isLogin_Khachhang'])|| isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){
+        ?>
+        <li class="nav-list__item">
+            <a href="">
+                Người tuyển dụng
+            </a>
+            <i class="fas fa-chevron-down"></i>
+            <ul class="nav-item__down">
+                <li class="nav-item__down-item">
+                    <a href="">Chăm sóc trẻ em</a>
+                </li>
+                <li class="nav-item__down-item"><a href="">Dọn dẹp nhà</a></li>
+                <li class="nav-item__down-item"><a href="">Chăm sóc người già</a></li>
+                <li class="nav-item__down-item"><a href="">Giúp việc theo giờ hành chính</a></li>
+                <li class="nav-item__down-item"><a href="">Giúp việc tết nguyên đám</a></li>
+            </ul>
+        </li>
+        <?php } ?>
+        <?php
             if(isset($_SESSION['isLogin_Khachhang'])|| isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){
         ?>
         <li class="nav-list__item">

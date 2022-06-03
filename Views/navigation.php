@@ -113,11 +113,15 @@
                 break;
             }
             break;
+        
         case "detailwork":
             $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
             switch ($act) {
                 case 'list':
                     require_once('detailwork/work.php');
+                    break;
+                case 'listcategory':
+                    require_once('detailwork/categorywork.php');
                     break;
                 default:
                     require_once('detailwork/work.php');

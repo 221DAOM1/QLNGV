@@ -174,6 +174,9 @@ switch ($mod) {
             case 'list':
                 $controller_obj->list();
             break;
+            case 'listcategory':
+                $controller_obj->listcategory();
+            break;
             case 'store':
                 $controller_obj->store();
             default:

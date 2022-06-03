@@ -8,7 +8,6 @@
         }
         function list(){
             $data_banner = $this->help_model->getBanner();
-            
             $data_newhelp = $this->help_model->giupviec_moi();
             $data_newwork = $this->help_model->congviec_moi();
             require_once('./Views/index.php');  

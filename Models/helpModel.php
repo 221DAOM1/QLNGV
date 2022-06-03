@@ -6,6 +6,11 @@
             require("result.php");
             return $data;
         }
+        function getCategory() {
+            $query = "SELECT * FROM danhmuccv";
+            require("result.php");
+            return $data;
+        }
         function giupviec_moi() {
             $query = "SELECT * FROM taikhoan,thongtinungvien WHERE taikhoan.maTK = thongtinungvien.maTK
             GROUP by taikhoan.maTK;";
