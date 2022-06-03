@@ -86,8 +86,8 @@
                         </div>
                         <div class="nav-left__filter-product">
                             <div class="filter-product__price">
-                                <h1>Theo mức giá</h1>
-                                <label style="padding: 15px 0;"><span>Giá: </span> 
+                                <h1>Theo lương</h1>
+                                <label style="padding: 15px 0;"><span>Lương: </span> 
                                 <input type="text" id="amount" readonly  style="border: none;"/></label>
                                 <input type="hidden" id="amount2" name="shop" />
                                 <div id="slider-range"></div></br>
@@ -98,7 +98,12 @@
                         </div>
                     </div>
                     <div class="product-list col-lg-7" >
+                        
                         <div class="container">
+                            <div class="product-list__title row">
+                                <h1 id="product-list__title__h1" data-danhmuc="<?= $cate ?>">
+                                </h1>
+                            </div>
                             <?php 
                             for ($i = 0; $i < (count($data_work)); $i++) {
                             ?> 

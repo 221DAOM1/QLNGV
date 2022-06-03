@@ -183,7 +183,7 @@ function filterProduct(action,name, danhmuc) {
     var action = action
     var danhmuc = danhmuc
     var name = name
-    var loai = $("input[type=text][name=loaisp]").val();
+    var loai = $("input[type=text][name=loaicv]").val();
     var betweenPrice = $("#amount2").val();
     if(loai === undefined) {
         loai = 'null';

@@ -115,9 +115,23 @@ switch ($mod) {
         }
         break;
     case "detailhelp":
+        $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
         require_once('./Controllers/DetailHelpController.php');
         $objCate = new DetailController();
-        $objCate->list();
+        switch ($act) {
+            case 'list':
+                $objCate->list();
+            break;
+            case 'listcategory':
+                $objCate->listcategory();
+            break;
+            case 'store':
+                $objCate->store();
+                break;
+            default:
+                $objCate->list();
+                break;
+        }
         break;
     case 'ratehelp': 
         $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";

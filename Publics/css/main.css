@@ -328,7 +328,7 @@ section#slider button.owl-dot.active {
     top: -253px;
 }
 #product-sale-slider .owl-nav {
-    top: -210px;
+    top: -271px;
 }
 
 
@@ -580,7 +580,7 @@ div.wrapper-count {
 .product-img{
     position: relative;
     width: 100%;
-    border: 1px solid #ff8720;
+    border: 1px solid var(--cl-primary);
     text-align: center;
     overflow: hidden;
 }
@@ -675,6 +675,8 @@ i.far.fa-heart.icon-heart-i:hover,
   
 .tilte-name-product-t {
     font-weight: 600;
+    height: 0px;
+    color: var(--cl-orange);
 }
 
 /* ---WorkNew--- */
@@ -701,12 +703,12 @@ i.far.fa-heart.icon-heart-i:hover,
 }
 
 .work_new_content > a:hover {
-    color: var(--cl-textprimary);
+    color: var(--cl-orange);
     text-decoration: none;
 }
 
 .work_new_name {
-    color: var(--cl-textprimary);
+    color: var(--cl-orange);
     font-weight: 600;
     margin-bottom: 15px;
     display: block;

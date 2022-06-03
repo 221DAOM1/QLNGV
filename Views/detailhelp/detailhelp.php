@@ -106,7 +106,7 @@
                     <?php 
                         for ($i = 0; $i < (count($data_lq)); $i++) {
                     ?>
-                    <div class="col-product__item sale-home" style="margin-right: 20px;">
+                    <div class="col-product__itemm sale-home" style="margin-right: 20px;">
                         <form action="" style="width: 229px;">
                             <div>
                                 <a href="">
@@ -122,9 +122,11 @@
                             </div>
                             <div class="product-fruits__infos">
                                 <h2 class="tilte-name-product-t"><?= $data_lq[$i]['hoTen']?></h2>
-                                <div>
+                                <div style="margin-top: 10px;">
                                     <span class="price-new"><?= $data_lq[$i]['ngaySinh'] ?></span>
-                                    <span class="price-old"><?php $data_lq[$i]['diaChi'] ?></span>
+                                </div>
+                                <div style="margin-bottom: 10px;">
+                                    <span class="price-new">Làm việc tại: <?= $data_lq[$i]['tenQuan'] ?></span>
                                 </div>
                             </div>
                         </form>

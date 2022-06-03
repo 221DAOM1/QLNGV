@@ -67,7 +67,7 @@
 
  .tilte-name-product-detail{
      font-size: 20px;
-     color: var(--cl-textprimary);
+     color: var(--cl-orange);
      padding-bottom: 10px;
  }
 
@@ -130,7 +130,7 @@
 
 .product-imgg img{
     width: 100%;
-    height: 294px;
+    height: 322px;
 }
 
 

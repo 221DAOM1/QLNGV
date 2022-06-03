@@ -7,6 +7,11 @@ require_once("./Models/helpModel.php");
              $this->help_model = new helpModel();
             
         }
+        public function listcategory()
+        {
+            $data_help = $this->help_model->giupviec($_GET['id']);
+            require_once("Views/index.php");
+        }
         function list()
         {   
             $data_user = $this->help_model->taikhoangv($_GET['tk']);

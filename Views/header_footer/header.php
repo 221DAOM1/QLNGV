@@ -26,7 +26,7 @@
             </a>
             <i class="fas fa-chevron-down"></i>
             <ul class="nav-item__down">
-                <li class="nav-item__down-item">
+            <li class="nav-item__down-item">
                     <a href="?act=detailwork&xuli=listcategory&id=1">Chăm sóc trẻ em</a>
                 </li>
                 <li class="nav-item__down-item"><a href="?act=detailwork&xuli=listcategory&id=2">Dọn dẹp nhà</a></li>
@@ -46,12 +46,15 @@
             <i class="fas fa-chevron-down"></i>
             <ul class="nav-item__down">
                 <li class="nav-item__down-item">
-                    <a href="">Chăm sóc trẻ em</a>
+                    <a href="?act=detailhelp&xuli=listcategory&id=1">Hải châu</a>
                 </li>
-                <li class="nav-item__down-item"><a href="">Dọn dẹp nhà</a></li>
-                <li class="nav-item__down-item"><a href="">Chăm sóc người già</a></li>
-                <li class="nav-item__down-item"><a href="">Giúp việc theo giờ hành chính</a></li>
-                <li class="nav-item__down-item"><a href="">Giúp việc tết nguyên đám</a></li>
+                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=2">Cẩm lệ</a></li>
+                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=3">Thanh Khê</a></li>
+                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=4">Liên Chiểu</a></li>
+                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=5">Ngũ Hành Sơn</a></li>
+                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=3">Sơn Trà</a></li>
+                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=4">Hòa Vang</a></li>
+                <li class="nav-item__down-item"><a href="?act=detailhelp&xuli=listcategory&id=5">Hoàng Sa</a></li>
             </ul>
         </li>
         <?php } ?>

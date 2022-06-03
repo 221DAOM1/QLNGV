@@ -127,7 +127,7 @@ p.text-sale {
 }
 .product-img img{
     width: 100%;
-    height: 250px;
+    height: 312px;
 }
  .button-add-product:hover {
     color: #fff;
@@ -213,12 +213,10 @@ p.text-sale {
     display: block;
     width: 100%;
     padding: 10px 0;
-    height: 45px;
 }
 .price-new{
     display: inline-block;
-    font-weight: bold;
-    color: var(--cl-red);
+    font-weight: 500;
     margin-top: 5px;
     margin-bottom: 0px;
     padding: 0;

@@ -173,16 +173,17 @@
                     </div>
                     <div class="product-img">
                         <a href="?act=detailhelp&tk=<?=$data_newhelp[$i]['maTK']?>" style="display: block;">
-                            <span class ="img--hover"></span> 
                             <img src="./Publics/images/<?php echo $data_newhelp[$i]['hinhAnh'] ?>" alt="">
                         </a>
                         <p class="text-sale">Mới</p>
                     </div>
                     <div class="product-fruits__infos">
                         <h2 class="tilte-name-product-t"><?= $data_newhelp[$i]['hoTen']?></h2>
-                        <div>
+                        <div style="margin-top: 10px;">
                             <span class="price-new"><?= $data_newhelp[$i]['ngaySinh'] ?></span>
-                            <span class="price-old"><?php $data_newhelp[$i]['diaChi'] ?></span>
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <span class="price-new">Làm việc tại: <?= $data_newhelp[$i]['tenQuan'] ?></span>
                         </div>
                     </div>
                 </form>

@@ -6,13 +6,15 @@
             require("result.php");
             return $data;
         }
-        function getCategory() {
-            $query = "SELECT * FROM danhmuccv";
+        function giupviec_moi() {
+            $query = "SELECT * FROM taikhoan,thongtinungvien,quanhuyen WHERE taikhoan.maTK = thongtinungvien.maTK and quanhuyen.idQuan=thongtinungvien.khuVucLamViec
+            GROUP by taikhoan.maTK;";
+            // echo $query;
             require("result.php");
             return $data;
         }
-        function giupviec_moi() {
-            $query = "SELECT * FROM taikhoan,thongtinungvien WHERE taikhoan.maTK = thongtinungvien.maTK
+        function giupviec($id) {
+            $query = "SELECT * FROM taikhoan,thongtinungvien,quanhuyen WHERE taikhoan.maTK = thongtinungvien.maTK AND thongtinungvien.khuVucLamViec = quanhuyen.idQuan 
             GROUP by taikhoan.maTK;";
             // echo $query;
             require("result.php");
@@ -51,7 +53,7 @@
 
         function help_danhmuc($danhmuc)
         {  
-            $query ="SELECT * from taikhoan,thongtinungvien WHERE taikhoan.maTK = thongtinungvien.maTK and khuVucLamViec = $danhmuc GROUP BY taikhoan.maTK;";
+            $query ="SELECT * from taikhoan,thongtinungvien,quanhuyen WHERE taikhoan.maTK = thongtinungvien.maTK and khuVucLamViec = $danhmuc and quanhuyen.idQuan=thongtinungvien.khuVucLamViec GROUP BY taikhoan.maTK;";
             require("result.php");
             return $data;  
         }

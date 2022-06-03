@@ -71,7 +71,18 @@
             }
             break;
         case "detailhelp":
-            require_once("detailhelp/detailhelp.php");
+            $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
+            switch ($act) {
+                case 'list':
+                    require_once('detailhelp/detailhelp.php');
+                    break;
+                case 'listcategory':
+                    require_once('detailhelp/categoryhelp.php');
+                    break;
+                default:
+                    require_once('detailhelp/detailhelp.php');
+                    break;
+                }
             break;
         case "ratehelp":
             $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
