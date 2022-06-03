@@ -17,7 +17,7 @@
 
 
         function chitietcongviec($id){
-            $query = "SELECT * FROM taikhoan,congviec,danhsachungvien WHERE taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
+            $query = "SELECT * FROM taikhoan,congviec,danhsachungvien,quanhuyen WHERE quanhuyen.idQuan=congviec.khuVuc and taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
             AND congviec.maCV=$id;";
             require("result.php");
             return $data;

@@ -31,7 +31,7 @@
         <div class="col col-lg-5" style="text-align: left;">
             <div class="product-detail-main">
                 <h2 class="tilte-name-product-detail">Tên công việc: <?php echo $data_user[0]['tenCV']; ?></h2>
-                <h2 class="tilte-name-product-detail">Họ và tên: <?php echo $data_user[0]['hoTen']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Họ và tên: <?php echo $data_user[0]['hoTen']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Ngày sinh: <?php echo $data_user[0]['ngaySinh']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Giới tính: <?php echo $data_user[0]['gioiTinh']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Địa chỉ: <?php echo $data_user[0]['diaChi']; ?></h2>
@@ -41,10 +41,10 @@
                 </div>
                 <?php } ?>
                 <form id ="table" action="?act=ratehelp&xuli=store" method="POST" enctype="multipart/form-data">
-                    <h2 class="tilte-name-product-detail" style="text-align: center;">ĐÁNH GIÁ GIÚP VIỆC</h2>
+                    <h2 class="tilte-name-product-detail">ĐÁNH GIÁ GIÚP VIỆC</h2>
                     <fieldset class="form-group">
                         <label>Số sao</label>
-                        <select class="form-control" name="soSao">
+                        <select class="form-control" name="soSao" style="width: 60px;">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -59,7 +59,7 @@
                     <input style="display: none;" type="text" name="maTK" class="form-control form-control-lg" value="<?= $data_user[0]['maTK']?>"/>
                     <input style="display: none;" type="text" name="maCV" class="form-control form-control-lg" value="<?= $data_user[0]['maCV']?>"/>
                     <div class="btn-recruiter">
-                        <button class="btn-confirm" type="submit" form="table">Đánh giá</button>
+                        <button class="btn-confirm" type="submit" form="table" style="padding: 12px;">Đánh giá</button>
                     </div>
                 </form>
             </div>
