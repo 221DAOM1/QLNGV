@@ -416,7 +416,7 @@ div.wrapper-count {
     position: relative;
     height: 44px;
     width: 54px;
-    background-color: #4EB92D;
+    background-color: var(--cl-primary);
     border-radius: 8px;
     text-align: center;
     font-size: 2.4em;
@@ -679,7 +679,7 @@ i.far.fa-heart.icon-heart-i:hover,
 .tilte-name-product-t {
     font-weight: 600;
     height: 0px;
-    color: var(--cl-orange);
+    color: var(--cl-black);
 }
 
 /* ---WorkNew--- */
@@ -706,12 +706,12 @@ i.far.fa-heart.icon-heart-i:hover,
 }
 
 .work_new_content > a:hover {
-    color: var(--cl-orange);
+    color: black;
     text-decoration: none;
 }
 
 .work_new_name {
-    color: var(--cl-orange);
+    color: black;
     font-weight: 600;
     margin-bottom: 15px;
     display: block;

@@ -11,7 +11,7 @@
                 <div>
                     <?php if(count($data_work)!=0) {?>
                     <strong>
-                        <span id="danhmuc">/<?= $data_work[0]['tenDM'] ?></span>
+                        <span id="danhmuc">/ <?= $data_work[0]['tenDM'] ?></span>
                     </strong>
                     <?php } ?>
                 </div>

@@ -13,7 +13,7 @@
 }
 
 .break-crumb__head strong span {
-    color :var(--cl-orange);
+    color :var(--cl-primary);
 }
 
 /* Page-content-account */
