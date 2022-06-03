@@ -14,7 +14,7 @@
             return $data;
         }
         function giupviec($id) {
-            $query = "SELECT * FROM taikhoan,thongtinungvien,quanhuyen WHERE taikhoan.maTK = thongtinungvien.maTK AND thongtinungvien.khuVucLamViec = quanhuyen.idQuan 
+            $query = "SELECT * FROM taikhoan,thongtinungvien,quanhuyen WHERE taikhoan.maTK = thongtinungvien.maTK AND thongtinungvien.khuVucLamViec = quanhuyen.idQuan AND idQuan=$id
             GROUP by taikhoan.maTK;";
             // echo $query;
             require("result.php");

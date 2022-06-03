@@ -24,8 +24,8 @@
         }
 
         function chitietdangky($id){
-            $query = "SELECT * FROM taikhoan,congviec,danhsachungvien WHERE taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
-            AND danhsachungvien.maTK=$id;";
+            $query = "SELECT * FROM taikhoan,congviec,danhsachungvien, hinhanhcv,quanhuyen WHERE quanhuyen.idQuan=congviec.khuVuc AND hinhanhcv.maCV=congviec.maCV AND taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
+            AND danhsachungvien.maTK=$id GROUP BY congviec.maCV;";
             require("result.php");
             return $data;
         }
