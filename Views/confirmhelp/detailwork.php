@@ -57,6 +57,18 @@
                 <h2 class="tilte-name-product-detail-detail">Mô tả: <?php echo $data_work[0]['moTa']; ?></h2>
             </div>
         </div>
+        <div class="col col-lg-2" style="visibility: visible; -webkit-animation-name: fadeInDown; animation-name: fadeInDown;">
+            <p class="link-btn big-a">
+                <a href="" class="btn btn-success">Đăng tin tuyển dụng
+                    <i class="fa fa-chevron-circle-right"></i>
+                </a>
+            </p>
+            <p class="link-btn big-a">
+                <a href="" class="btn btn-success">Đăng tin tìm việc
+                    <i class="fa fa-chevron-circle-right"></i>
+                </a>
+            </p>
+        </div>
     </div>
     
 </div>
