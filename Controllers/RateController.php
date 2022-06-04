@@ -12,6 +12,12 @@
             
             require_once("./Views/index.php");
         }
+        public function listcvuv()
+        {
+            $data = $this->rate_model->congviecuv($_SESSION['login']['maTK']);
+            
+            require_once("./Views/index.php");
+        }
         function chitiet()
         {
             $id = isset($_GET['id']) ? $_GET['id'] : 1;

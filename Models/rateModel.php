@@ -9,6 +9,13 @@
             return $data;
         }
 
+        function congviecuv($maTK){
+            $query = "SELECT * FROM congviec as cv, danhsachungvien as dsuv,hinhanhcv as ha,quanhuyen as qh
+            WHERE cv.maCV=dsuv.maCV and ha.maCV=cv.maCV and dsuv.tinhTrangUngTuyen=1 and dsuv.khXacNhan=0 and qh.idQuan=cv.khuVuc and cv.maTK = $maTK GROUP BY cv.maCV;";
+            require("result.php");
+            return $data;
+        }
+
         function congviecgv($idCV){
             $query = "SELECT * from congviec,hinhanhcv,danhmuccv,quanhuyen,taikhoan WHERE taikhoan.maTK=congviec.maTK and quanhuyen.idQuan=congviec.khuVuc AND congviec.maCV=hinhanhcv.maCV AND danhmuccv.maDMCV = congviec.maDMCV AND congviec.maCV=$idCV;";
             require("result.php");

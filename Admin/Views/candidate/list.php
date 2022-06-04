@@ -47,7 +47,7 @@
         <td><?= $row['moTa'] ?></td>
         <td><?= $row['thoiGianDang'] ?></td>
         <td>
-          <a style="width: 177px;" href="?mod=candidate&act=chitiet&id=<?= $row['maCV']?>&tt=1" class="btn btn-success" >Xem người ứng tuyển</a>
+          <a style="width: 177px;" href="?mod=candidate&act=chitiet&id=<?= $row['maCV']?>&tt=0" class="btn btn-success" >Xem người ứng tuyển</a>
         </td>
       </tr>
     <?php } ?>

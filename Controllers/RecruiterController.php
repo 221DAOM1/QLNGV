@@ -63,7 +63,7 @@
                 'diaChi' =>  $_POST['diaChi'],
                 'time' =>  $_POST['time'],
                 'moTa' => $_POST['moTa'],
-                'tinhTrang' => 1,
+                'tinhTrang' => 0,
                 'thoiGianDang' => $ThoiGian,
             );
             $this->recruiter_model->store($data_work);

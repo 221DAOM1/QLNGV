@@ -41,7 +41,7 @@
                     <select class="form-control" name="trinhDoHV">
                         <option>12/12</option>
                         <option>Đại học</option>
-                        <option>Bỏ qua</option>
+                        <option>Không cần</option>
                     </select>
                 </fieldset>
                 <fieldset class="form-group">

@@ -161,7 +161,7 @@ switch ($mod) {
         $controller_obj = new RateController();
         switch ($act) {
             case 'list':
-                $controller_obj->list();
+                $controller_obj->listcvuv();
             break;
             case 'chitietuv':
                 $controller_obj->chitietuv();
