@@ -6,7 +6,8 @@
 -- Thời gian đã tạo: Th6 07, 2022 lúc 04:05 AM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 8.1.0
-
+create database gtngv;
+use gtngv;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -424,6 +425,14 @@ ALTER TABLE `taikhoan`
 ALTER TABLE `thongtinungvien`
   MODIFY `maTK` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
+
+create table userToken (
+	id int primary key auto_increment,
+    token varchar(255)  not null,
+	maTK int not null,
+    foreign key(maTK) references taikhoan(maTK)
+);
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -125,5 +125,3 @@
             header('Location:?act=home');
         }
     }
-    
-?>
