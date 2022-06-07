@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 31, 2022 lúc 11:36 AM
+-- Thời gian đã tạo: Th6 07, 2022 lúc 04:05 AM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 8.1.0
 
@@ -57,7 +57,7 @@ CREATE TABLE `congviec` (
   `trinhDoHV` varchar(255) NOT NULL,
   `gioiTinhYC` varchar(10) NOT NULL,
   `chucVu` varchar(255) NOT NULL,
-  `luong` varchar(255) NOT NULL,
+  `luong` int(11) NOT NULL,
   `diaChi` varchar(255) NOT NULL,
   `time` varchar(255) NOT NULL,
   `moTa` varchar(255) NOT NULL,
@@ -71,8 +71,10 @@ CREATE TABLE `congviec` (
 --
 
 INSERT INTO `congviec` (`maCV`, `maTK`, `maDMCV`, `tenCV`, `khuVuc`, `soLuong`, `trinhDoHV`, `gioiTinhYC`, `chucVu`, `luong`, `diaChi`, `time`, `moTa`, `tinhTrang`, `tinhTrangDaUT`, `thoiGianDang`) VALUES
-(486, 4, 1, 'Tuyển giúp việc ăn ở lại lương từ 5 đến 12tr/tháng, tại Hải Châu', 1, 1, '12/12', 'Nữ', 'Nhân viên dọn dẹp nhà', '8.000.000 - 10.000.000 VNĐ', '02 Thanh Sơn, P. Thanh Bình, Q.Hải Châu, Đà Nẵng', 'Ngày 8 tiếng', 'Yêu cầu nhân viên đã có kinh nghiệm dọn dẹp nhà', 1, 1, '2022-05-24 20:35:35'),
-(487, 13, 1, 'Cần tuyển giúp việc 10 ngày hè lương từ 250k đến 350k/ngày', 2, 1, '12/12', 'Nữ', 'Nhân viên chăm sóc người già', '10.000.000 - 15.000.000', '28 thanh sơn, P. Thanh Bình, Hải Châu, Đà Nẵng', 'Ngày 10 tiếng', 'Yêu cầu nhân viên có kinh nghiệm chăm sóc người già', 1, 1, '2022-05-25 07:31:26');
+(486, 5, 1, 'Tuyển giúp việc ăn ở lại lương từ 5 đến 12tr/tháng, tại Hải Châu', 1, 1, '12/12', 'Nữ', 'Nhân viên dọn dẹp nhà', 10000000, '02 Thanh Sơn, P. Thanh Bình, Q.Hải Châu, Đà Nẵng', 'Ngày 8 tiếng', 'Yêu cầu nhân viên đã có kinh nghiệm dọn dẹp nhà', 1, 1, '2022-05-24 20:35:35'),
+(487, 32, 3, 'Cần tuyển giúp việc 10 ngày hè lương từ 250k đến 350k/ngày', 2, 1, '12/12', 'Nữ', 'Nhân viên chăm sóc người già', 15000000, '28 thanh sơn, P. Thanh Bình, Hải Châu, Đà Nẵng', 'Ngày 10 tiếng', 'Yêu cầu nhân viên có kinh nghiệm chăm sóc người già', 1, 1, '2022-05-25 07:31:26'),
+(490, 5, 5, 'Tuyển giúp việc làm tết ăn ở lại 10 ngày chăm sóc cụ bà lương 800k/ ngày', 7, 1, 'Bỏ qua', 'Mọi giới t', 'Nhân viên chăm sóc', 5000000, '02 Thanh Sơn, P. Thanh Bình, Q.Hải Châu, Đà Nẵng', 'Ngày 8 tiếng', 'Có kinh nghiệm chăm sóc ', 1, 1, '2022-06-04 11:29:46'),
+(491, 4, 4, 'Nhân viên chạy bàn', 3, 3, 'Không cần', 'Mọi giới t', 'Phục vụ', 7000000, '05 Thái Thị Bôi, Chính Gián, Thanh Khê, Đà Nẵng', 'Tối từ 7h tới 9h', 'Không cần có trình độ kinh nghiệm.', 1, 1, '2022-06-04 17:12:14');
 
 -- --------------------------------------------------------
 
@@ -94,7 +96,9 @@ CREATE TABLE `danhgiagv` (
 --
 
 INSERT INTO `danhgiagv` (`maDG`, `maCV`, `maTK`, `soSao`, `binhLuan`, `ngayDanhGia`) VALUES
-(8, 486, 14, 5, 'GOOD JOB', '2022-05-30 09:10:32');
+(8, 486, 14, 5, 'GOOD JOB', '2022-05-30 09:10:32'),
+(11, 490, 16, 5, 'GOOD', '2022-06-04 16:56:26'),
+(12, 491, 17, 3, 'NOT GOOD', '2022-06-04 17:19:34');
 
 -- --------------------------------------------------------
 
@@ -115,7 +119,9 @@ CREATE TABLE `danhmuccv` (
 INSERT INTO `danhmuccv` (`maDMCV`, `tenDM`, `hinhAnh`) VALUES
 (1, 'Chăm sóc trẻ em', ''),
 (2, 'Dọn dẹp nhà', ''),
-(3, 'Chăm sóc người già', '');
+(3, 'Chăm sóc người già', ''),
+(4, 'Giúp việc theo giờ hành chính', ''),
+(5, 'Giúp việc tết nguyên đám', '');
 
 -- --------------------------------------------------------
 
@@ -137,8 +143,11 @@ CREATE TABLE `danhsachungvien` (
 --
 
 INSERT INTO `danhsachungvien` (`maDS`, `maCV`, `thoiGianUT`, `maTK`, `tinhTrangUngTuyen`, `khXacNhan`) VALUES
-(1, 486, '', 14, 1, 1),
-(2, 487, '', 15, 1, 0);
+(1, 486, '2022-05-31 17:54:08', 14, 1, 1),
+(2, 487, '2022-05-31 17:54:08', 15, 1, 1),
+(6, 487, '2022-06-02 21:54:49', 14, 0, 0),
+(7, 490, '2022-06-04 16:45:27', 16, 1, 0),
+(8, 491, '2022-06-04 17:15:38', 17, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -163,7 +172,13 @@ INSERT INTO `hinhanhcv` (`maHA`, `maCV`, `tenHinh`, `hinhAnhCV`) VALUES
 (1380, 486, 'anh3.jpg', 'hinhanh3'),
 (1381, 487, 'anh2.jpg', 'hinhanh1'),
 (1382, 487, 'anh1.jpg', 'hinhanh2'),
-(1383, 487, 'anh3.jpg', 'hinhanh3');
+(1383, 487, 'anh3.jpg', 'hinhanh3'),
+(1390, 490, 't1.jpg', 'hinhanh1'),
+(1391, 490, 't2.jpg', 'hinhanh2'),
+(1392, 490, 't3.jpg', 'hinhanh3'),
+(1393, 49, 'pv1.jpg', 'hinhanh1'),
+(1394, 491, 'pv2.jpg', 'hinhanh2'),
+(1395, 491, 'pv3.jpg', 'hinhanh3');
 
 -- --------------------------------------------------------
 
@@ -176,6 +191,16 @@ CREATE TABLE `phanquyen` (
   `tenQuyen` varchar(255) NOT NULL,
   `chiTietQuyen` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `phanquyen`
+--
+
+INSERT INTO `phanquyen` (`maQuyen`, `tenQuyen`, `chiTietQuyen`) VALUES
+(1, 'Admin', ''),
+(2, 'Khách hàng', ''),
+(3, 'Giúp viêc', ''),
+(4, 'Nhân viên\r\n', '');
 
 -- --------------------------------------------------------
 
@@ -218,7 +243,7 @@ CREATE TABLE `taikhoan` (
   `ngaySinh` varchar(50) NOT NULL,
   `CMND` varchar(20) NOT NULL,
   `SDT` int(11) NOT NULL,
-  `email` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `diaChi` varchar(255) NOT NULL,
   `hinhAnh` varchar(255) NOT NULL,
   `trangThai` int(11) NOT NULL,
@@ -230,16 +255,17 @@ CREATE TABLE `taikhoan` (
 --
 
 INSERT INTO `taikhoan` (`maTK`, `maQuyen`, `taiKhoan`, `matKhau`, `hoTen`, `gioiTinh`, `ngaySinh`, `CMND`, `SDT`, `email`, `diaChi`, `hinhAnh`, `trangThai`, `thoiGian`) VALUES
-(4, 4, 'nqhuy', 'b1200f883875ad6b70fc055cf27b2a65', 'Nguyễn Quang Huy', '', '', '23328997', 961640909, 0, '', '', 1, ''),
-(5, 2, 'huyhuy', 'cc0d45bc2f499fc4666d09691485a0f9', 'Nguyễn Quang Huy', '', '', '23328997', 961640909, 0, '', '', 1, ''),
-(8, 3, 'ngv123', '5f6abcbffed27f4fb564589b4bbe08b0', 'Nguyễn Thị Thanh Trà', 'Nữ', '19/05/1968', '23328997', 961640909, 0, 'Đà Nẵng', 'ntg.jpg', 1, ''),
-(13, 1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'adminn', 'Nam', '233289997', '233289997', 961640909, 0, 'Đà Nẵng', 'admin.jpg', 1, ''),
-(14, 3, 'ngv01', '89a9f0cea6d85f20598c4ccd9761a15c', 'Lê Thị Hồng Thắm ', 'Nữ', '14/05/1987', '233547887', 964789851, 0, 'Đà Nẵng', 'ltht.jpg', 1, ''),
-(15, 3, 'ngv02', 'd45d7bf6d6dde38d984291e44d9ea5d8', 'Đinh Thị Lự', 'Nữ', '14/05/1967', '235478741', 964741251, 0, 'Đà Nẵng', 'dtl.jpg', 1, ''),
-(16, 3, 'ngv03', '7c96dc6bc52ebdc9c3bd612083ccae2e', 'Bùi Thị Soan', 'Nam', '12/03/1978', '257874114', 961452585, 0, 'Đà Nẵng', 'bts.jpg', 1, ''),
-(17, 3, 'ngv04', '87b04d99292adf1e1aaef1bbab6166ca', 'Vũ Thị Bàn', 'Nữ', '17/07/1981', '254745874', 965417758, 0, 'Đà Nẵng', 'vtb.jpg', 1, ''),
-(18, 3, 'ngv05', '33fabe6ea5d96d12c85d7454e18ea17e', 'Phạm Thị Xuân', 'Nữ', '11/01/1969', '255857778', 961640909, 0, 'Đà Nẵng', 'ptx.jpg', 1, ''),
-(19, 3, 'ngv06', 'b642f56a263892853e1edcd12ef293ff', 'Nguyễn Thị Minh Khai', 'Nữ', '03/05/1987', '258747774', 961452541, 0, 'Đà Nẵng', 'ntmk.jpg', 1, '2022-05-26 11:45:36');
+(4, 4, 'nqhuy', 'b1200f883875ad6b70fc055cf27b2a65', 'Nguyễn Quang Huy', 'Nam', '', '23328997', 961640909, 'nqhuy@gmail.com', 'Đà Nẵng', '', 1, ''),
+(5, 2, 'huyhuy', 'cc0d45bc2f499fc4666d09691485a0f9', 'Nguyễn Quang Huy', '', '', '23328997', 961640909, '0', '', '', 1, ''),
+(8, 3, 'ngv123', '5f6abcbffed27f4fb564589b4bbe08b0', 'Nguyễn Thị Thanh Trà', 'Nữ', '19/05/1968', '23328997', 961640909, '0', 'Đà Nẵng', 'ntg.jpg', 1, ''),
+(13, 1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 'Nam', '233289997', '233289997', 961640909, '0', 'Đà Nẵng', 'admin.jpg', 1, ''),
+(14, 3, 'ngv01', '89a9f0cea6d85f20598c4ccd9761a15c', 'Lê Thị Hồng Thắm ', 'Nữ', '14/05/1987', '233547887', 964789851, '0', 'Đà Nẵng', 'ltht.jpg', 1, ''),
+(15, 3, 'ngv02', 'd45d7bf6d6dde38d984291e44d9ea5d8', 'Đinh Thị Lự', 'Nữ', '14/05/1967', '235478741', 964741251, '0', 'Đà Nẵng', 'dtl.jpg', 1, ''),
+(16, 3, 'ngv03', '7c96dc6bc52ebdc9c3bd612083ccae2e', 'Bùi Thị Soan', 'Nam', '12/03/1978', '257874114', 961452585, '0', 'Đà Nẵng', 'bts.jpg', 1, ''),
+(17, 3, 'ngv04', '87b04d99292adf1e1aaef1bbab6166ca', 'Vũ Thị Bàn', 'Nữ', '17/07/1981', '254745874', 965417758, '0', 'Đà Nẵng', 'vtb.jpg', 1, ''),
+(18, 3, 'ngv05', '33fabe6ea5d96d12c85d7454e18ea17e', 'Phạm Thị Xuân', 'Nữ', '11/01/1969', '255857778', 961640909, '0', 'Đà Nẵng', 'ptx.jpg', 1, ''),
+(19, 3, 'ngv06', 'b642f56a263892853e1edcd12ef293ff', 'Nguyễn Thị Minh Khai', 'Nữ', '03/05/1987', '258747774', 961452541, '0', 'Đà Nẵng', 'ntmk.jpg', 1, '2022-05-26 11:45:36'),
+(32, 2, 'vxphuc', '6da29681a424954c59062627a657666d', 'Võ Xuân Phúc', '', '', '244787412', 96571425, 'vxp@gmail.com', '', '', 1, '');
 
 -- --------------------------------------------------------
 
@@ -348,37 +374,37 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT cho bảng `congviec`
 --
 ALTER TABLE `congviec`
-  MODIFY `maCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=490;
+  MODIFY `maCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=492;
 
 --
 -- AUTO_INCREMENT cho bảng `danhgiagv`
 --
 ALTER TABLE `danhgiagv`
-  MODIFY `maDG` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `maDG` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT cho bảng `danhmuccv`
 --
 ALTER TABLE `danhmuccv`
-  MODIFY `maDMCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `maDMCV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `danhsachungvien`
 --
 ALTER TABLE `danhsachungvien`
-  MODIFY `maDS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `maDS` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `hinhanhcv`
 --
 ALTER TABLE `hinhanhcv`
-  MODIFY `maHA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1390;
+  MODIFY `maHA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1396;
 
 --
 -- AUTO_INCREMENT cho bảng `phanquyen`
 --
 ALTER TABLE `phanquyen`
-  MODIFY `maQuyen` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `maQuyen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `quanhuyen`
@@ -390,7 +416,7 @@ ALTER TABLE `quanhuyen`
 -- AUTO_INCREMENT cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `maTK` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `maTK` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT cho bảng `thongtinungvien`

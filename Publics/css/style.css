@@ -53,3 +53,7 @@ html, body {
     height: 100%;
     text-align: center;
 }
+
+#main{
+    height: 70%;
+}
