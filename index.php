@@ -246,6 +246,25 @@ switch ($mod) {
                 break;
         }
         break;
+    case "userToken":
+        $act = isset($_GET['xuli']) ? $_GET['xuli'] : "getToken";
+        require_once('Controllers/TokenController.php');
+        $tokenController = new TokenController();
+        switch ($act) {
+            case 'getToken':
+                $tokenController->getTokenOfUser();
+                break;
+            case 'addToken':
+                $tokenController->addTokenForUser();
+                break;
+            case 'deleteToken':
+                $tokenController->deleteToken();
+                break;
+            default:
+                $tokenController->getTokenOfUser();
+                break;
+        }
+        break;
     default:
         require_once('home/home.php');
 }

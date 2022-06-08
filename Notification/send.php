@@ -5,10 +5,9 @@ require_once('./Models/token.php');
 $maTK = $_SESSION['login']['maTK'];
 $TokenModel = new TokenModel();
 $tokens = $TokenModel->getTokenOfUser($maTK);
-$listToken = [];
 
 foreach ($tokens as $array) {
-    $listToken = $array["token"];
+    $listToken[] = $array["token"];
 }
 
 $header = [
@@ -17,14 +16,13 @@ $header = [
 ];
 
 $msg = [
-    'title' => 'Testing Notification',
-    'body' => 'Testing Notification from localhost',
+    'title' => 'Có bài đăng mới',
+    'body' => 'Nhân viên cần vào duyệt',
     'icon' => './Publics/images/logo.png',
     // 'image' => './Publics/images/logo.png',
 ];
-
 $payload = [
-    'registration_ids'     => array($listToken),
+    'registration_ids'     => $listToken,
     'data'                => $msg
 ];
 
@@ -46,5 +44,5 @@ curl_close($curl);
 if ($err) {
     echo "cURL Error #:" . $err;
 } else {
-    // echo $response;
+    echo $response;
 }
