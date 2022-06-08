@@ -49,10 +49,14 @@ class Login extends Model
                     if ($login['maQuyen'] == 3) {
                         $_SESSION['isLogin_Giupviec'] = true;
                         $_SESSION['login'] = $login;
+                        require_once("./Notification/addToken.php");
+                        return;
                     } else {
                         if ($login['maQuyen'] == 2) {
                             $_SESSION['isLogin_Khachhang'] = true;
                             $_SESSION['login'] = $login;
+                            require_once("./Notification/addToken.php");
+                            return;
                         } else {
                             $_SESSION['isLogin'] = true;
                             $_SESSION['login'] = $login;
@@ -85,14 +89,17 @@ class Login extends Model
         if (isset($_SESSION['isLogin_Giupviec'])) {
             unset($_SESSION['isLogin_Giupviec']);
             unset($_SESSION['login']);
+            $tokens = $TokenModel->deleteToken($maTK);
         }
         if (isset($_SESSION['isLogin_Khachhang'])) {
             unset($_SESSION['isLogin_Khachhang']);
             unset($_SESSION['login']);
+            $tokens = $TokenModel->deleteToken($maTK);
         }
         if (isset($_SESSION['isLogin'])) {
             unset($_SESSION['isLogin']);
             unset($_SESSION['login']);
+            $tokens = $TokenModel->deleteToken($maTK);
         }
         header('location: ?act=home');
     }

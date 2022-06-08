@@ -28,7 +28,6 @@
 
 <?php
 session_start();
-// require_once("./Notification/send.php");
 $mod = isset($_GET['act']) ? $_GET['act'] : "home";
 switch ($mod) {
     case 'home':
@@ -150,10 +149,10 @@ switch ($mod) {
         switch ($act) {
             case 'list':
                 $objCate->list();
-            break;
+                break;
             case 'listcategory':
                 $objCate->listcategory();
-            break;
+                break;
             case 'store':
                 $objCate->store();
                 break;
@@ -162,14 +161,14 @@ switch ($mod) {
                 break;
         }
         break;
-    case 'ratehelp': 
+    case 'ratehelp':
         $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
         require_once('./Controllers/RateController.php');
         $controller_obj = new RateController();
         switch ($act) {
             case 'list':
                 $controller_obj->list();
-            break;
+                break;
             case 'chitiet':
                 $controller_obj->chitiet();
                 break;
@@ -184,14 +183,14 @@ switch ($mod) {
                 break;
         }
         break;
-    case 'confirmhelp': 
+    case 'confirmhelp':
         $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
         require_once('./Controllers/RateController.php');
         $controller_obj = new RateController();
         switch ($act) {
             case 'list':
                 $controller_obj->listcvuv();
-            break;
+                break;
             case 'chitietuv':
                 $controller_obj->chitietuv();
                 break;
@@ -209,17 +208,17 @@ switch ($mod) {
                 break;
         }
         break;
-    case 'detailwork': 
+    case 'detailwork':
         $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
         require_once('./Controllers/DetailWorkController.php');
         $controller_obj = new DetailWorkController();
         switch ($act) {
             case 'list':
                 $controller_obj->list();
-            break;
+                break;
             case 'listcategory':
                 $controller_obj->listcategory();
-            break;
+                break;
             case 'store':
                 $controller_obj->store();
             default:
