@@ -68,7 +68,7 @@ class recruiterController
             'thoiGianDang' => $ThoiGian,
         );
 
-        // $this->recruiter_model->store($data_work);
+        // $this->recruiter_model->store2($data_work);
         // $idcv = $this->recruiter_model->getIdWorknew();
         // $data_img = array(
         //     $idcv . " 1" => $hinhAnhChinh,
@@ -81,5 +81,6 @@ class recruiterController
         require('./Models/sendNotification.php');
         $send = new SendNotification();
         $send->sendNotificationToUserOrAdmin('Có bài đăng mới', 'Môt bài đăng mới, chờ duyệt và giới thiệu ứng viên');
+        header('Location:?act=home');
     }
 }

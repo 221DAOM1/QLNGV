@@ -50,7 +50,7 @@
         <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./Publics/js/main.js"></script>
-    <!-- <script src="./public/js/countdown.js"></script> -->
+    <script src="./Publics/js/countdown.js"></script>
     <script>
         var $sliderBanner = $('.slider-list')
         $sliderBanner.owlCarousel({
@@ -87,6 +87,16 @@
             }
         }
         start()
+    </script>
+    <script>
+        var options1 = {
+            width: 437,
+            height: 350,
+            zoomWidth: 400,
+            zoomHeight: 200,
+            offset: {vertical: 2, horizontal: 5}
+        };
+        new ImageZoom(document.getElementById("product-detail-left__thumbnail"), options1);
     </script>
 </body>
 </html>

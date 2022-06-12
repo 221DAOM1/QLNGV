@@ -432,7 +432,7 @@ div.wrapper-count {
     position: absolute;
     z-index: 6;
     top: calc(50% - 5px);
-    background: #186600;
+    background: var(--cl-primary);
     border-radius: 50%;
     width: 10px;
     height: 10px;
@@ -454,7 +454,7 @@ div.wrapper-count {
   
   .top {
     z-index: 3;
-    background-color: #4EB92D;
+    background-color: var(--cl-primary);
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
     -webkit-transform: perspective(200px);
@@ -492,7 +492,7 @@ div.wrapper-count {
     top: 0;
     height: 50%;
     overflow: hidden;
-    background-color: #31c205;
+    background-color: var(--cl-primary);
   }
   
   .bottom-back span {
@@ -516,7 +516,7 @@ div.wrapper-count {
     bottom: 0;
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    background-color: #31c205;
+    background-color: var(--cl-primary);
     -webkit-transform: perspective(200px) rotateX(180deg);
             transform: perspective(200px) rotateX(180deg);
   }
