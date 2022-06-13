@@ -1,6 +1,5 @@
-
-<a href="?mod=candidate&act=chitiet&id=<?= $data[0]['maCV'] ?>&tt=1" type="button" class="btn btn-primary">Ứng viên đã duyệt</a>
-<a href="?mod=candidate&act=chitiet&id=<?= $data[0]['maCV'] ?>&tt=0" type="button" class="btn btn-danger">Ứng viên chưa duyệt</a>
+<a href="?mod=candidate&act=chitiet&id=<?= $_GET["id"]; ?>&tt=1" type="button" class="btn btn-primary">Ứng viên đã duyệt</a>
+<a href="?mod=candidate&act=chitiet&id=<?= $_GET["id"]; ?>&tt=0" type="button" class="btn btn-danger">Ứng viên chưa duyệt</a>
 <?php if (isset($_COOKIE['msg2'])) { ?>
   <div class="alert alert-success">
     <strong>Thông báo</strong> <?= $_COOKIE['msg2'] ?>

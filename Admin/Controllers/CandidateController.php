@@ -39,8 +39,6 @@ class CandidateController
             $data = $this->candidate_model->chitietungvien($_GET['id'],$tt);
         } else {
         }
-        
-        
         require_once("./Views/index.php");
     }
     function chitiethelp()
