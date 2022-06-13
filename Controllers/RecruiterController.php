@@ -68,15 +68,15 @@ class recruiterController
             'thoiGianDang' => $ThoiGian,
         );
 
-        // $this->recruiter_model->store2($data_work);
-        // $idcv = $this->recruiter_model->getIdWorknew();
-        // $data_img = array(
-        //     $idcv . " 1" => $hinhAnhChinh,
-        //     $idcv . " 2"  => $hinhAnh1,
-        //     $idcv . " 3"  => $hinhAnh2
-        // );
+        $this->recruiter_model->store2($data_work);
+        $idcv = $this->recruiter_model->getIdWorknew();
+        $data_img = array(
+            $idcv . " 1" => $hinhAnhChinh,
+            $idcv . " 2"  => $hinhAnh1,
+            $idcv . " 3"  => $hinhAnh2
+        );
 
-        // $this->recruiter_model->insertImg($data_img);
+        $this->recruiter_model->insertImg($data_img);
 
         require('./Models/sendNotification.php');
         $send = new SendNotification();

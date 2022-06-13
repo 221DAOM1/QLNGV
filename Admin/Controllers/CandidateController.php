@@ -23,6 +23,9 @@ class CandidateController
     function xetduyet()
     {
         $this->candidate_model->updateds($_GET['idcv'],$_GET['idtk']);
+        require('./Models/sendNotification.php');
+        $send = new SendNotification();
+        $send->sendNotificationToUserOrAdmin('Đã có người giới thiệu trong bài đăng của bạn', 'Mau vô xem nào');
         require_once("./Views/index.php");
     }
     function chitiet()
