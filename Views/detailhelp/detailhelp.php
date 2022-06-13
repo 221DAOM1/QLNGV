@@ -30,7 +30,7 @@
     <div class="row mb-4">
         <div class="col col-lg-4">
             <div class="product-detail-left">
-                <div id="product-detail-left__thumbnail" class="<?php if($status == true) echo "product-detail-left__thumbnail--sale "?>">
+                <div id="product-detail-left__thumbnail">
                     <img src="./Publics/images/<?php echo $data_user[0]['hinhAnh']; ?>" alt="" class="product-detail-left__image-main">
                 </div>
             </div>

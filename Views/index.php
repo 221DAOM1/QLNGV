@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="./Publics/css/detailhelp.css">
     <link rel="stylesheet" href="./Publics/css/work.css">
     <link rel="stylesheet" href="./Admin/Publics/css/admin.css">
-    <link rel="stylesheet" href="./Publics/js/main.js">
 </head>
 <body>
     <?php

@@ -30,6 +30,7 @@
                         <?php for ($i=0; $i < count($data_work) ; $i++) { ?>
                             <li class=""><img src="./Publics/images/<?php echo $data_work[$i]['tenHinh'] ?>" alt=""></li>
                         <?php } ?>
+                    </ul>
                     <div class="product-detail-left__control">
                         <span class="product-detail-left__control-left">
                             <i class="fas fa-chevron-left"></i>
@@ -69,17 +70,16 @@
             </div>
         </div>
         <div class="col col-lg-3" style="visibility: visible; -webkit-animation-name: fadeInDown; animation-name: fadeInDown;">
-        <p class="link-btn big-a">
-            <a href="" class="btn btn-success">Đăng tin tuyển dụng
-                <i class="fa fa-chevron-circle-right"></i>
-            </a>
-        </p>
-        <p class="link-btn big-a">
-            <a href="" class="btn btn-success">Đăng tin tìm việc
-                <i class="fa fa-chevron-circle-right"></i>
-            </a>
-        </p>
-        
+            <p class="link-btn big-a">
+                <a href="" class="btn btn-success">Đăng tin tuyển dụng
+                    <i class="fa fa-chevron-circle-right"></i>
+                </a>
+            </p>
+            <p class="link-btn big-a">
+                <a href="" class="btn btn-success">Đăng tin tìm việc
+                    <i class="fa fa-chevron-circle-right"></i>
+                </a>
+            </p>
         </div>
         <section id="product-dry" class="product-related" style="width: 100%;">
             <div class="container">
@@ -94,6 +94,5 @@
             </div>
         </section>
     </div>
-    
 </div>
 </main>

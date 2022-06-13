@@ -5,7 +5,7 @@
 }
 #product-detail-left__thumbnail img{
     width: 385px!important;
-    height: 534px;
+    height: 534px!important;
     border: 2px solid #c1c1c1;
     border-radius: 10px;
  }
@@ -38,12 +38,6 @@
     margin-right: 12px;
     border-radius: 8px;
 }
-
-.product-detail-left__control{
-    height: 100%;
-    
- }
-
  .product-detail-left__control > span {
     position: absolute;
     top: 50%;
