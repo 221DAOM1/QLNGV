@@ -10,7 +10,7 @@
                 <a class="has-arrow" href="../index.php" aria-expanded="true">
                     <div class="icon_menu">
                         <i class="fas fa-home"></i>
-                        <span>Trang chủ</span>
+                        <span style="font-size: 20px;">Trang chủ</span>
                     </div>
                 </a>
             </li>
@@ -20,7 +20,7 @@
                     <a class="has-arrow" href="?mod=nguoidung" aria-expanded="true">
                         <div class="icon_menu">
                             <i class="fas fa-user" aria-expanded="true"></i>
-                            <span>Quản lý tài khoản</span>
+                            <span style="font-size: 20px;">Quản lý tài khoản</span>
                         </div>
                     </a>
                 </li>
@@ -31,7 +31,7 @@
                     <a class="has-arrow" href="?mod=category" aria-expanded="true">
                         <div class="icon_menu">
                             <i class="fa-solid fa-align-justify"></i>
-                            <span>Quản lý danh mục</span>
+                            <span style="font-size: 20px;">Quản lý danh mục</span>
                         </div>
                     </a>
                 </li>
@@ -42,7 +42,7 @@
                     <a class="has-arrow" href="?mod=congviec" aria-expanded="true">
                         <div class="icon_menu">
                             <i class="fa-solid fa-briefcase"></i>
-                            <span>Quản lý bài đăng</span>
+                            <span style="font-size: 20px;">Quản lý bài đăng</span>
                         </div>
                     </a>
                 </li>
@@ -50,7 +50,7 @@
                     <a class="has-arrow" href="?mod=candidate&id=0" aria-expanded="true">
                         <div class="icon_menu">
                             <i class="fa-solid fa-handshake-angle"></i>
-                            <span>Giới thiệu ứng viên</span>
+                            <span style="font-size: 20px;">Giới thiệu ứng viên</span>
                         </div>
                     </a>
                 </li>
@@ -61,7 +61,7 @@
                     <a class="has-arrow" href="?mod=banner" aria-expanded="true">
                         <div class="icon_menu">
                             <i class="far fa-image"></i>
-                            <span>Quản lý banner</span>
+                            <span style="font-size: 20px;">Quản lý banner</span>
                         </div>
                     </a>
                 </li>
