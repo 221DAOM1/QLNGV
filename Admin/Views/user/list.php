@@ -15,14 +15,11 @@
       <th class="th-firt" scope="col">Mã TK</th>
       <th scope="col">Mã quyền</th>
       <th scope="col">Tài khoản</th>
-      <th scope="col">Mật khẩu</th>
       <th scope="col">Họ tên</th>
       <th class="th-firt" scope="col">Giới tính</th>
       <th scope="col">CMND</th>
       <th scope="col">SDT</th>
-      <th scope="col">Email</th>
       <th scope="col">Địa chỉ</th>
-      <th scope="col">Hình ảnh</th>
       <th>Thao tác</th>
     </tr>
   </thead>
@@ -52,14 +49,11 @@
           ?>
         </td>
         <td><?= $row['taiKhoan'] ?></td>
-        <td><?= $row['matKhau'] ?></td>
         <td><?= $row['hoTen'] ?></td>
         <td class="th-firt"><?= $row['gioiTinh'] ?></td>
         <td><?= $row['CMND'] ?></td>
-        <td><?= $row['SDT'] ?></td>
-        <td><?= $row['email'] ?></td>
+        <td>0<?= $row['SDT'] ?></td>
         <td><?= $row['diaChi'] ?></td>
-        <td><?= $row['hinhAnh'] ?></td>
         
         <td>
           <a style="width: 55px;" href="?mod=nguoidung&act=detail&id=<?= $row['maTK'] ?>" type="button" class="btn btn-success">Xem</a>

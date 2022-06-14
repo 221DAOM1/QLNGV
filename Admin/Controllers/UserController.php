@@ -64,7 +64,6 @@ class UserController
             'maTK' => $_POST['maTK'],
             'maQuyen' =>  $_POST['maQuyen'],
             'taiKhoan' => $_POST['taiKhoan'],
-            'matKhau' => md5($_POST['matKhau']),
             'hoTen' => $_POST['hoTen'],
             'gioiTinh' => $_POST['gioiTinh'],
             'ngaySinh' => $_POST['ngaySinh'],

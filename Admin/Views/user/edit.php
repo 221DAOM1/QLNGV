@@ -41,10 +41,6 @@
                <input type="text" class="form-control" id="" placeholder="" name="diaChi" value="<?= $data['diaChi']?>">
            </div>
            <div class="form-group">
-               <label for="">Mật Khẩu</label>
-               <input type="Password" class="form-control" id="" placeholder="" name="matKhau" value="<?= $data['matKhau']?>">
-           </div>
-           <div class="form-group">
                <label for="">Trạng Thái</label>
                <input type="text" class="form-control" id="" placeholder="" name="trangThai" value="<?= $data['trangThai']?>">
            </div>
