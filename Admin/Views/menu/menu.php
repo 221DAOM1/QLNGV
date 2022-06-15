@@ -39,7 +39,7 @@
             <?php
                 if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
                 <li>
-                    <a class="has-arrow" href="?mod=congviec" aria-expanded="true">
+                    <a class="has-arrow" href="?mod=congviec&id=1" aria-expanded="true">
                         <div class="icon_menu">
                             <i class="fa-solid fa-briefcase"></i>
                             <span style="font-size: 20px;">Quản lý bài đăng</span>

@@ -21,8 +21,8 @@
             <div class="container">
                 <div class="row">
                     <div class="nav-left col-lg-3">
-                        <div class="nav-left__category">
-                            <h1 style="color: var(--cl-primary);">Danh mục</h1>
+                        <div class="nav-left__filter-head">
+                            <h1 style="text-align:center"    style="color: var(--cl-primary);" >Danh mục</h1>
                             <ul class="nav-left-category__list">
                                 <li class="category__item"><a href="?act=home">Trang chủ</a> </li>
                                 <li class="category__item">
@@ -98,11 +98,11 @@
                                             </a>
                                         </div>
                                         <div class="product-fruits__infos">
-                                            <h2 class="tilte-name-product-t"><?= $data_help[$i]['hoTen']?></h2>
+                                            <h2 class="tilte-name-product-t">Họ Tên: <?= $data_help[$i]['hoTen']?></h2>
                                             <div style="margin-top: 10px;">
-                                                <span class="price-new"><?= $data_help[$i]['ngaySinh'] ?></span>
+                                                <span class="price-new">Ngày sinh: <?= $data_help[$i]['ngaySinh'] ?></span>
                                             </div>
-                                            <div style="margin-bottom: 10px;">
+                                            <div style="margin-top: 5px;">
                                                 <span class="price-new">Làm việc tại: <?= $data_help[$i]['tenQuan'] ?></span>
                                             </div>
                                         </div>

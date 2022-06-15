@@ -20,7 +20,7 @@ class work extends Model
     }
 
     function trangthai($id){
-        $query = "select * from congviec where tinhTrang = $id  ORDER BY maCV DESC";
+        $query = "select * from congviec,danhmuccv,quanhuyen where congviec.khuVuc=quanhuyen.idQuan and congviec.maDMCV=danhmuccv.maDMCV and congviec.tinhTrang = $id  ORDER BY maCV DESC";
 
         require("result.php");
 

@@ -13,16 +13,10 @@
     color: white;">
       <th class="th-firt" scope="col">Mã CV</th>
       <th scope="col">Mã TK</th>
-      <th scope="col">Tên danh mục</th>
+      <th scope="col">Danh mục</th>
       <th scope="col">Tên công việc</th>
       <th scope="col">Khu vực</th>
-      <th scope="col">Số lượng</th>
-      <th scope="col">Trình độ học vấn</th>
-      <th scope="col">Giới tính yêu cầu</th>
-      <th scope="col">Chức vụ</th>
-      <th scope="col">Lương</th>
       <th scope="col">Địa chỉ</th>
-      <th scope="col">Thời gian</th>
       <th scope="col">Mô tả</th>
       <th scope="col">Tình trạng</th>
       <th scope="col">Thời gian đăng</th>
@@ -35,30 +29,10 @@
       <tr>
         <th class="th-firt" scope="row"><?= $row['maCV'] ?></th>
         <td><?= $row['maTK'] ?></td>
-        <td>
-          <?php
-          if ($row['maDMCV'] == 1) {
-            echo 'Chăm sóc trẻ em';
-          } else {
-            if ($row['maDMCV'] == 2) {
-              echo 'Dọn dẹp nhà';
-            } else {
-                if ($row['maDMCV'] == 3) {
-                  echo 'Chăm sóc người già';
-                }
-            }
-          }
-          ?>
-        </td>
+        <td><?= $row['tenDM'] ?></td>
         <td><?= $row['tenCV'] ?></td>
-        <td><?= $row['khuVuc'] ?></td>
-        <td><?= $row['soLuong'] ?></td>
-        <td><?= $row['trinhDoHV'] ?></td>
-        <td><?= $row['gioiTinhYC'] ?></td>
-        <td><?= $row['chucVu'] ?></td>
-        <td><?= $row['luong'] ?></td>
+        <td><?= $row['tenQuan'] ?></td>
         <td><?= $row['diaChi'] ?></td>
-        <td><?= $row['time'] ?></td>
         <td><?= $row['moTa'] ?></td>
         <td><?= $row['tinhTrang'] ?></td>
         <td><?= $row['thoiGianDang'] ?></td>
