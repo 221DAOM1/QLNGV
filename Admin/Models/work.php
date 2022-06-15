@@ -16,7 +16,7 @@ class work extends Model
     function updatecv($idcv){
         $query = "UPDATE congviec SET tinhTrang=1 WHERE maCV=$idcv";
         $result = $this->conn->query($query);
-        header('Location: ?mod=congviec');
+        header('Location: ?mod=congviec&id=1');
     }
 
     function trangthai($id){

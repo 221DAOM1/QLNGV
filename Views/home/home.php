@@ -220,7 +220,7 @@
                 </div>
                 <?php } ?>
             </div>
-            <div class="work_new_right_newspaper">
+            <div class="work_new_right_newspaper" style="margin-left: 20px;">
                 <div class="content_home_top">
                     <div class="big-hotline  wow fadeInDown animated">
                         Tin tức mới

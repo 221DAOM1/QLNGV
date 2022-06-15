@@ -22,7 +22,7 @@
                 if ((isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) || (isset($_SESSION['isLogin_Nhanvien']) && $_SESSION['isLogin_Nhanvien'] == true) || (isset($_SESSION['isLogin_Khachhang']) && $_SESSION['isLogin_Khachhang'] == true) || (isset($_SESSION['isLogin_Giupviec']) && $_SESSION['isLogin_Giupviec'] == true)) {
                     switch ($act) {
                         case 'login':
-                            require_once("login.php");
+                            require_once("login/login.php");
                             break;
                         case 'account':
                             require_once("login/infoedit.php");

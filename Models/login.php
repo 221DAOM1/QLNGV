@@ -67,7 +67,7 @@ class Login extends Model
             header('Location: ?mod=abcS');
         } else {
             setcookie('msg1', 'Đăng nhập không thành công', time() + 5);
-            header('Location: ?act=taikhoan#dangnhap');
+            header('Location: ?act=taikhoan&xuli=dangnhap');
         }
     }
     function logout()

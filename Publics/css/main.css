@@ -731,3 +731,34 @@ i.far.fa-heart.icon-heart-i:hover,
 .work_new_right_newspaper {
     width: 50%;
 }
+
+.nav-item__down {
+    position: absolute;
+    box-shadow: 1px 2px 8px #c1c1c1;
+    width: 200px;
+    top: 42px;
+    left: 0px;
+    display: none;
+    background: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    animation: animation ease-in 0.3s;
+    
+}
+@keyframes animation {
+    from{
+        opacity: 0;
+      
+    }
+    to{
+        opacity: 1;
+      
+    }
+}
+.nav-list .nav-list__item:hover .nav-item__down{
+    opacity: 1;
+    z-index: 12;
+    border-top: 3px solid red;
+}

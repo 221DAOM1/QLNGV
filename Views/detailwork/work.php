@@ -81,18 +81,6 @@
                 </a>
             </p>
         </div>
-        <section id="product-dry" class="product-related" style="width: 100%;">
-            <div class="container">
-                <div class="populator__head">
-                    <div>
-                        <h2 class="populator__head-title">
-                            <a href="">Công việc liên quan</a>
-                        </h2>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
     </div>
 </div>
 </main>
