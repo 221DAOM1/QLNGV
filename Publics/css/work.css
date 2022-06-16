@@ -551,3 +551,22 @@ h1#product-list__title__h1 {
 .label_title{
     padding: 3px;
 }
+
+.title-name-result{
+    color: var(--cl-green);
+    font-size: 14px;
+    padding-bottom: 8px;
+ }
+ .price-name-result{
+     color: var(--cl-red);
+     font-size: 14px;
+ }
+ 
+ a.result-count {
+    border-top: 1px solid;
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: var(--cl-green);
+    padding: 8px 0;
+}

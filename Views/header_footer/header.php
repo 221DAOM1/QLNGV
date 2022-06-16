@@ -1,11 +1,42 @@
 <header id="header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col">
-                <p style="color: var(--cl-primary);"><i class="fa-solid fa-location-dot"></i> Trường SPKT - 48 Cao Thắng - Phường Thanh Bình - Hải Châu, Đà Nẵng</p>
+            <div class="col-lg-2 col col-md-4 col-ms-6 col-xs-12 col-logo__header">
+                <a href="?act=home" class="header__logo">
+                    <img style="width: 187px;height: 53px;" src="./Publics/images/logogv.jpg" alt="">
+                </a>
             </div>
-            <div class="col-lg-4 col">
-                <p style="color: var(--cl-primary);"><i class="fa-solid fa-phone"></i> 0961640909 - 0935778714</p>
+            <div class="col-lg-7 col" style="margin-top: 8px;">
+                <!-- <p style="color: var(--cl-primary);"><i class="fa-solid fa-location-dot"></i> Trường SPKT - 48 Cao Thắng - Phường Thanh Bình - Hải Châu, Đà Nẵng</p> -->
+                <div class="search-box">
+                    <div class="header__search">
+                        <form action="?act=search" class="search-box-action" method="GET">
+                            <input type="hidden" name="act" value="search">
+                            <span class="input-group">
+                                <button class="search-submit" type="submit" name="" style="background-color: transparent;">
+                                    <img src="https://img.icons8.com/material-outlined/24/000000/search--v1.png"/>
+                                </button>
+                            </span>
+                            <input type="text" placeholder="Tìm kiếm công việc..." class="search-text-product" name="keyword" autocomplete="off">
+                        </form>
+                        <input type="hidden" name="action" value="tim-kiem">
+                        <div class="result__box">
+                            <div class="search-results">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col" style="margin-top: 8px;">
+                <!-- <p style="color: var(--cl-primary);"><i class="fa-solid fa-phone"></i> 0961640909 - 0935778714</p> -->
+                
+                <div class="group__contact">
+                        <div class="contact__phone">
+                            <p>Hỗ trợ online</p>
+                            <a href="">0947895039</a>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>

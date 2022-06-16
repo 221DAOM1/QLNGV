@@ -17,7 +17,7 @@
     <!-- Lib -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/js-image-zoom@0.7.0/js-image-zoom.js" type="application/javascript"></script>
-    <script src="./public/js/jquery.js"></script>
+    <script src="./Publics/js/jquery.js"></script>
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./Publics/css/style.css">

@@ -17,6 +17,13 @@ class recruiterModel extends model
         require("result.php");
         return $data;
     }
+    
+    function searchData($key) {
+        $query = "SELECT * from congviec,hinhanhcv,danhmuccv,quanhuyen,taikhoan WHERE taikhoan.maTK=congviec.maTK and quanhuyen.idQuan=congviec.khuVuc AND congviec.maCV=hinhanhcv.maCV AND danhmuccv.maDMCV = congviec.maDMCV and tenCV LIKE '$key%' GROUP by congviec.maCV;";
+        require("result.php");
+        // echo $query;
+        return $data;
+    }
     function congvieccg($idCV)
     {
         $query = "SELECT * from congviec,hinhanhcv,danhmuccv,quanhuyen,taikhoan WHERE taikhoan.maTK=congviec.maTK and quanhuyen.idQuan=congviec.khuVuc AND congviec.maCV=hinhanhcv.maCV AND danhmuccv.maDMCV = congviec.maDMCV AND congviec.maDMCV=$idCV AND tinhTrang=1 GROUP BY congviec.maCV;";

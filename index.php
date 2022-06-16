@@ -264,6 +264,11 @@ switch ($mod) {
                 break;
         }
         break;
+    case "search":
+        require_once('./Controllers/DetailWorkController.php');
+        $objCate = new DetailWorkController();
+        $objCate->list1();
+        break;
     default:
         require_once('home/home.php');
 }

@@ -139,6 +139,9 @@
                     break;
                 }
             break;
+        case "search":
+            require_once("search/list-search.php");
+            break;
         default:
         require_once("error-404.php");
         break;

@@ -11,6 +11,16 @@
             $data_work = $this->work_model->congviec($_GET['cv']);
             require_once("Views/index.php");
         }
+        public function list1()
+
+        {   
+            if(isset($_GET['keyword'])) {
+                $key = $_GET['keyword'];
+                $data = $this->work_model->searchData($key);
+            }
+
+            require_once('./Views/index.php');  
+        }
         public function listcategory()
         {
             $data_work = $this->work_model->congvieccg($_GET['id']);
