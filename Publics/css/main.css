@@ -768,3 +768,10 @@ i.far.fa-heart.icon-heart-i:hover,
     z-index: 12;
     border-top: 3px solid red;
 }
+
+.group__contact {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

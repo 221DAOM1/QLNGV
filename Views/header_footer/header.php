@@ -36,6 +36,9 @@
                             <p>Hỗ trợ online</p>
                             <a href="">0961640909</a>
                         </div>
+                        <div style="margin-left: 10px;">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
                     </div>
             </div>
         </div>
