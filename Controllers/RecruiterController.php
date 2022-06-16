@@ -77,7 +77,6 @@ class recruiterController
         );
 
         $this->recruiter_model->insertImg($data_img);
-
         require('./Models/sendNotification.php');
         $send = new SendNotification();
         $send->sendNotificationToUserOrAdmin('Có bài đăng mới', 'Môt bài đăng mới, chờ duyệt và giới thiệu ứng viên');

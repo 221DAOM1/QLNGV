@@ -19,7 +19,7 @@
         </div>
         <div class="product__content">
             <div class="container">
-                <div class="row">
+                <div class="row"  style="margin-bottom: 50px;">
                     <div class="nav-left col-lg-3">
                         <div class="nav-left__filter-head">
                             <h1 style="text-align:center"    style="color: var(--cl-primary);" >Danh mục</h1>
