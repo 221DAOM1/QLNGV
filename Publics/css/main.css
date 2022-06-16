@@ -660,6 +660,12 @@ p.text-sale {
     color: red;
 }
 
+
+.contact__phone a {
+    color: var(--cl-green);
+    font-weight: 600;
+}
+
 .col-product__item:hover .product-item-icon{
     visibility: visible;
     right: 20px;
