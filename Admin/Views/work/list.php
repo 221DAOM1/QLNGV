@@ -18,7 +18,6 @@
       <th scope="col">Khu vực</th>
       <th scope="col">Địa chỉ</th>
       <th scope="col">Mô tả</th>
-      <th scope="col">Tình trạng</th>
       <th scope="col">Thời gian đăng</th>
       <th>Thao tác</th>
     </tr>
@@ -34,10 +33,9 @@
         <td><?= $row['tenQuan'] ?></td>
         <td><?= $row['diaChi'] ?></td>
         <td><?= $row['moTa'] ?></td>
-        <td><?= $row['tinhTrang'] ?></td>
         <td><?= $row['thoiGianDang'] ?></td>
         <td>
-          <a style="width: 110px;" href="?mod=congviec&act=chitiet&id=<?= $row['maCV'] ?>&tt=<?=$row['tinhTrang']?>" class="btn btn-success" >Xem chi tiết</a>
+          <a style="width: 118px;" href="?mod=congviec&act=chitiet&id=<?= $row['maCV'] ?>&tt=<?=$row['tinhTrang']?>" class="btn btn-success" >Xem chi tiết</a>
           <?php if($row['tinhTrang']==0) {?>
           <form id ="table" action="?mod=congviec&act=xetduyet&idcv=<?= $row['maCV']; ?>" method="POST" enctype="multipart/form-data">
               <div class="btn-recruiter">

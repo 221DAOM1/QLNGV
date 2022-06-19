@@ -9,7 +9,7 @@
                 </a>
                 <span class="mr_lr">&nbsp;/ &nbsp;</span>
                 <a href="#">
-                    <span>Chi tiết người giúp việc</span>
+                    <span>Đánh giá</span>
                 </a>
                 <span class="mr_lr">&nbsp;/ &nbsp;</span>
             </div>
@@ -41,7 +41,7 @@
                 </div>
                 <?php } ?>
                 <form id ="table" action="?act=ratehelp&xuli=store" method="POST" enctype="multipart/form-data">
-                    <h2 class="tilte-name-product-detail">ĐÁNH GIÁ GIÚP VIỆC</h2>
+                    <h2 class="tilte-name-product-detail">ĐÁNH GIÁ</h2>
                     <fieldset class="form-group">
                         <label>Số sao</label>
                         <select class="form-control" name="soSao" style="width: 60px;">

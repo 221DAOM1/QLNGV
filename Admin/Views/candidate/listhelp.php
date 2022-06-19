@@ -37,7 +37,7 @@
         <td><?= $row['gioiTinh'] ?></td>
         <td><?= $row['ngaySinh'] ?></td>
         <td><?= $row['CMND'] ?></td>
-        <td><?= $row['SDT'] ?></td>
+        <td>0<?= $row['SDT'] ?></td>
         <td><?= $row['diaChi'] ?></td>
         <td><?= $row['thoiGian'] ?></td>
         <td><?= $row['trinhDoHV'] ?></td>

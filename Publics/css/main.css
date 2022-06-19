@@ -775,3 +775,13 @@ i.far.fa-heart.icon-heart-i:hover,
     justify-content: center;
     align-items: center;
 }
+
+
+.star-nomal.star-active{
+    color: var(--cl-green);
+}
+.star-nomal {
+    cursor: pointer;
+    color: #999;
+    font-size: 30px;
+}

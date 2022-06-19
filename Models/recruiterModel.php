@@ -13,7 +13,7 @@ class recruiterModel extends model
     }
     function congviec($idCV)
     {
-        $query = "SELECT * from congviec,hinhanhcv,danhmuccv,quanhuyen,taikhoan WHERE taikhoan.maTK=congviec.maTK and quanhuyen.idQuan=congviec.khuVuc AND congviec.maCV=hinhanhcv.maCV AND danhmuccv.maDMCV = congviec.maDMCV AND congviec.maCV=$idCV;";
+        $query = "SELECT tenCV,tenHinh,hoTen,SDT,tenQuan,soLuong,trinhDoHV,gioiTinhYC,chucVu,luong,time,moTa,congviec.diaChi,congviec.maCV,taikhoan.maTK from congviec,hinhanhcv,danhmuccv,quanhuyen,taikhoan WHERE taikhoan.maTK=congviec.maTK and quanhuyen.idQuan=congviec.khuVuc AND congviec.maCV=hinhanhcv.maCV AND danhmuccv.maDMCV = congviec.maDMCV AND congviec.maCV=$idCV;";
         require("result.php");
         return $data;
     }

@@ -71,26 +71,5 @@
             header('Location: ?act=confirmhelp&xuli=list');
         }
 
-        function store($data)
-        {
-            $f = "";
-            $v = "";
-            foreach ($data as $key => $value) {
-                $f .= $key . ",";
-                $v .= "'" . $value . "',";
-            }
-            $f = trim($f, ",");
-            $v = trim($v, ",");
-            $query = "INSERT INTO $this->table($f) VALUES ($v);";
-
-            $status = $this->conn->query($query);
-
-            if ($status == true) {
-                setcookie('msg2', 'ĐÁNH GIÁ THÀNH CÔNG', time() + 2);
-                header('Location: ?act=' . "home");
-            } else {
-                
-            }
-        }
     }
 ?>

@@ -85,10 +85,10 @@
                 <div class="right-col">
                     <h1>Quyền lợi thành viên</h1>
                     <div>
-                        <p>Vận chuyển siêu tốc</p>
-                        <p>Sản phẩm đa dạng</p>
-                        <p>Tích điểm đổi quà</p>
-                        <p>Được giảm giá cho lần mua tiếp theo lên đến 10%</p>
+                        <p>Đăng bài thuê nhân viên</p>
+                        <p>Được giới thiệu người giúp việc hợp lý</p>
+                        <p>Tìm kiếm người giúp việc dễ dàng</p>
+                        <p>Quản lý người giúp việc trên hệ thống một cách tiện lợi</p>
                     </div>
                     <a class="btn-register-default" href="?act=taikhoan&xuli=login">Đăng nhập</a>
                 </div>

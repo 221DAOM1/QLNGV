@@ -26,7 +26,7 @@
                 </li>
             <?php } ?>
             <?php
-                if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
+                if(isset($_SESSION['isLogin_Admin'])){ ?>
                 <li>
                     <a class="has-arrow" href="?mod=category" aria-expanded="true">
                         <div class="icon_menu">

@@ -35,7 +35,7 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <?php
-                                if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) {
+                                if ((isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true)||(isset($_SESSION['isLogin_Nhanvien']) && $_SESSION['isLogin_Nhanvien'] == true)) {
                                 $mod = isset($_GET['mod']) ? $_GET['mod'] : "login";
                                 $act = isset($_GET['act']) ? $_GET['act'] : "admin"; 
                                 switch ($mod) {
