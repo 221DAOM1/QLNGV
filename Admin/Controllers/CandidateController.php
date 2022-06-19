@@ -1,5 +1,5 @@
 <?php
-    require_once("./Models/candidate.php");
+require_once("./Models/candidate.php");
 class CandidateController
 {
     var $candidate_model;
@@ -22,11 +22,11 @@ class CandidateController
     }
     function xetduyet()
     {
-        $this->candidate_model->updateds($_GET['idcv'],$_GET['idtk']);
+        $this->candidate_model->updateds($_GET['idcv'], $_GET['idtk']);
         require('./Models/sendNotification.php');
         $send = new SendNotification();
         // $send->sendNotificationToUserOrAdmin('Có bài đăng mới', 'Môt bài đăng mới, chờ duyệt và giới thiệu ứng viên');
-        $send->sendNotificationToUsers($_GET['maTK'],'Đã có người giới thiệu trong bài đăng của bạn', 'Mau vô xem nào');
+        $send->sendNotificationToUsers($_GET['maTK'], 'Đã có người giới thiệu trong bài đăng của bạn', 'Mau vô xem nào');
         require_once("./Views/index.php");
     }
     function chitiet()
@@ -37,20 +37,19 @@ class CandidateController
             if ($tt > 1) {
                 $tt = 0;
             }
-            $data = $this->candidate_model->chitietungvien($_GET['id'],$tt);
+            $data = $this->candidate_model->chitietungvien($_GET['id'], $tt);
         } else {
         }
         require_once("./Views/index.php");
     }
     function chitiethelp()
     {
-        
+
         $id = isset($_GET['id']) ? $_GET['id'] : 1;
         $data_user = $this->candidate_model->chitietgiupviec($id);
-        $data_dmcv = $this->candidate_model->danhmuc();     
+        $data_dmcv = $this->candidate_model->danhmuc();
         //lấy đánh giá
         $DataEvalute = $this->candidate_model->getEvalute($id);
         require_once("Views/index.php");
     }
-    
 }
