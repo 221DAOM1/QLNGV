@@ -69,7 +69,8 @@
             $this->rate_model->updateds($_POST['maCV'],$_POST['maTK']);
             require('./Models/sendNotification.php');
             $send = new SendNotification();
-            $send->sendNotificationToUserOrAdmin('Có bài đăng mới', 'Môt bài đăng mới, chờ duyệt và giới thiệu ứng viên');
+            $tokens = array($_GET['maTK']);
+            $send->sendNotificationToUsers($tokens, 'Đã có người giới thiệu trong bài đăng của bạn', 'Mau vô xem nào');
             header('Location:?act=home');
         }
         

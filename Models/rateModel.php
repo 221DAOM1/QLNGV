@@ -17,7 +17,7 @@
         }
 
         function congviecgv($idCV){
-            $query = "SELECT * from congviec,hinhanhcv,danhmuccv,quanhuyen,taikhoan WHERE taikhoan.maTK=congviec.maTK and quanhuyen.idQuan=congviec.khuVuc AND congviec.maCV=hinhanhcv.maCV AND danhmuccv.maDMCV = congviec.maDMCV AND congviec.maCV=$idCV;";
+            $query = "SELECT tenCV,tenHinh,hoTen,SDT,tenQuan,soLuong,trinhDoHV,gioiTinhYC,chucVu,luong,time,moTa,congviec.diaChi,congviec.maCV,taikhoan.maTK from congviec,hinhanhcv,danhmuccv,quanhuyen,taikhoan WHERE taikhoan.maTK=congviec.maTK and quanhuyen.idQuan=congviec.khuVuc AND congviec.maCV=hinhanhcv.maCV AND danhmuccv.maDMCV = congviec.maDMCV AND congviec.maCV=$idCV;";
             require("result.php");
             return $data;
         }
@@ -52,7 +52,7 @@
         }
 
         function taikhoangv1($id,$idTK){
-            $query = "SELECT taikhoan.maTK,hinhAnh,taikhoan.diaChi,hoTen,ngaySinh,gioiTinh,congviec.maCV,tenCV,thongtinungvien.thoiGian,quanhuyen.tenQuan,thongtinungvien.soThich,thongtinungvien.ghiChu,thongtinungvien.trinhDoHV from taikhoan,thongtinungvien,quanhuyen,congviec,danhsachungvien WHERE taikhoan.maTK = thongtinungvien.maTK AND thongtinungvien.khuVucLamViec=quanhuyen.idQuan AND taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
+            $query = "SELECT taikhoan.maTK,SDT,email,hinhAnh,taikhoan.diaChi,hoTen,ngaySinh,gioiTinh,congviec.maCV,tenCV,thongtinungvien.thoiGian,quanhuyen.tenQuan,thongtinungvien.soThich,thongtinungvien.ghiChu,thongtinungvien.trinhDoHV from taikhoan,thongtinungvien,quanhuyen,congviec,danhsachungvien WHERE taikhoan.maTK = thongtinungvien.maTK AND thongtinungvien.khuVucLamViec=quanhuyen.idQuan AND taikhoan.maTK = danhsachungvien.maTK AND congviec.maCV = danhsachungvien.maCV
             AND danhsachungvien.maTK=$idTK AND danhsachungvien.maCV=$id;";
             require("result.php");
             return $data;

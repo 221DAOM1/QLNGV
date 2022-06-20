@@ -155,7 +155,7 @@ class recruiterModel extends model
                 header('Location:?act=home');
             } else {
                 setcookie('msg', $query, time() + 2);
-                header('Location: ?mod=' . $this->table . '&act=add');
+                header('Location: ?act=work&xuli=add');
             }
         }
 }

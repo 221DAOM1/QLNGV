@@ -22,7 +22,8 @@
                 <h2 class="tilte-name-product-detail">Họ và tên: <?php echo $data_user[0]['hoTen']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Ngày sinh: <?php echo $data_user[0]['ngaySinh']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Giới tính: <?php echo $data_user[0]['gioiTinh']; ?></h2>
-                <h2 class="tilte-name-product-detail-detail">Địa chỉ: <?php echo $data_user[0]['diaChi']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">Email: <?php echo $data_user[0]['email']; ?></h2>
+                <h2 class="tilte-name-product-detail-detail">SĐT: 0<?php echo $data_user[0]['SDT']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Thời gian muốn làm: <?php echo $data_user[0]['thoiGian']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Trình độ học vấn: <?php echo $data_user[0]['trinhDoHV']; ?></h2>
                 <h2 class="tilte-name-product-detail-detail">Khu vực làm việc: <?php echo $data_user[0]['tenQuan']; ?></h2>

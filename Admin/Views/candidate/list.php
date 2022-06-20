@@ -23,7 +23,6 @@
       <th scope="col">Lương</th>
       <th scope="col">Địa chỉ</th>
       <th scope="col">Thời gian</th>
-      <th scope="col">Mô tả</th>
       <th scope="col">Thời gian đăng</th>
       <th>Thao tác</th>
     </tr>
@@ -44,7 +43,6 @@
         <td><?= $row['luong'] ?></td>
         <td><?= $row['diaChi'] ?></td>
         <td><?= $row['time'] ?></td>
-        <td><?= $row['moTa'] ?></td>
         <td><?= $row['thoiGianDang'] ?></td>
         <td>
           <a style="width: 193px;" href="?mod=candidate&act=chitiet&id=<?= $row['maCV']?>&tt=0" class="btn btn-success" >Xem người ứng tuyển</a>
