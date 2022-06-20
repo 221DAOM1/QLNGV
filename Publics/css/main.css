@@ -810,3 +810,12 @@ i.far.fa-heart.icon-heart-i:hover,
     color: #999;
     font-size: 30px;
 }
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    margin-bottom: 90px;
+    box-shadow: 0px 0px 6px rgb(79 95 120 / 10%);
+    z-index: 11;
+    animation: header-animation 0.7s ease;
+}
