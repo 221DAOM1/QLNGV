@@ -1,8 +1,8 @@
 <section class="main">
     <div class="container">
         <div class="page-content-recruiter">
-            <div>
-                <h1 style="text-align: center ;">Đăng thông tin công việc</h1>
+            <div style="background-color: #28a745; height: 30px; padding-top: 5px">
+                <h1 style="text-align: center; color: white;">Đăng thông tin công việc</h1>
             </div>
             <hr>
             <?php if (isset($_COOKIE['msg2'])) { ?>
@@ -13,11 +13,12 @@
             <form id="table" action="?act=work&xuli=store" method="POST" enctype="multipart/form-data">
                 <fieldset class="form-group" style="text-align: left;">
                     <label>Tên công việc</label>
-                    <span class="required">*</span>
+                    <span class="required" style="color: red">*</span>
                     <input type="text" name="tenCV" class="form-control form-control-lg" placeholder="Tên công việc" required />
                 </fieldset>
                 <fieldset class="form-group" style="text-align: left;">
-                    <label>Loại công việc</label>
+                    <label>Loại công việc </label>
+                    <span class="required" style="color: red">*</span>
                     <select required id="maDMCV" class="form-control" name="maDMCV">
                         <option value="" disabled selected>Chọn loại công việc</option>
                         <?php foreach ($data_category as $row) { ?>
@@ -27,6 +28,7 @@
                 </fieldset>
                 <fieldset class="form-group" style="text-align: left;">
                     <label>Khu vực</label>
+                    <span class="required" style="color: red">*</span>
                     <select required id="khuVuc" class="form-control" name="khuVuc">
                         <option value="" disabled selected>Chọn khu vực</option>
                         <?php foreach ($data_district as $row) { ?>
@@ -38,6 +40,7 @@
                 <hr>
                 <fieldset class="form-group" style="text-align: left;">
                     <label>Số lượng người làm</label>
+                    <span class="required" style="color: red">*</span>
                     <input required type="text" name="soLuong" class="form-control form-control-lg" placeholder="Số lượng người làm" />
                 </fieldset>
                 <fieldset class="form-group" style="text-align: left;">
@@ -50,6 +53,7 @@
                 </fieldset>
                 <fieldset class="form-group" style="text-align: left;">
                     <label>Thời gian làm việc</label>
+                    <span class="required" style="color: red">*</span>
                     <input required type="text" name="time" class="form-control form-control-lg" placeholder="Thời gian làm việc" />
                 </fieldset>
                 <fieldset class="form-group" style="text-align: left;">
@@ -65,11 +69,13 @@
                     <input type="text" name="chucVu" class="form-control form-control-lg" placeholder="Chức vụ người làm" />
                 </fieldset>
                 <fieldset class="form-group" style="text-align: left;">
-                    <label>Lương nhân viên</label>
+                    <label>Lương nhân viên theo ngày</label>
+                    <span class="required" style="color: red">*</span>
                     <input required type="text" name="luong" class="form-control form-control-lg" placeholder="Lương nhân viên" />
                 </fieldset>
                 <fieldset class="form-group" style="text-align: left;">
                     <label>Địa chỉ làm việc</label>
+                    <span class="required" style="color: red">*</span>
                     <input required type="text" name="diaChi" class="form-control form-control-lg" placeholder="Địa chỉ làm việc" />
                 </fieldset>
                 <fieldset class="form-group" style="text-align: left;">
@@ -88,7 +94,7 @@
                     <label>Hình ảnh 3</label>
                     <input type="file" class="form-control" id="" placeholder="" name="hinhAnh2">
                 </fieldset>
-                <div class="btn-recruiter" >
+                <div class="btn-recruiter">
                     <button class="btn-confirm" type="submit" form="table">Xác nhận</button>
                 </div>
             </form>
